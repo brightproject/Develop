@@ -6,7 +6,8 @@
 		$profile .= "<p><textarea rows=\"1\" cols=\"45\" name=\"name\"></textarea></p>";
 		$profile .= "<p><input type=\"submit\" value=\"Отправить\"></p>";
 		$profile .= "</form>";
-		$user = $db->getRow("SELECT * FROM first where name=?s", $_GET['name']);
+		$user = isset($_GET['name']) ? $_GET['name'] : '';
+		$user = $db->getCol("SELECT * FROM first where name=?s", $_GET['name']);
 		$profile .= "<ul>";
 				 foreach ($user as $m)
 					 {
