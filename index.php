@@ -1,6 +1,7 @@
 <?php
 		include 'safemysql.class.php';
 		$db = new SafeMySQL();
+		//$db = new SafeMysql(array('user' => $user, 'pass' => $pass,'db' => $db, 'charset' => 'cp1251'));
 		$profile .= "<form action=\"index.php\" method=\"post\">";
 		$profile .= "<p><b>¬ведите им€:</b></p>";
 		$profile .= "<p><textarea rows=\"1\" cols=\"45\" name=\"name\"></textarea></p>";
