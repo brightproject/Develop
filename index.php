@@ -1,5 +1,5 @@
 <?php
-		require_once ("safemysql.class.php");
+		include 'safemysql.class.php';
 		$db = new SafeMySQL();
 		$profile .= "<form action=\"index.php\" method=\"post\">";
 		$profile .= "<p><b>¬ведите им€:</b></p>";
