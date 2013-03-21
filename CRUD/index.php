@@ -8,12 +8,14 @@ $table = 'test';
 $db = 'test';
 // $db->query("CREATE TABLE IF NOT EXISTS ?n (id INTEGER PRIMARY KEY, name TEXT), ",$table);
 $db    = new SafeMysql(array('db' => $db));
-// $sql = CREATE TABLE test 
-// (
-// PID INT NOT NULL AUTO_INCREMENT,
-// PRIMARY KEY(PID),
-// name CHAR(15),
-// );
+$db->createTable($nametables);
+$nametables = "CREATE TABLE users(id int auto_increment primary key,
+		email TINYTEXT,
+		password VARCHAR(16),
+		name TINYTEXT,
+		daybirth VARCHAR(2),
+		monthbirth VARCHAR(40),
+		yearbirth VARCHAR (4))";
 
 
 if($_SERVER['REQUEST_METHOD']=='POST') {
