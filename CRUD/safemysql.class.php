@@ -119,9 +119,9 @@ class SafeMySQL
 	{	
 		return $this->rawQuery($this->prepareQuery(func_get_args()));
 	}
-	public function createTableUser() 
+	public function buildDB()
 	{
-		//return mysql_query($nametables,NULL);
+	  return mysql_query($sql);    
 	}
 
 	/**
