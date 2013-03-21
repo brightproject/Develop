@@ -69,7 +69,7 @@ span:hover {color:#333	}
 	 //$k = array('all', 'null', 'nonull');
 	 
 	$dirname = "."; 
-	$extentions = array('php', 'css', 'tpl', 'js', 'html'); 
+	$extentions = array('php', 'css', 'tpl', 'js', 'html', 'md', 'git'); 
 	$k = array('all', 'null', 'nonull', 'size');	
 	
 	foreach($extentions as $exten) {
