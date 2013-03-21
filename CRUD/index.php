@@ -1,10 +1,13 @@
 <?
 
 error_reporting(E_ALL);  
-
+header("Content-Type: text/html; charset=cp1251"); 
 include 'safemysql.class.php';
 // $db    = new SafeMysql();
-$db    = new SafeMysql(array('db' => $db, 'charset' => 'cp1251'));
+$table = 'test';
+$db = 'test';
+// $db->query("CREATE TABLE IF NOT EXISTS ?n (id INTEGER PRIMARY KEY, name TEXT), ",$table);
+$db    = new SafeMysql(array('db' => $db));
 // $sql = CREATE TABLE test 
 // (
 // PID INT NOT NULL AUTO_INCREMENT,
@@ -12,8 +15,6 @@ $db    = new SafeMysql(array('db' => $db, 'charset' => 'cp1251'));
 // name CHAR(15),
 // );
 
-
-$table = "test"; 
 
 if($_SERVER['REQUEST_METHOD']=='POST') {
   if (isset($_POST['delete'])) {
