@@ -17,49 +17,40 @@ span:hover {color:#333	}
 </style>
 <body>
 <?php
-  ////////////////////////////////////////////////////////// 
-  // Рекурсивная функция - спускаемся вниз по каталогу 
-  ////////////////////////////////////////////////////////// 
-  function scan_dir($dirname) 
-  { 
-    // Объявляем переменные замены глобальными
-    GLOBAL $extentions, $count;
-    // Открываем текущую директорию 
-    $dir = opendir($dirname); 
-    // Читаем в цикле директорию 
-    while (($file = readdir($dir)) !== false) 
-    { 
-      // Если файл обрабатываем его содержимое 
-      if($file != "." && $file != "..") 
-      { 
-        // Если имеем дело с файлом - производим в нём замену
-        if(is_file($dirname."/".$file)) 
-        { 
-          // Извлекаем из имени файла расширение
-          $ext = strrchr($dirname."/".$file, "."); 
-          foreach($extentions as $exten)
-          if(preg_match($exten, $ext))
-          {
-            // Читаем содержимое файла
-            $content = file($dirname."/".$file); 
-            // Подсчтываем число файлов
-            $count += count($content);
-            // Удаляем массив
-            unset($content);
-          }
-        } 
-        // Если перед нами директория, вызываем рекурсивно 
-        // функцию scan_dir 
-        if(is_dir($dirname."/".$file)) 
-        { 
-          scan_dir($dirname."/".$file); 
-        } 
-      } 
-    } 
-    // Закрываем директорию 
-    closedir($dir); 
-  } 
-//проверка
+	function scan_dir($dirname) { 
+		global $extentions, $count;
+		$dir = opendir($dirname); 
+		
+		while (($file = readdir($dir)) !== false) { 
+			if($file != "." && $file != "..") { 
+				if(is_file($dirname."/".$file)) { 
+					$ext = strrchr($dirname."/".$file, "."); 
+					foreach($extentions as $exten) {
+						if(preg_match('#\.'.$exten.'#is', $ext)) {
+							$content = file($dirname."/".$file);
+							
+							foreach($content as $key => $m) {
+								$count[$exten]['all'] += count($key);
+								if(strlen(trim($m)) > 0) {
+									$count[$exten]['nonull'] += count($key);
+								}
+								else {
+									$count[$exten]['null']++;
+								}
+							}
+							$count[$exten]['size'] += filesize($dirname."/".$file);
+							unset($content);
+						}
+					}
+				}
+				if(is_dir($dirname."/".$file)) { 
+					scan_dir($dirname."/".$file); 
+				} 
+			} 
+		} 
+		closedir($dir); 
+	} 
+//ПРОВЕРКА
 	 // Имя корневой директории проекта
 	 //$dirname = "softtime"; 
 	 // Массив с расширениями файлов, для которых следует подсчитывать
@@ -76,6 +67,10 @@ span:hover {color:#333	}
 	 //$dirname = "."; 
 	 //$extentions = array('php', 'css', 'tpl', 'js'); 
 	 //$k = array('all', 'null', 'nonull');
+	 
+	$dirname = "."; 
+	$extentions = array('php', 'css', 'tpl', 'js', 'html'); 
+	$k = array('all', 'null', 'nonull', 'size');	
 	
 	foreach($extentions as $exten) {
 		foreach($k as $key) {
