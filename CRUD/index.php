@@ -6,18 +6,15 @@ include 'safemysql.class.php';
 // $db    = new SafeMysql();
 $table = 'test';
 $db = 'test';
+$newtablename = 'new';
+//$nametables = 'new';
 // $db->query("CREATE TABLE IF NOT EXISTS ?n (id INTEGER PRIMARY KEY, name TEXT), ",$table);
 $db    = new SafeMysql(array('db' => $db));
-$db->createTable($nametables);
-$nametables = "CREATE TABLE users(id int auto_increment primary key,
-		email TINYTEXT,
-		password VARCHAR(16),
-		name TINYTEXT,
-		daybirth VARCHAR(2),
-		monthbirth VARCHAR(40),
-		yearbirth VARCHAR (4))";
 
-
+//Создание новой таблицы
+//$db->buildDB("CREATE TABLE IF NOT EXISTS ?s id int auto_increment primary key title VARCHAR(150),bodytext TEXT,created VARCHAR(100)",$newtablename);
+//$db->query("CREATE TABLE IF NOT EXISTS ?s title VARCHAR(150),bodytext TEXT,created VARCHAR(100)",$newtablename);
+	
 if($_SERVER['REQUEST_METHOD']=='POST') {
   if (isset($_POST['delete'])) {
     $db->query("DELETE FROM ?n WHERE id=?i",$table,$_POST['delete']);
