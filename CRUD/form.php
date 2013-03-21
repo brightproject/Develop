@@ -2,7 +2,7 @@
 <input type="text" name="name" value="<?=$row['name']?>"><br>
 <input type="hidden" name="id" value="<?=$row['id']?>">
 <input type="submit"><br>
-<a href="?">Return to the list</a>
+<a href="?">Вернуться обратно к списку</a>
 </form>
 <? if ($row['id']):?>
 <div align=right>
