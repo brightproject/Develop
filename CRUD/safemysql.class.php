@@ -119,6 +119,10 @@ class SafeMySQL
 	{	
 		return $this->rawQuery($this->prepareQuery(func_get_args()));
 	}
+	public function createTable() 
+	{
+		//return mysql_query($nametables,NULL);
+	}
 
 	/**
 	 * Conventional function to fetch single row. 
