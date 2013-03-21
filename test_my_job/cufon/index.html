@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=cp1251" />
+	<title>Cufon font replace</title>
+	<link rel="stylesheet" type="text/css" href="css/all.css" />
+	<script type="text/javascript" src="js/mootools-1.2.1.js"></script>
+	<script type="text/javascript" src="js/cufon.js"></script>
+	<script type="text/javascript" src="fonts/Perfo_400.font.js"></script>
+	<script type="text/javascript" src="fonts/Montblanc_italic_400.font.js"></script>
+	<script type="text/javascript" src="fonts/Calibri_italic_400.font.js"></script>
+	<script src="fonts/Seven_Swordsmen_BB_400.font.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		Cufon.replace('#main-container h3', { fontFamily: 'Montblanc' });
+        Cufon.replace('h4', { fontFamily: 'Perfo' });
+		Cufon.replace('p', { fontFamily: 'Calibri' });
+		Cufon.replace('p', { fontFamily: 'Seven Swordsmen BB' });
+		Cufon.replace('em', { fontFamily: 'Calibri' });
+	
+//		using the jQuery selector engine;
+			Cufon.replace('p.multi span.two', { fontFamily: 'Seven Swordsmen BB' });
+//		testing the gradient with jQuery selector
+			Cufon.replace('p.grad', {
+			    color: '-linear-gradient(#CF2626, #232323)'
+			});
+	</script>
+		<style type="text/css">
+			p.multi{
+				font: bold 32px Arial, Helvatica, Tahoma, sans-serif;
+			}
+			p.grad{
+				width: 600px;
+				font: bold 50px Tahoma, Arial, sans-serif;
+			}
+		</style>
+
+</head>
+<body>
+	<div id="main-container">
+		<h3>
+			Съешь еще этих мягких французских булочек и выпей чаю.
+		</h3>
+
+		<h4>
+			Съешь еще этих мягких французских булочек и выпей чаю.
+		</h4>
+		<h4>
+			Макс гавно, а Влад мудрый каа.
+		</h4>
+		<em>
+			Lorem ipsum <a href="#">dolor</a> sit amet, <em>consectetur</em> adipiscing elit. Nullam turpis purus, 
+			tempor non condimentum ac, tristique id elit. Nunc eget velit vehicula sapien
+			imperdiet posuere. Ut risus quam, consectetur in volutpat sit amet, volutpat eget
+			sapien. Nullam volutpat imperdiet urna eget sagittis. <a href="#" class="link1">Пример ссылки 1</a>,
+
+<a href="#" class="link2">Пример ссылки 1</a>
+		</em>
+		<br /><br /><br />
+		<p class="multi">Multiple <span class="one">words</span> in a <span class="two">span</span></p>
+		
+		<p class="grad">This is a big typographic headline</p>
+
+   	</div>
+<script type="text/javascript"> Cufon.now(); </script>
+</body>
+</html>

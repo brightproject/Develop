@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+
+<head>
+
+
+<script src="jquery.js"></script>
+
+
+
+<link rel="stylesheet" type="text/css" href="style.css"/>
+
+
+<title>Форма обратной связи в модальном окне</title>
+<style type="text/css">
+#button {
+margin-left:-10px;
+background: #00f url('images/feed_b.gif') no-repeat;
+position:fixed;
+width: 26px;
+height: 100px; 
+top:50%;
+float:left;
+z-index:1000000;
+}
+
+#button:hover {
+margin-left:-10px;
+background: #f00 url('images/feed.gif') no-repeat;
+position:fixed;
+width: 26px;
+height: 100px; 
+top:50%;
+float:left;
+z-index:1000000;
+}
+
+</style>
+</head>
+
+<body>
+
+<a href="contact.html" rel="#overlay">
+<div id="button">
+</div>
+</a>
+
+
+<div class="overlay" id="overlay">
+<div class="wrap"></div>
+</div>
+<script>
+
+$(function() {
+	$("a[rel]").overlay(function() {
+		var wrap = this.getContent().find("div.wrap");
+		if (wrap.is(":empty")) {
+			wrap.load(this.getTrigger().attr("href"));
+		}
+	});
+});
+
+</script>
+
+
+</body>
+</html>

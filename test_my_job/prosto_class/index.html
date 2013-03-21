@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="ru" lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Прикольный эффект</title>
+<script language="JavaScript" type="text/javascript" src="js/index.js"> </script>
+<style type="text/css">
+html, body { width: 100%; height: 100%; margin: 0; padding: 0; }
+body { color: #aaa; background-color: #000; font: 70% Verdana, Arial, Helvetica, sans-serif; float: left; min-width: 750px; min-height: 550px; position: relative; }
+* html body { font-size: 0.70em; }
+* html { overflow: auto; }
+
+ul, ol, li { margin: 0; padding: 0; list-style-type: none; }
+table, tr, td { border-collapse: collapse; padding: 0; }
+img { border: 0; }
+.clear { clear: both; }
+
+h1, h2, h3 { margin: 0 0 0.5em 0; font-style: normal; font-weight: normal; }
+
+a { color: #aaa; }
+a:hover { color: #ccc; }
+a:visited { color: #888; }
+
+table { height: 100%; width: 100%; }
+table td { vertical-align: middle; }
+
+#logo { width: 130px; height: 212px; position: relative; margin: 0 auto; padding-bottom: 212px; }
+#logo .circle { width: 174px; height: 306px; left: -22px; top: -9px; position: absolute; background-image: url(img/circle.png); z-index: 100; }
+* html #logo .circle { background-image: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/circle.png',sizingMethod=scale); }
+#logo .circleTr { width: 174px; height: 306px; left: -22px; top: -9px; position: absolute; background-image: url(img/circle.gif); z-index: 10; }
+#logo .point { width: 9px; height: 9px; top: 0; left: 0; position: absolute; background-image: url(img/point.png); z-index: 50; font-size: 1px; }
+* html #logo .point { background-image: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/point.png',sizingMethod=scale); }
+#logo a { position: absolute; z-index: 1000; }
+#logo a.self { width: 105px; height: 52px; left: 12px; top: 39px; }
+#logo a.power { width: 67px; height: 76px; left: 31px; top: 169px; }
+#logo img { padding: 10px; }
+
+.top { position: absolute; top: 4em; }
+.bottom { position: absolute; bottom: 4em; }
+.right { position: absolute; right: 2em; }
+.center { position: absolute; width: 100%; text-align: center; }
+
+.nimbler img { display: block; }
+
+</style>
+</head>
+<body>
+<table class="center">
+	<tr>
+		<td>
+			<div id="logo">
+			<a href="#" class="self">
+			<img src="img/logo.gif" height="32" alt="innova" width="85" /></a>
+			<a href="#" class="power"></a>
+			<div class="circle"></div>
+			</div>
+		</td>
+	</tr>
+</table>
+<div class="top right">
+<a href="#">english version</a>
+</div>
+<div class="bottom center">
+<a href="http://www.macromedia.com/go/getflash">Adobe Flash Player 8.0+</a>
+</div>
+<div class="nimbler bottom right">
+<a href="#">
+<img src="img/nimbler.gif" height="55" alt="nimbler." width="17" /></a>
+<img src="img/creation.gif" height="68" alt="Создание&nbsp;&#151;" width="17" />
+</div>
+</body>
+</html>

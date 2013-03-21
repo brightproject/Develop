@@ -1,0 +1,43 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:xforms="http://www.w3.org/2002/xforms">
+<head>
+<title>XForms AJAX Example</title>
+<xforms:model id="modelData">
+ <xforms:instance xmlns="">
+  <Data>
+   <First>First</First>
+   <Last>Last</Last>
+   <Email>email@email.com</Email>
+  </Data>
+ </xforms:instance>
+</xforms:model>
+<script src="prototype.js"></script>
+</head>
+<body>
+<xforms:input ref="/Data/First">
+<xforms:label>First: </xforms:label>
+</xforms:input><br/>
+<xforms:input ref="/Data/Last">
+<xforms:label>Last: </xforms:label>
+</xforms:input><br/>
+<xforms:input ref="/Data/Email">
+<xforms:label>Email: </xforms:label>
+</xforms:input><br/><br/>
+
+<button onclick="submit()">Submit</button>
+<script>
+function submit()
+{
+ var m = $('modelData');
+ var base = m.getElementsByTagName('Data')[0];
+ var s = new XMLSerializer();
+ var data = ( s.serializeToString( base ) ).toString();
+ new Ajax.Updater( 'result', 'params.php', { method: 'post', parameters: 'data='+escape( data ) } );
+}
+</script>
+
+<br/><br/>
+<div id="result">
+</div>
+
+</body></html>

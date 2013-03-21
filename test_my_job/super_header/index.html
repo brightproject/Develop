@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <title>Супер хедер</title>
+  <meta http-equiv=content-type content="text/html; charset=windows-1251"/>
+  <link rel="stylesheet" type="text/css" media="all" href="style/style.css"/>
+  <script language="javascript" type="text/javascript" src="js/scripts.js"></script>
+
+</head>
+
+<body>
+
+			<div style="top: 8px; width: 960px; height: 299px; overflow: hidden; position: absolute;">
+				<div id="layer_workflow" onclick="manage_layers(this)" style="width: 839px; z-index: 3; position: absolute;">
+					<div style="background: #3290db url(images/layer_workflow_1.jpg) no-repeat; width: 809px; height: 299px;">
+						<div style="margin-left: 40px; margin-top: 125px; width: 290px;" onclick="window.location.href='/solutions/workflow'">
+
+							<h1 style="color: white;">Электронный документооборот</h1>
+							<p style="color: white; font-size: 90%; margin-top: 10px;">Система электронного документооборота и автоматизации бизнес-процессов DocTrix разработана на базе технологий Microsoft SharePoint и предназначена для эффективного внедрения электронной формы документооборота в организации любого уровня с возможностью автоматизации важнейших бизнес-процессов компании.</p>
+						</div>
+					</div>
+					<div style="margin-top: 28px;"><img src="images/layer_workflow_2.gif"></div>
+				</div>
+				<div id="layer_portals" onclick="manage_layers(this)" style="width: 899px; z-index: 2; position: absolute;">
+					<div style="background: #7ec3ed url(images/layer_portals_1.jpg) no-repeat; width: 869px; height: 299px;">
+
+						<div style="margin-left: 122px; margin-top: 125px; width: 290px;" onclick="window.location.href='/solutions/portals'">
+							<h1 style="color: white;">Корпоративные порталы</h1>
+							<p style="color: white; font-size: 90%; margin-top: 10px;">Современный корпоративный портал является единой точкой входа в информационную инфраструктуру организации для каждого сотрудника, обеспечивая взаимодействие структурных подразделений, надежное и безопасное хранение и поиск корпоративной информации, автоматизацию бизнес-процессов и многие другие функции.</p>
+						</div>
+					</div>
+					<div style="margin-top: 28px;"><img src="images/layer_portals_2.gif"></div>
+				</div>
+				<div id="layer_nintex" onclick="manage_layers(this)" style="width: 959px; z-index: 1; position: absolute;">
+
+					<div style="background: #b6d9ef url(images/layer_nintex_1.jpg) no-repeat; width: 929px; height: 299px;">
+						<div style="margin-left: 182px; margin-top: 125px; width: 290px;" onclick="window.location.href='/solutions/automation'">
+							<h1 style="color: #005abe;">Workflow Platform</h1>
+							<p style="color: #3f3f3f; font-size: 90%; margin-top: 10px;">Платформа автоматизации бизнес-процессов позволяет пользователям самостоятельно автоматизировать бизнес процессы любого уровня сложности без привлечения разработчиков, расширяя стандартные возможности Microsoft SharePoint и графического редактора бизнес-процессов «Nintex Workflow».</p>
+						</div>
+					</div>
+					<div style="margin-top: 29px;"><img src="images/layer_nintex_2.gif"></div>
+				</div>
+
+			</div>
+
+
+	<script language="javascript" type="text/javascript">
+		nintex = document.getElementById('layer_nintex');
+		portals = document.getElementById('layer_portals');
+		workflow = document.getElementById('layer_workflow');
+
+		nintex.state = 'open';
+		portals.state = 'open';
+		workflow.state = 'open';
+	</script>
+
+</body>
+
+</html>

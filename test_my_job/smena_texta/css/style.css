@@ -1,0 +1,785 @@
+body {
+	background:url(http://stonyisland.ru/images/fon_g.jpg) top repeat-x #000000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	margin: 0;
+	padding: 0;
+	min-width: 1000px;
+}
+h1 {
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+li {	
+	text-align: left;
+}
+
+
+.adiv {
+	cursor: pointer;
+	text-decoration: none;
+}
+a img {
+	border-color:#FFFFFF;
+}
+a:visited img {
+	border-color:#FFFFFF;
+}
+a:hover img {
+	border-color:#b9020b;
+}
+a { /* Гиперссылка */
+	color:#FFFFFF;
+}
+a:visited {
+	color:#FFFFFF;
+}
+a:hover { /* При наведении курсора */
+	color:#b9020b;
+	text-decoration:underline;
+}
+a p { /* Гиперссылка */
+	text-decoration: none;
+}
+a:hover p { /* При наведении курсора */
+	text-decoration:underline;
+}
+
+/* Логотип, облака и луна */
+#logo {
+	width: 458px;
+	height: 148px;
+	margin: 0 auto;
+	top: 15px;
+	left: 115px;
+	position: absolute;
+}
+#luna {
+	width: 210px;
+	height: 200px;
+	margin: 0 auto;
+	top: 44px;
+	left: -105px;
+	position: absolute;
+}
+#oblako {
+	background: url(http://stonyisland.ru/images/cloud-1.gif) top center no-repeat;
+	position: absolute;
+	top: 135px;
+	left: 0;
+	width: 100%;
+	height: 177px;
+	overflow: hidden;
+	min-width: 1000px;
+}
+#oblako_2 {
+	background: url(http://stonyisland.ru/images/cloud-2.gif) top center no-repeat;
+	position: absolute;
+	top: 105px;
+	left: 0;
+	width: 100%;
+	height: 272px;
+	overflow: hidden;
+	min-width: 1000px;
+}
+#oblako_3 {
+	background: url(http://stonyisland.ru/images/cloud-3.gif) top center no-repeat;
+	position: absolute;
+	top: 115px;
+	left: 0;
+	width: 100%;
+	height: 185px;
+	overflow: hidden;
+	min-width: 1000px;
+}
+#oblako_4 {
+	background: url(http://stonyisland.ru/images/cloud-4.gif) top center no-repeat;
+	position: absolute;
+	top: 80px;
+	left: 0;
+	width: 100%;
+	height: 235px;
+	overflow: hidden;
+	min-width: 1000px;
+}
+/* ----------- */
+
+/* Языки */
+#lang {
+	width: 132px;
+	height: 45px;
+	text-align: center;
+	top: 42px;
+	right: 246px;
+	position: absolute;
+	margin: 20px;
+	border: 20px;
+}
+.lang_line {
+	padding: 0 14px 0px 14px;
+}
+/* ----------- */
+
+/* Слои */
+#glav {
+	width: 1000px;
+	height: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+#r_left {
+	width: 665px;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+}
+#r_right {
+	width: 335px;
+	height: 100%;
+	top: 0;
+	left: 665px;
+	position: absolute;
+}
+#r_niz {
+	width: 665px;
+	height: 100%;
+	margin: 0 auto;
+	top: 595px;
+	left: 0px;
+	position: absolute;
+}
+/* ----------- */
+
+/* Бронирование */
+#cloth {
+	background: url(http://stonyisland.ru/images/hotel-reservation-online.gif) top center no-repeat;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 181px;
+	overflow: hidden;
+	min-width: 1000px;
+}
+
+#online_img {
+	width: 302px;
+	height: 181px;
+	margin: 0 auto;
+	top: 0;
+	right: -100px;
+	position: absolute;
+}
+#online {
+	width: 300px;
+	height: 255px;
+	text-align: left;
+	top: 0;
+	left: 0;
+	position: relative;
+}
+.online_text {
+	padding-top: 152px;
+	line-height: 33px;
+	margin: 0px;
+}
+.online_1 {
+	font-size: 33px;
+	color: #b9020b;
+}
+.online_2 {
+	font-size: 36px;
+	color:#FFFFFF;
+}
+.online_3 {
+	font-size: 30px;
+	color:#FFFFFF;
+}
+.online_4 {
+	font-size: 18px;
+	color:#FFFFFF;
+}
+/* ----------- */
+
+/* Кредитные карты */
+
+#credit {
+	width: 285px;
+	height: 92px;
+	text-align: center;
+	top: 37px;
+	left: 12px;
+	position: relative;
+	line-height: 0
+}
+/* ----------- */
+
+/* Контакты */
+
+#telephone {
+	background:url(http://stonyisland.ru/images/telephone.gif) no-repeat top left;
+	width: 300px;
+	height: 134px;
+	text-align: left;
+	top: 24px;
+	left: 0px;
+	position: relative;
+	text-align: right;
+	line-height: 45px;
+}
+.telephone_text {
+	margin: 0px;
+}
+.telephone_t1 {
+	font-size: 30px;
+	color: #FFFFFF;
+}
+.telephone_t2 {
+	font-size: 28px;
+	color: #b9020b;
+}
+.telephone_t3 {
+	font-size: 20px;
+	color: #9b9b9b;
+}
+.telephone_t4 {
+	font-weight: bold;
+	font-size: 30px;
+	color: #FFFFFF;
+	letter-spacing: -1px;
+}
+.telephone_t5 {
+	font-size: 25px;
+	color: #FFFFFF;
+}
+.telephone_t6 {
+	font-weight: bold;
+	font-size: 30px;
+	color: #FFFFFF;
+	letter-spacing: 2px;
+}
+.telephone_t7 {
+	font-size: 22px;
+	color: #FFFFFF;
+}
+/* ----------- */
+
+/* Скидки */
+#super {
+	width: 300px;
+	height: 134px;
+	top: 20px;
+	left: 500px;
+	margin: 0 auto;
+	position: absolute;
+	color:#FFFFFF
+}
+
+#super2 {
+	width: 300px;
+	height: 134px;
+	top: 20px;
+	left: 500px;
+	margin: 0 auto;
+	position: absolute;
+	color:#FFFFFF;
+	display:none;
+}
+.kol {
+	float: right;
+	padding: 20px 15px 0px 5px;
+}
+.super_t1 {
+	color:#FFFFFF;
+	font-size: 18px;
+	white-space: nowrap;
+}
+.super_t2 {
+	color:#4a4a4a;
+	font-size: 12px;
+	font-weight: bold;
+	padding-top: 10px;
+	padding-left: 12px;
+	margin: 0;
+	text-decoration: underline;
+}
+a:hover .super_t2 {
+	color:#FFFFFF;
+	text-decoration: underline;
+}
+#line {
+	width: 7px;
+	height: 115px;
+	top: 35px;
+	left: 0px;
+	margin: 0 auto;
+	position: absolute;
+	background:#b9020b;
+}
+/* ----------- */
+
+/* Кнопки под логотипом */
+#g_knop_menu {
+	width: 620px;
+	height: 37px;
+	top: 180px;
+	left: 96px;
+	position: absolute;
+}
+#g_km {
+	background:url(http://stonyisland.ru/images/button.gif) no-repeat;
+	width: 220px;
+	height: 52px;
+	float:left;
+}
+a.a_g_km {
+	color:#FFFFFF;
+	text-decoration: none;
+	cursor: pointer;
+}
+a.a_g_km:hover #g_km_c {
+	color:#ba1422;
+	text-decoration: none;
+}
+a.a_g_km:visited {
+	color:#ba1422;
+	text-decoration: none;
+}
+#g_km_l {
+	width:0px;
+	position: relative;
+	left: 0px;
+	top: 0px;
+	float: left
+}
+#g_km_c {
+	height: 52px;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	padding: 9px 0px 0px 22px;
+	font-size: 14px;
+	font-weight:bold;
+	color:#FFFFFF;
+}
+#g_km_c_n {
+	height: 52px;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	padding: 9px 0px 0px 22px;
+	font-size: 14px;
+	font-weight:bold;
+	color:#ba1422;
+}
+#g_km_st {
+	background:url(http://stonyisland.ru/images/km_strel.gif) no-repeat;
+	height: 45px;
+	width:6px;
+	float: left;
+	margin: 7px 0px 0px 10px;
+}
+
+#g_km_st_n {
+	background:url(http://stonyisland.ru/images/km_strel_n.gif) no-repeat;
+	height: 45px;
+	width:6px;
+	float: left;
+	margin: 7px 0px 0px 10px;
+}
+
+.knop_t1 {
+	font-weight: bold;
+	font-size: 14px;
+}
+.knop_t2 {
+	font-weight: normal;
+	font-size: 11px;
+}
+/* ----------- */
+
+/* Здания */
+#zdanie_1 {
+	width: 381px;
+	height: 341px;
+	margin: 0 auto;
+	text-align: left;
+	top: 232px;
+	left: -25px;
+	position: absolute;
+	display: block;
+}
+#zdanie_2 {
+	width: 309px;
+	height: 341px;
+	margin: 0 auto;
+	text-align: left;
+	top: 232px;
+	left: 356px;
+	position: absolute;
+}
+.zdanie_top {
+	display: block;
+}
+/* ----------- */
+
+/* Погода */
+#pogoda {
+	width: 300px;
+	height: 100px;
+	margin: 0 auto;
+	text-align: left;
+	top: 5px;
+	left: 35px;
+	position: absolute;
+}
+.pogoda_t {
+	color:#FFFFFF;
+	font-size: 16px;
+}
+#pogoda_img {
+	width: 150px;
+	height: 70px;
+	margin: 0 auto;
+	text-align: right;
+	top: 20px;
+	left: 0px;
+	position: absolute;
+}
+.pogoda_img_t1 {
+	color:#b9020b;
+	font-size: 26px;
+	padding-right: 0px;
+}
+.pogoda_img_t2 {
+	color: #FFFFFF;
+	font-size: 12px;
+	padding-right: 0px;
+}
+.pogoda_img_t3 {
+	color:#FFFFFF;
+	font-size: 12px;
+	padding-right: 0px;
+}
+#pogoda_val {
+	width: 100px;
+	height: 70px;
+	background:url(http://stonyisland.ru/images/currency.png) no-repeat top left;
+	margin: 0 auto;
+	text-align: right;
+	top: 20px;
+	left: 170px;
+	position: absolute;
+}
+.pogoda_val_t {
+	color:#FFFFFF;
+	font-size: 12px;
+	padding-top: 6px;
+	padding-right: 20px;
+	line-height: 28px;
+	margin:0px;
+}
+.pogoda_val_t1 {
+	color:#4a4a4a;
+	font-size: 12px;
+}
+.pogoda_val_t2 {
+	color:#4a4a4a;
+	font-size: 12px;
+}
+
+#pogoda_pod {
+	width: 170px;
+	height: 20px;
+	margin: 0 auto;
+	text-align: right;
+	top: 90px;
+	left: 100px;
+	position: absolute;
+}
+.pogoda_pod {
+	color:#FFFFFF;
+	font-size: 12px;
+	padding-right: 20px;
+	margin:0px;
+}
+
+.pogoda_pod a {
+text-decoration:none;
+}
+
+/* ----------- */
+
+/* Копирайтер и ссылки */
+#stext {
+	width: 600px;
+	height: 65px;
+	margin: 0 auto;
+	text-align: left;
+	top: 170px;
+	left: 35px;
+	position: absolute;
+	color:#FFFFFF;
+	text-align: justify;
+}
+
+/* Копирайтер и ссылки */
+#copy {
+	width: 350px;
+	height: 65px;
+	margin: 0 auto;
+	text-align: left;
+	top: 730px;
+	left: 35px;
+	position: absolute;
+}
+#copy_hotels {
+	width: 340px;
+	height: 65px;
+	margin: 0 auto;
+	text-align: left;
+	top: 0px;
+	left: 0px;
+	position: absolute;
+	text-align: left;
+	color:#FFFFFF;
+}
+.copy_t {
+	color:#4a4a4a;
+	font-size: 11px;
+	padding-top: 6px;
+	margin:0px;
+}
+#click {
+	width: 550px;
+	height: 45px;
+	margin: 0 auto;
+	text-align: left;
+	top: 760px;
+	left: 335px;
+	position: absolute;
+}
+#links {
+	width: 200px;
+	height: 45px;
+	margin: 0 auto;
+	text-align: left;
+	top: 760px;
+	left: 770px;
+	position: absolute;
+	color:#FFFFFF;
+}
+#cc_hotels {
+	width: 250px;
+	height: 165px;
+	margin: 0 auto;
+	text-align: left;
+	top: 780px;
+	left: 660px;
+	position: absolute;
+}
+#click_hotels {
+	width: 250px;
+	height: 80px;
+	margin: 0 auto;
+	text-align: left;
+	top: 125px;
+	left: 0px;
+	position: absolute;
+	text-align: left;
+}
+/* ----------- */
+
+/* Фотографии гостиницы */
+#foto {
+	background:url(http://stonyisland.ru/images/photos-hotels.jpg) bottom right no-repeat;
+	width: 265px;
+	height: 160px;
+	margin: 0 auto;
+	text-align: left;
+	top: 0px;
+	left: 335px;
+	position: absolute;
+}
+.foto_t {
+	line-height: 28px;
+	margin: 0px;
+}
+.foto_t1 {
+	color:#b9020b;
+	font-size: 36px;
+}
+.foto_t2 {
+	color:#FFFFFF;
+	font-size: 30px;
+}
+
+.table_foto_m {
+	border-collapse: collapse;
+	
+}
+
+.table_foto_m td {
+	margin: 0; padding: 0; outline: none;
+	vertical-align: top;
+	
+}
+/* ----------- */
+
+/* Меню гостинц */
+#knop_menu {
+	width: 620px;
+	height: 37px;
+	top: 237px;
+	right: 10px;
+	position: absolute;
+}
+#km {
+	background:url(http://stonyisland.ru/images/km_c.png) top repeat-x;
+	height:37px;
+	float:left;
+}
+a.a_km {
+	color:#FFFFFF;
+	text-decoration: none;
+	cursor: pointer;
+}
+a.a_km:hover #km_c {
+	color:#ba1422;
+	text-decoration: none;
+}
+a.a_km:visited {
+	color:#ba1422;
+	text-decoration: none;
+}
+#km_l {
+	background:url(http://stonyisland.ru/images/km_l.png) left no-repeat;
+	height:37px;
+	width:14px;
+	position: relative;
+	left: 0px;
+	top: 0px;
+	float: left
+}
+#km_c {
+	height:37px;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	padding: 10px 0px 0px 0px;
+	font-size: 14px;
+	font-weight:bold;
+	color:#FFFFFF;
+}
+#km_c_n {
+	height:37px;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	padding: 10px 0px 0px 0px;
+	font-size: 14px;
+	font-weight:bold;
+	color:#ba1422;
+}
+#km_r {
+	background: url(http://stonyisland.ru/images/km_r.png) right no-repeat;
+	height:37px;
+	width:14px;
+	position: relative;
+	right: 0px;
+	top: 0px;
+	float: right;
+	text-align: left;
+}
+	
+#km_st {
+	background:url(http://stonyisland.ru/images/km_strel.gif) no-repeat;
+	height: 25px;
+	width:6px;
+	float: left;
+	margin: 0px 0px 0px 0px;
+}
+
+#km_st_n {
+	background:url(http://stonyisland.ru/images/km_strel_n.gif) no-repeat;
+	height: 25px;
+	width:6px;
+	float: left;
+	margin: 0px 0px 0px 0px;
+}
+/* ----------- */
+
+/* Текст */
+#r_text {
+	width: 600px;
+	height: 100%;
+	margin: 0 auto;
+	top: 280px;
+	left: 35px;
+	position: absolute;
+	/*color:#c5c8ca;*/
+	color: #FFFFFF;
+	text-align: justify;
+}
+#rg_text {
+	width: 600px;
+	height: 100%;
+	margin: 0 auto;
+	top: 236px;
+	left: 35px;
+	position: absolute;
+	/*color:#c5c8ca;*/
+	color: #FFFFFF;
+	text-align: justify;
+}
+#r_text_bottom {
+	height: 15px;
+}
+#r_text p {
+	text-indent: 0px;
+}
+/* ----------- */
+
+/* Вывод подсказок title и alt */
+#tooltip {
+	BORDER-RIGHT: #ba1422 1px solid;
+	PADDING-RIGHT: 5px;
+	BORDER-TOP: #ba1422 1px solid;
+	PADDING-LEFT: 5px;
+	BACKGROUND: #ffffff;
+	VISIBILITY: hidden;
+	PADDING-BOTTOM: 3px;
+	MARGIN: 0px;
+	FONT: menu;
+	BORDER-LEFT: #ba1422 1px solid;
+	COLOR: #000000;
+	PADDING-TOP:3px;
+	BORDER-BOTTOM: #ba1422 1px solid;
+	POSITION: absolute;
+	z-index: 100;
+}
+/* ----------- */
+
+/* Таблицы */
+table.table_border {
+	text-align: center;
+	vertical-align: middle;	
+	border-collapse:collapse;
+	table-layout: auto;
+
+}
+
+table.table_border tr{
+
+
+}
+
+table.table_border td{
+	border: 1px solid #4f4f4f;
+	padding: 5px;
+}
+
+/* ----------- */

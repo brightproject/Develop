@@ -1,0 +1,81 @@
+#slider4, #slider5, #slider9{
+position: relative; /*leave as is*/
+overflow: hidden; /*leave as is*/
+background: #000 url('../img/colors/red.jpg') top repeat-x;
+border: 1px solid #000;
+padding: 5px 5px 0px 5px;
+width: 520px;
+height: 253px;
+}
+
+#slider4 img, #slider5 img, #slider9 img {
+border: 1px solid #666;
+}
+
+
+#slider4 .contentdiv, #slider5 .contentdiv, #slider9 .contentdiv{
+visibility: hidden; /*leave as is*/
+position: absolute; /*leave as is*/
+left: 15px;  /*leave as is*/
+top: 24px;  /*leave as is*/
+background: white;
+filter:progid:DXImageTransform.Microsoft.alpha(opacity=100);
+-moz-opacity: 1;
+opacity: 1;
+}
+
+#paginate-slider4, #paginate-slider5, #paginate-slider9{
+width: 520px; /*Width of pagination DIV. To equal that of Content Slider's width, take into account the later's left/right paddings!*/
+text-align: center;
+padding: 211px 5px 0px 0px;
+font-weight: bold;
+background-color: transparent;
+font-size: 12px;
+}
+
+#paginate-slider4 a,  #paginate-slider4 a:visited, #paginate-slider5 a,  #paginate-slider5 a:visited, #paginate-slider9 a,  #paginate-slider9 a:visited {
+background: #fff url('../img/colors/light_button.gif') top repeat-x;
+padding: 2px 13px 2px 13px;
+text-decoration: none; 
+color: #cc1a21;
+font-weight: bold;
+font-family: Verdana;
+border: 1px solid #000;
+font-size: 12px;
+}
+
+#paginate-slider4 a.selected, #paginate-slider4 a.selected:hover, #paginate-slider4 a:hover, 
+#paginate-slider5 a.selected, #paginate-slider5 a.selected:hover, #paginate-slider5 a:hover, 
+#paginate-slider9 a.selected, #paginate-slider9 a.selected:hover, #paginate-slider9 a:hover {
+background: #a91a20 url('../img/colors/red_button.gif') top repeat-x;
+color: #fff;
+font-weight: bold;
+border: 1px solid #999;
+font-size: 12px;
+}
+
+.lmovie {
+width: 100%;
+text-align: center;
+color: #fff;
+font-size: 12px;
+font-weight: bold;
+font-family: Verdana;
+text-transform: uppercase;
+padding: 0px 0px 5px 0px;
+text-decoration: none;
+}
+
+.lmovie a, .lmovie a:visited{
+color: #fff;
+text-transform: uppercase;
+text-decoration: none;
+font-size: 12px;
+}
+
+.lmovie a:hover{
+color: #e4e4e4;
+text-transform: uppercase;
+text-decoration: none;
+font-size: 12px;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery Tooltip Plugin Demo</title>
+
+<link rel="stylesheet" href="jquery.tooltip.css" />
+<link rel="stylesheet" href="demo/screen.css" />
+<script src="lib/jquery.js" type="text/javascript"></script>
+<script src="lib/jquery.bgiframe.js" type="text/javascript"></script>
+<script src="lib/jquery.dimensions.js" type="text/javascript"></script>
+<script src="jquery.tooltip.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+$(function() {
+$("#fancy, #fancy2, #fancy3,#fancy4, #fancy5,").tooltip({
+	track: true,
+	delay: 0,
+	showURL: false,
+	fixPNG: true,
+	showBody: " - ",
+	extraClass: "pretty fancy",
+	top: -15,
+	left: 5
+});
+
+});
+</script>
+
+</head>
+<body>
+
+		<legend>Tooltips с экстра классами. Используется для различных tooltip стилей на одной странице</legend>
+
+		<br/>
+		<span id="fancy" title="Это первая">Первая!!!</span><br />
+		<span id="fancy4" title="Это вторая">Вторая!!!</span><br />
+		<span id="fancy5" title="You are dead, this is hell. - Это третья.">Третья!!!</span><br />
+		<span id="fancy2" title="Нука поводил жалом!!!">Текст для наведения!!!Текст для наведения!!!Текст для наведения!!!</span><br />
+		<a href="#" id="fancy3" title="-=Ипаааааааааать колотить=-">Это ссылка .......... сцука!!!</a><br />
+		<p><span id="pretty" title="Я пиздатая подсказка!!!<br />Я пиздатая подсказка!!!">Тут мноооооооооооооооооооооооооооооооооого текста!!!</span></p>
+		<br/>
+		<br/>
+		<br/>
+
+</div>
+
+</body>
+</html>

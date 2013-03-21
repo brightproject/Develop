@@ -1,0 +1,264 @@
+body {
+	font: 9pt Arial, Helvetica, sans-serif;
+	margin: 0px;
+	background: #E5E5E5 url('/default_view/images/background.jpg') repeat-x;
+	background-attachment: fixed;
+}
+
+table {
+	font: 9pt Arial, Helvetica, sans-serif;
+	empty-cells: show;
+	border-collapse: collapse;
+}
+
+table.plain th, table.plain td {
+	padding: 4px;
+	border: 1px solid silver;
+}
+
+img {
+	border: 0px;
+}
+
+a {
+
+}
+
+input, textarea {
+	font: 8pt Tahoma, Arial, Helvetica, sans-serif;
+
+}
+
+.default {
+
+}
+
+.advanced {
+	border: 1px dotted red;
+}
+
+#main_container {
+	border: none;
+	width: 960px;
+	margin-top: 10px;
+}
+
+.comment {
+	font-size: 8pt;
+	color: grey;
+}
+
+.center {
+	text-align: center;
+}
+
+.right {
+	text-align: right;
+}
+
+.ml20 { margin-left: 20px; }
+.ml40 { margin-left: 20px; padding-left: 20px; }
+.bl8 { border-left: 8px solid #EEE; }
+
+/* Header */
+
+#layer_nintex, #layer_portals, #layer_workflow {
+	/*position: relative;*/
+}
+#layer_nintex div, #layer_portals div, #layer_workflow div {
+	float: left;
+	cursor: pointer;
+}
+
+
+/* Menu */
+
+.menu_default {
+	margin: 5px 0px;
+	width: 100%;
+	height: 53px;
+}
+
+.menu_default td {
+	font-size: 11pt;
+	padding: 15px 20px 0px;
+	background: url('/default_view/images/main_menu_back.gif') #a9d33a;
+	vertical-align: top;
+}
+
+.menu_item_default {
+	color: #42560c;
+}
+
+.menu_item_default a {
+	color: #42560c;
+	text-decoration: none;
+}
+
+.menu_item_default_active {
+	background: url('/default_view/images/main_menu_back_active.gif') #729b06 !important;
+	color: white;
+}
+
+.menu_item_default_active a {
+	color: white;
+	text-decoration: none;
+}
+
+.menu_item_default_over {
+	background: url('/default_view/images/main_menu_back_active.gif') #729b06 !important;
+	color: white;
+	cursor: pointer;
+}
+
+.menu_item_default_over a {
+	color: white;
+	text-decoration: none;
+}
+
+.menu_item_separator {
+	width: 1px;
+	padding: 0px 1px 0px 0px !important;
+	background: url('/default_view/images/main_menu_item_separator.gif') #a9d33a !important;
+}
+
+div.submenu {
+	position: absolute;
+	border: 1px dotted grey;
+	padding: 10px 0px;
+	background-color: #E5E5E5;
+	display: none;
+	z-index: 4;
+}
+
+div.submenu p {
+	margin-bottom: 0px;
+	font-size: 9pt;
+	padding: 0px 10px;
+}
+
+/* Body */
+
+h1 {
+	font: Arial, Helvetica, sans-serif;
+	color: #565656;
+	font-size: 13pt;
+	font-weight: bold;
+}
+
+.solutions {
+	border-bottom: 1px dotted silver;
+	/*height: 300px;
+	overflow: auto;*/
+}
+
+.solutions td {
+	padding: 5px 15px 10px;
+}
+
+h1 { /* .solutions */
+	margin-bottom: 5px;
+}
+
+h2 { /* .solutions */
+	font: Tahoma, Arial, Helvetica, sans-serif;
+	color: #3183c8;
+	font-size: 11pt;
+	font-weight: bold;
+	margin: 5px 0px;
+}
+
+h3 { /* .solutions */
+	font: Tahoma, Arial, Helvetica, sans-serif;
+	color: #777777;
+	font-size: 9pt; /* 7pt */
+	font-weight: bold;
+	margin: 5px 0px;
+}
+
+p { /* .solutions */
+	font: Tahoma, Arial, Helvetica, sans-serif;
+	line-height: 13pt;
+	color: #333333;
+	font-size: 9pt; /* 8pt */
+	margin: 5px 0px 10px;
+}
+
+p a { /* .solutions */
+	color: #333;
+	text-decoration: none;
+	border-bottom: 1px dotted #333333;
+}
+
+h2 a { /* .solutions */
+	color: #3183c8;
+	text-decoration: none;
+	border-bottom: 1px dotted #3183c8;
+}
+
+ul { /* .solutions */
+	font: Tahoma, Arial, Helvetica, sans-serif;
+	line-height: 13pt;
+	color: #333333;
+	font-size: 9pt; /* 8pt */
+	margin-top: 5px;
+}
+
+.infobox {
+	width: 310px;
+	padding: 10px;
+}
+
+.infobox table {
+	width: 100%;
+	height: 180px;
+}
+
+.infobox table td {
+	padding: 10px 20px 10px 20px;
+	vertical-align: top;
+}
+
+.infobox h2 {
+	font: Tahoma, Arial, Helvetica, sans-serif;
+	color: #565656;
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+.infobox h3 {
+	font: Tahoma, Arial, Helvetica, sans-serif;
+	color: #729d01;
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+.infobox p {
+	font: Tahoma, Arial, Helvetica, sans-serif;
+	color: #333333;
+	font-size: 10pt;
+	margin: 10px 0px;
+}
+
+
+#solutions_table {
+	border-top: 1px dotted silver;
+	border-right: 1px dotted silver;
+}
+
+#solutions_table th {
+	font-weight: normal;
+	font-size: 8pt;
+	line-height: 10pt;
+}
+
+#solutions_table p {
+	color: gray;
+	font-size: 8pt;
+	line-height: 8pt;
+}
+
+#solutions_table td, #solutions_table th {
+	border-left: 1px dotted silver;
+	text-align: center;
+}

@@ -1,0 +1,23 @@
+.caracta dt {height: 45px;}
+.zakdog {left:-200px;}
+.hintcont {background-image: none; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='crop', src='img/hint-c.png'); height: 5px;}
+.hint-t {background-image: none; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='crop', src='img/hint-t.png');}
+.hint-b {background-image: none; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='crop', src='img/hint-b.png');}
+.oprbot {background: url(../img/oprbot.jpg) no-repeat left bottom;}
+#overlay{
+	background-image: none;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="img/overlay.png", sizingMethod="scale");
+width: 100%;
+position: absolute;
+z-index: 10;
+	}
+.content ol li {
+border: none;
+background: transparent;
+z-index: 0;
+}
+.content ul li {
+border: none;
+background: transparent;
+z-index: 0; 
+}

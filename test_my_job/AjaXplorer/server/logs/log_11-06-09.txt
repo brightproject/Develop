@@ -1,0 +1,4 @@
+11-06-09 1:31:49	127.0.0.1	INFO	shared	Create User	user_id=admin
+11-06-09 1:32:18	127.0.0.1	INFO	admin	Log In	
+11-06-09 1:32:34	127.0.0.1	INFO	admin	Download	files=/INSTALL-SelectMeAndClickEdit.txt
+11-06-09 1:33:25	127.0.0.1	INFO	admin	Switch Repository	rep. id=1

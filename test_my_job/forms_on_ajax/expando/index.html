@@ -1,0 +1,40 @@
+<html>
+<head>
+<script src="prototype.js"></script>
+</head>
+<body>
+<form id="myform">
+<table id="keytable">
+  <tr><td>Keyword</td><td><input type="text" name="keyword_1"></td></tr>
+</table>
+</form>
+
+<input type="button" onclick="addkeyword()" value="Add Keyword">
+<input type="button" onclick="dosubmit()" value="Submit">
+
+<div id="result" style="padding:5px;">
+</div>
+
+<script>
+var nextkeyid = 2;
+function addkeyword()
+{
+  var elTR = $('keytable').insertRow( -1 );
+
+  var elTitleTD = elTR.insertCell( -1 );
+  elTitleTD.appendChild( document.createTextNode( 'Keyword' ) );
+
+  var elInput = document.createElement( 'input' );
+  elInput.type = 'text';
+  elInput.name = 'keyword_'+nextkeyid;
+  nextkeyid++;
+
+  var elInputTD = elTR.insertCell( -1 );
+  elInputTD.appendChild( elInput );
+}
+function dosubmit( ) {
+  new Ajax.Updater( 'result', 'add.php', { method: 'post', parameters: $('myform').serialize() } );
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<title>jQuery Poll Demo</title>
+		<link href="style.css" rel="stylesheet" type="text/css" />
+		<script src="jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="poll.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="container">
+			<div id="header">
+				<h1>jQuery Poll Demo</h1>
+				<h2>Because reloading the page is not in <em>style</em></h2><br /><hr />
+			</div>
+			<div id="left">
+				<div id="poll-container">
+					<h3>Poll</h3>
+					<form id='poll' action="poll.php" method="post" accept-charset="utf-8">
+						<p>Pick your favorite Javascript framework:</p><p>
+						<input type="radio" name="poll" value="opt1" id="opt1" /><label for='opt1'>&nbsp;jQuery</label><br />
+						<input type="radio" name="poll" value="opt2" id="opt2" /><label for='opt2'>&nbsp;Ext JS</label><br />
+						<input type="radio" name="poll" value="opt3" id="opt3" /><label for='opt3'>&nbsp;Dojo</label><br />
+						<input type="radio" name="poll" value="opt4" id="opt4" /><label for='opt4'>&nbsp;Prototype</label><br />
+						<input type="radio" name="poll" value="opt5" id="opt5" /><label for='opt5'>&nbsp;YUI</label><br />
+						<input type="radio" name="poll" value="opt6" id="opt6" /><label for='opt6'>&nbsp;mootools</label><br /><br />
+						<input type="submit" value="Vote &rarr;" /></p>
+					</form>
+				</div>
+			</div>
+
+		</div>
+	</body>
+</html>

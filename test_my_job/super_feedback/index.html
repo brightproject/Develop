@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head> 
+  <title>Customer Feedback 2.0</title>
+
+</head>
+<body>
+
+  <script type="text/javascript">
+    var uservoiceOptions = {
+      key: 'uservoice',
+      host: 'uservoice.uservoice.com', 
+      forum: 'general', 
+      alignment: 'left',
+      background_color:'#f00', 
+      text_color: 'white',
+      hover_color: '#06C',
+      lang: 'en',
+      showTab: true
+    };
+    function _loadUserVoice() {
+      var s = document.createElement('script');
+      s.setAttribute('type', 'text/javascript');
+      s.setAttribute('src', ("js/tab.js");
+      document.getElementsByTagName('head')[0].appendChild(s);
+    }
+    _loadSuper = window.onload;
+    window.onload = (typeof window.onload != 'function') ? _loadUserVoice : function() { _loadSuper(); _loadUserVoice(); };
+  </script>  
+
+</body>
+</html>

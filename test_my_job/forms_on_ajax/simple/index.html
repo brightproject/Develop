@@ -1,0 +1,25 @@
+<?php header("Content-Type: text/html; charset=utf-8"); ?>
+<html>
+<head>
+<script src="prototype.js"></script>
+</head>
+<body>
+<form id="myform">
+<table>
+  <tr><td>First</td><td><input type="text" name="first"></td></tr>
+  <tr><td>Last</td><td><input type="text" name="last"></td></tr>
+  <tr><td>Email</td><td><input type="text" name="email"></td></tr>
+</table>
+<input type="button" onclick="dosubmit()" value="Submit">
+</form>
+<div id="result" style="padding:5px;">
+</div>
+<script>
+function dosubmit( ) {
+  new Ajax.Updater( 'result', 'add.php', { method: 'post',
+    parameters: $('myform').serialize() } );
+  $('myform').reset();
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+#container{ background: #ffffff; padding-bottom: 90px; }
+#portfolio .work a span { display: none; }
+#portfolio{ padding: 0px 35px 0px 70px; }
+#portfolio .work{ border-right: 1px solid #ffffff; border-top: 1px solid #ffffff; float: left; height: 82px; position: relative; width: 295px; }
+#portfolio .work a{ background: url(img/e.gif); color: #ffffff; display: block; height: 58px; left: 0px; padding: 12px 15px; position: absolute; text-decoration: none; top: 0px; width: 265px; }
+#portfolio .work a:hover{ background: url(img/e2.png); }
+#portfolio .work a:hover span{ display: block; }
+#portfolio_work{ min-height: 500px; /*background: url(img/pen.jpg) left 170px no-repeat;*/ padding: 0px 30px 0px 70px; }
+#portfolio .work img{ margin: 0px; }

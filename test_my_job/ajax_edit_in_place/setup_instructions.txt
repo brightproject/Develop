@@ -1,0 +1,5 @@
+1. set up a db and call it whatever you want, or just run product.sql in a db of your choice. 
+2. update config.inc to your db login info and lines 27 + 84 of include/functions.php
+to the direct location where brains.php will reside
+(test by calling the url to brains.php directly in your browser) 
+3. upload index.php and the include directory and test!

@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Аякс рулит</title>
+</head>
+<p>
+<strong>Пример. Ajax-форма без submit():</strong>
+</p>
+
+<div style="float: left;">
+<form action="ajax/ajax_lookup.php" id="formVar2" method="post">
+ 
+    Имя <input id="name21" name="name21" value="Иван" type="text"><br>
+    Фамилия <input id="name22" name="last_name" value="Петров" type="text"><br>
+    <input onclick="$('formVar2').send({update: 'result2' })" value="Отослать" type="button">
+</form>
+</div>
+<div id="result2" style="border: 1px dashed red; margin: 10px; padding: 10px; float: left; width: 200px;">
+&nbsp;<br>
+&nbsp;<br>
+&nbsp;<br>
+</div>

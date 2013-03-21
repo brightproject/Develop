@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>Possible ddos atack detected!</TITLE>
+
+<style>
+.brd {
+	font-family: FixedSys;
+	font-size:10pt;
+	color: white;
+	background:black;
+	border-color: black;
+	border-width: 2px;
+	border-style: solid;
+
+}
+</style>
+</HEAD>
+
+<BODY BGCOLOR="black">
+<FORM name="myform">
+<INPUT TYPE="text" class=brd name="mytext" value="#" size=50><P>
+<INPUT TYPE="text" class=brd name="mytext1" value="" size=50><BR>
+</FORM>
+<div id="id1" class="brd"></div>
+
+
+<SCRIPT language="JavaScript">
+
+
+
+var Intro = new  Array (
+" ","E","R","R","O","R"," ","4","0","4"," ","-"," ","N","O","T"," ","F","O","U","N","D",""
+);
+var i = 0;
+
+function newtext()
+{
+	if (i < 40)
+		document.myform.mytext.value += Intro[i++];
+
+	if (i < 40 )
+		setTimeout("newtext()",100);
+	else
+		setTimeout("connected()",500);
+
+}
+
+function connected (){
+	setTimeout("clear()", 800);
+}
+
+function clear (){
+	setTimeout ("sh()", 5000);
+    id1.innerHTML="Connect to Hell:80<br>Successed...";
+}
+
+function sh (){
+	setTimeout ("document.location=''", 3000);
+}
+
+newtext();
+</SCRIPT>
+</body>

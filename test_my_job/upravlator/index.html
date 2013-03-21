@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript" src="js/jquery.js"></script>
+<script language="javascript" type="text/javascript" src="js/easing.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    jQuery.easing.def = 'easeOutElastic';
+    $('#menu_top_btn').css({top:"0px"}).toggle(
+      function() { 
+        $(this).animate({top:40}, 1000);
+        $('#menu_top').animate({top:-110}, 1000);
+    setCookie('uprav','show',0,'/');
+      },  
+      function() { 
+        $(this).animate({top:0}, 1000);
+        $('#menu_top').animate({top:-150}, 1000);
+    setCookie('uprav','hide',0,'/');
+      })
+if(getCookie('uprav')=='show'){
+    $('#menu_top_btn').css({top:"40px"});
+    $('#menu_top').css({top:-110}, 1000);
+}
+  });
+</script>
+
+  <title>Прыгающий управлятор</title>
+
+</head>
+<body onload="">
+<div id="menu_top_btn"></div>
+<div id="menu_top">
+  <table cellpadding="0" cellspacing="0">
+    <tr>
+      <td><a href="">Меню 1</a></td>
+      <td><a href="">Меню 2</a></td>
+	  <td><a href="">Меню 3</a></td>
+      <td><a href="">Меню 4</a></td>
+      <td><a href="">Меню 5</a></td>
+      <td><a href="">Меню 6</a></td>
+      <td><a href="">Меню 7</a></td>
+      <td><a href="">Меню 8</a></td>
+      <td><a href="">Меню 9</a></td>
+    </tr>
+  </table>
+</div>
+
+</body>
+</html>

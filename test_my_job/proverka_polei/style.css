@@ -1,0 +1,35 @@
+/* Форма заказа */
+
+
+#forma_zakaza { display:none; font-size:10px; color:#000; position:fixed; left:0px; top:0; width:100%; min-height:100%; background:url(images/pixelform.png); z-index:1000; }
+#fzk { position:fixed; margin-left:170px; margin-top:20px; background:url(images/forzkbg.png) no-repeat; z-index:100000; width:400px; height:340px; }
+#close { background:url(images/close.png) no-repeat; width:35px; height:37px; float:right; margin-top:6px; margin-right:5px; cursor:pointer; clear:both; }
+
+#fuckyou { margin-left:23px; margin-top:50px; }
+
+#informload { width:310px; margin-left:auto; margin-right:auto; margin-top:20px; }
+.finp { width:203px; height:15px; border: 1px solid #999999; margin:10px; font-size:10px; }
+#textareaform { height:102px; }
+td.yell { background:#D0DAE6; }
+td.pdr { padding-right:10px; padding-top:10px; }
+td.pdr img { border: 1px solid #999999; }
+#vvedikodsuka { padding-left:10px; }
+
+
+/* onlineZayavka */
+
+#onlainZayavka {
+	border-top: 1px solid #727169;
+	border-bottom: 1px solid #727169;
+	margin: 15px 29px;
+	padding: 28px 0;
+	display:block;
+}
+
+#onlainZayavka a.img {
+	margin-right: 25px;
+}
+
+#onlainZayavka a {
+	font-size: 16px;
+}

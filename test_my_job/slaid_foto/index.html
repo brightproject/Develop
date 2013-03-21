@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251"/>
+	<title>Эффектный слайд фоток</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />	
+
+<link rel="stylesheet" href="css/white-imageMenu.css" type="text/css" media="screen" />
+<script type="text/javascript" src="js/mootools.js"></script>
+<script type="text/javascript" src="js/imageMenu.js"></script>
+
+
+	
+</head>
+
+<body onload="mnogo_main()" onunload="GUnload()">
+
+<div id="wrapper">
+
+	<div class="description"></div>
+
+<div id="imageMenu">
+			<ul>
+				<li class="bk1"><a href="">Тульские кафе и рестораны</a></li>
+				<li class="bk2"><a href="">Банки Тулы</a></li>
+
+				<li class="bk3"><a href="">Автосалоны Тулы</a></li>
+				<li class="bk4"><a href="">Магазины и торговые комплексы Тулы</a></li>
+				<li class="bk5"><a href="">Маршруты тульских автолайнов</a></li>
+				<li class="bk6"><a href="">Образовательные учреждения Тулы</a></li>
+				<li class="bk7"><a href="">Спорт-клубы Тулы</a></li>	
+			</ul>
+
+			</div>
+		
+<script type="text/javascript">
+			
+			window.addEvent('domready', function(){
+				var myMenu = new ImageMenu($$('#imageMenu a'),{openWidth:310, border:2, onOpen:function(e,i){location=(e);}});
+			});
+		</script>	
+
+</div>
+<!--  -->
+
+
+</body>
+</html>

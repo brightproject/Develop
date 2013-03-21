@@ -1,0 +1,6 @@
+5	YUI	1
+6	mootools	2
+4	Prototype	3
+3	Dojo	4
+1	jQuery	5
+2	Ext JS	6

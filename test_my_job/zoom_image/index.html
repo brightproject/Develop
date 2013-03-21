@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=cp1251" />
+	<title>Увеличение картинок</title>
+	<meta http-equiv="Description" content=" AJAX и русские буквы - проблема с кодировкой. " />
+	<meta http-equiv="Keywords" content="AJAX PHP JavaScript HTML скрипты статьи" />
+
+	<base href="" />
+	<link type="text/css" href="css/style.css" rel="stylesheet" />
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.7.2.custom.min.js"></script>
+	<script type="text/javascript" src="js/ui.magnifier.min.js"></script>
+
+
+</head>
+<body>
+<table width="100%" cellpadding="0" cellspacing="0">
+
+<tr><td colspan="3" class="menu tb bb" align="center">
+<div id="magmenu">
+<img src="img/ajax.png" width="60" height="90" alt="ajax" class="cur" />&nbsp;&nbsp;&nbsp;<img src="img/php.png" width="60" height="90" alt="php" class="cur" />&nbsp;&nbsp;&nbsp;<img src="img/javascript.png" width="60" height="90" alt="javascript" class="cur" />&nbsp;&nbsp;&nbsp;<img src="img/html.png" width="60" height="90" alt="html" class="cur" />&nbsp;&nbsp;&nbsp;<img src="img/jquery.png" width="60" height="90" alt="jquery" class="cur" />&nbsp;&nbsp;&nbsp;<img src="img/useful.png" width="60" height="90" alt="useful" class="cur" />&nbsp;&nbsp;&nbsp;
+</div>
+</td></tr></table>
+<script type="text/javascript">
+$('#magmenu').width(700).magnifier({click: function (e,ui){location = $('base').attr('href')+$(ui.current).attr('alt')+'.php';}});
+</script>
+<br />
+
+
+</body>
+</html>

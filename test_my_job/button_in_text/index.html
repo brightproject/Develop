@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+
+	<title>CSS List overflow</title>
+	
+	<meta name="Author" content="Nikita Seleckis" /> 
+	<meta name="Release-Date" content="14.01.2009" />
+	
+	<style type="text/css" media="screen">
+		
+		* {
+			margin: 0; padding: 0;
+		}
+		body{
+			font: normal 13px/28px arial,sans-serif;
+			color: #3c3c3c;
+		}
+		div#root {
+			width: 500px;
+			margin: 0 auto;
+		}
+		h1, h2, h3, h4, h5, h6 {
+			margin-bottom: 16px;
+			margin-top: 32px;
+		}
+		h1 {
+			font: normal 35px/1 serif;
+			color: #12c212;
+		}
+		h2 {
+			font: normal 30px/1 serif;
+			color: #18ad18;
+		}
+		h3 {
+			font: bold 23px/1 serif;
+			color: #228e22;
+		}
+		h4 {
+			font: normal 19px/1 sans-serif;
+			color: #2c6e2c;
+		}
+		h5 {
+			font: bold 14px/1 sans-serif;
+			color: #355035;
+		}
+		h6 {
+			font: bold 12px/1 sans-serif;
+			color: #3c3c3c;
+		}
+		p {
+			margin: 0 0 16px 0;
+			line-height: 20px;
+			font-size: 13px;
+		}
+		
+		
+		.button {
+			display: -moz-inline-box; /* только для FF2 */
+			display: inline-block;
+			background: #83af31 url(button-r.gif) no-repeat right top;
+		}
+		.button.active {
+			vertical-align: bottom; /* нужно для Opera */
+			height: 20px;
+		}
+			.button span {
+				display: block;
+				display: inline-block; /* только для IE6 */
+				padding: 0 10px;
+				height: 100%;
+				background: url(button-l.gif) no-repeat left top;
+				cursor: pointer;
+			}
+			.button.active span{
+				position: relative;
+			}
+
+				/* для всех кроме IE */
+				.button.active span:after {
+					content: " ";
+					display: block;
+					margin-top: -2px;
+					height: 8px;
+					background: url(button-arrow.png) no-repeat top;
+				}
+		.button:link,
+		.button:visited {
+			color: #fff;
+			text-decoration: none;
+		}
+		.button:hover,
+		.button:active {
+			color: #dfd;
+			text-decoration: none;
+		}
+	</style>
+	
+	<!--[if lte IE 7]>
+	<style type="text/css">
+		.button.active {
+			vertical-align: baseline;	/* только для IE */	
+		}
+				.button.active span b {
+					display: block;
+					position: absolute;
+					left: 50%;
+					top: 18px;
+					margin-left: -7.5px;
+					width: 13px;
+					height: 8px;
+					background: url(button-arrow.png) no-repeat top;
+				}
+				
+	</style>
+	<![endif]-->
+	
+	
+</head>
+
+<body>
+	<div id="root">
+		<h1>Строчная кнопка</h1>
+		<h2>Используя элемент «a»</h2>
+		<div class="post">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip <a href="#" title="Нажмите кнопку" class="button"><span>Кнопка как ссылка</span></a> ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+		<h2>Используя элемент «a» с дополнительным элементом</h2>
+		<div class="post">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip <a href="#" title="Нажмите кнопку" class="button active"><span>Кнопка со стрелкой (все)<b></b></span></a> ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+	</div>
+</body>
+</html>

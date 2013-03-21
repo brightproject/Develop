@@ -1,0 +1,30 @@
+<html>
+<head>
+<script src="prototype.js"></script>
+</head>
+<body>
+<form id="logform">
+User: <input type="text" name="user"><br/>
+Password: <input type="password" name="password"><br/>
+<input type="button" onclick="login()" value="Login">
+</form>
+<div id="noway" style="display:none;">
+  No way!
+</div>
+<script>
+function login() {
+  new Ajax.Request( 'login.php',
+  {
+    method: 'post',
+    postBody: $('logform').serialize(),
+    onSuccess: function( transport ) {
+      if( transport.responseText.match( /\<ok\/\>/ ) )
+        window.location = 'home.html';
+      else
+        $('noway').style.display='block';
+    }
+  } );
+}
+</script>
+</body>
+</html>

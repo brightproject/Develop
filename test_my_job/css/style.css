@@ -1,0 +1,205 @@
+body{ margin: 0px; font-family: tahoma, verdana; font-size: 11px; color: #191919; background-color: white; margin:0; padding:0;}
+
+#main {
+margin: 0 auto;
+width:400px;
+border:1px solid #000000; background-color:#ffffff;
+}
+
+#new {
+margin: 0 auto;
+width:400px;
+font-size:14px;
+}
+
+form {margin:0; padding:0;}
+
+body#edit { padding: 0px}
+
+td#site {font-family: arial; font-size: 12px}
+textarea, input {font-size: 12px; font-family: arial}
+
+table {margin: 0px}
+td {font-size: 11px}
+
+input {}
+input#check {width: 20px}
+
+h1 {font-size: 12px; margin-bottom: 8px}
+
+h1#nav_head {font-size: 14px; display: inline}
+
+img {border: none; margin: 0px}
+img#left {float: left}
+img#right {float: right}
+
+#box {text-align: center; color: #C4DDED; font-size: 9px; text-decoration: none; line-height: 8px; display: block; float: left; margin-right: 10px}
+
+a:hover#box {color: #D7EEFD}
+
+a#box2 {text-align: center; color: #2477A2; font-size: 9px; text-decoration: none; line-height: 8px; }
+
+a:hover#box2 {color: #2384B8}
+
+input#box2 {width: 22px; float: left}
+
+textarea {width: 100%; height: 100%}
+
+a {color: #2477A2; text-decoration: none}
+
+a:hover {color: #2384B8; text-decoration: underline}
+
+/** Навигационная панель **/
+td#head, td#bar_nav {background: #2477A2; vertical-align: top; font-family: arial; font-size: 10px; color: #C4DDED; height: 32px; line-height: 10px; padding: 2px 0px 0px 20px}
+
+td#head a {color: #C4DDED;}
+
+td#bar_nav_cut {font-family: arial; font-size: 10px; color: #C4DDED; background: url(../i/top_background.gif) repeat-x 0px 0px; margin: 0px; padding: 0px 0px 0px 20px}
+
+td#bar_nav {border-left: #fff solid 1px}
+
+h1#head {font-size: 11px;}
+
+img#head {vertical-align: top}
+
+/** Таблица вывода результатов **/
+td#list {padding-top: 2px}
+
+/* Заголовок */
+td#head_t, td#head_t2, td#head_t1 {border: solid 1px #2477A2; background: #C4DDED; color: #2477A2; font-size: 11px; font-weight: 600; padding: 4px 10px}
+
+td#head_t {border-right: none}
+td#head_t1 {padding: 4px 10px 4px 5px; border-right: none;}
+
+/* Нулевая строка */
+td#col_0 {font-size: 1px; height: 2px}
+
+/* Строка 1-го типа */
+tr.col_1 {background: #F5FBFE; color: #20709A;}
+tr.col_1 td { border-bottom: 1px solid white; padding: 3px 6px 3px 6px;}
+
+
+/* Строка 2-го типа */
+tr.col_2 {background: #E7F5FE; color: #126B9A;}
+tr.col_2 td { border-bottom: 1px solid white; padding: 3px 6px 3px 6px;}
+
+/* Невидимые строки */
+tr.col_3, tr.col_4 {background: #F5F5F5; color: #777777; }
+tr.col_3 td, tr.col_4 td, tr.col_5 td { border-bottom: 1px solid white; padding: 3px 6px 3px 6px;}
+tr.col_3 td a {color: #777777;}
+tr.col_4 td a {color: #000000;}
+.comment { background-color: #E5E5E5; }
+
+tr.col_5 {background: #FFEBEB; color: #126B9A; padding: 3px 0 3px 12px;}
+
+tr.col_selected {background-color: #FFFFD1; }
+tr.col_selected td { border-bottom: 1px solid white; padding: 3px 6px 3px 6px;}
+
+/* Полная строка */
+td#col_3 {border: solid 1px #2477A2; background: #E7F5FE; height: 32px; padding-left: 12px; color: #20709A}
+
+/* Редактор */
+td#modul {padding: 5px 20px; vertical-align: top}
+
+td#bottom {color: #fff; height: 20px; text-align: right; padding-right: 25px}
+
+#close_box {position: absolute; right: 0px; top: 0px; width: 60px; border-left: 2px solid #fff; text-align: center; padding: 0px 0px 0px 15px}
+
+table#edit {background: #2477A2; width: 100%}
+
+td#row {background: #ECF7FE; vertical-align: top; padding-left: 10px}
+
+td#attach {width: 170px; background: #ECF7FE; border: solid 1px #2477A2; color: #2477A2; vertical-align: top}
+
+td#gal {width: 100%; background: #ECF7FE; color: #2477A2; vertical-align: top}
+
+td#img_gal {width: 25%; background: #ECF7FE; padding: 5px 10px}
+
+#m_head {font-size: 11px; width: 100%; font-weight: 600; margin: 0px; padding: 2px 0px 4px 7px; color: #2477A2; }
+
+div.attach_box {padding: 4px 7px; border-bottom: solid 1px #2477A2} 
+
+input#small {font-size: 10px; height: 16px; border: solid 1px #2477A2; width: 150px}
+
+#but_add {background: url(../i/but3_add.gif) no-repeat 0px 1px; border: none; cursor: pointer; color: #2477A2; font-size: 10px; padding: 0px 10px; width: 100px; height: 12px}
+
+input#del {display: inline; width: 14px; height: 14px; border: 1px solid red}
+
+
+.center { text-align: center; }
+.center a { font-weight: bold; color: #000000;}
+.center a:link { font-weight: normal; color: #126B9A;}
+.center a:visited { font-weight: normal; color: #126B9A;}
+
+.topbar {font-family: arial; font-size: 10px; color: #C4DDED; margin: 0px; padding: 2px 0px 0px 10px; background-color:#1875A3; text-align:center;}
+
+.topbar a {color: #C4DDED; text-decoration: none}
+.topbar a:hover {color: #D7EEFD}
+	
+.navbar { background-color:#1875A3; color: #C4DDED; font-size: 14px; padding: 0px 0 0px 10px; text-align:left;}
+.navbar p {margin:0; padding:0;}
+.navbar div {padding: 3px 0 5px 0px;  background-color:#1875A3; font-size: 12px; text-align: center; height: 22px; }
+.navbar a {color: #C4DDED; text-decoration: none}
+.navbar a:hover {color: #C4DDED; text-decoration: underline}
+
+.inpath { font-size: 10px; height: 10px;}
+
+.listalka { text-align: center; }
+.listalka a {color: #97B2CB;}
+.listalka a:link {color: #2477A2; font-weight: bold;}
+.listalka a:visited {color: #2477A2; font-weight: bold;}
+
+.userbox {color: #C4DDED; padding-right: 10px; text-align: right; position: absolute; top: 5px; width: 100%; }
+.userbox a {color: #C4DDED; text-decoration: underline;}
+
+
+a.arrow {text-decoration: none;}
+a.arrow:hover {color: red; text-decoration: none;}
+
+
+
+
+/* Всплывающие подсказки */
+
+
+div { margin: 0; padding: 0; font-size: small; color: #333 }
+
+
+
+
+#tooltip.pretty {
+	font-family: Arial;
+	border: none;
+	width: 210px;
+	padding:20px;
+	height: 135px;
+	opacity: 0.6;
+	background: url('../jquery_ajax/jquery_tooltip/demo/shadow.png');
+}
+#tooltip.pretty h3 {
+	margin-bottom: 0.75em;
+	font-size: 12pt;
+	width: 220px;
+	text-align: center;
+}
+#tooltip.pretty div { width: 220px; text-align: left; }
+
+#tooltip.fancy {
+	background: url('../jquery_ajax/jquery_tooltip/demo/shadow.png');
+	padding-top: 5em;
+	height: 100px;
+}
+#tooltip.fancy.viewport-right {
+	background: url('../jquery_ajax/jquery_tooltip/demo/shadow_reverse.png');
+}
+
+
+#tooltip {
+	position: absolute;
+	z-index: 3000;
+	border: 1px solid #111;
+	background-color: #eee;
+	padding: 5px;
+	opacity: 0.85;
+}
+#tooltip h3, #tooltip div { margin: 0; }
