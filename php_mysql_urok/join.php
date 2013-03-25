@@ -20,17 +20,17 @@
 	$result = mysql_query($sql) or die(mysql_error());  
 	while($row = mysql_fetch_array($result)){ // переменную запроса выборки необходимо обработать специальной функцией mysql_fetch_array()
 	  $content .= '<div class="post" id="mid-' . $row['mid'] . '">'; // div оборачивающий запись
-	  $content .= '<span class="time">#' . $row['mid'] . ' от ' . date('d-m-Y', $row['created']) . '</span><h2>' . $row['title'] . '</h2>'; 	// выводим время и заголовок
+	  $content .= '<span class="time"><b>Запись №</b>' . $row['mid'] . ' от ' . date('d-m-Y', $row['created']) . '</span><h2>' . $row['title'] . '</h2>'; 	// выводим время и заголовок
 	  $content .= '<p>' . $row['bodytext'] . '</p>'; // выводим текст сообщения
 	  if(!empty($row['filename'])){
-	    $content .= '<p>Приложение: <a target="_blank" href="/'. $row['filepath'] .'">'. $row['filename'] .'</a></p>';
+	    $content .= '<p>Приложение: <a target="_blank" href="'. $row['filepath'] .'">'. $row['filename'] .'</a></p>';
 	  }
-	  $content .= '<a href="index.php?admin=update&mid=' . $row['mid'] . '">Редактировать сообщение</a>'; // добавляем ссылку на редактирование сообщения
-	  $content .= '<a href="index.php?admin=delete&mid=' . $row['mid'] . '">Удалить сообщение</a>'; //добавляем ссылку на удаление сообщения
+	  $content .= '<a href="join.php?admin=update&mid=' . $row['mid'] . '">Редактировать сообщение</a>'; // добавляем ссылку на редактирование сообщения
+	  $content .= '<a href="join.php?admin=delete&mid=' . $row['mid'] . '">Удалить сообщение</a>'; //добавляем ссылку на удаление сообщения
 	  $content .= '</p>';
 	  $content .= '</div>'; // конец оборачивающего div'a
 	}
-	$content .= '<p><a href="index.php?admin=add">Добавить сообщение</a></p>';
+	$content .= '<p><a href="join.php?admin=add">Добавить сообщение</a></p>';
 	
 	$content .= '<h2>LEFT JOIN</h2>';
 	$sql = 'SELECT * FROM Messages LEFT JOIN Files ON Messages.mid=Files.fid ORDER BY mid DESC';
@@ -40,14 +40,14 @@
 	  $content .= '<span class="time">#' . $row['mid'] . ' от ' . date('d-m-Y', $row['created']) . '</span><h2>' . $row['title'] . '</h2>'; 	// выводим время и заголовок
 	  $content .= '<p>' . $row['bodytext'] . '</p>'; // выводим текст сообщения
 	  if(!empty($row['filename'])){
-	    $content .= '<p>Приложение: <a target="_blank" href="/'. $row['filepath'] .'">'. $row['filename'] .'</a></p>';
+	    $content .= '<p>Приложение: <a target="_blank" href="'. $row['filepath'] .'">'. $row['filename'] .'</a></p>';
 	  }
-	  $content .= '<a href="index.php?admin=update&mid=' . $row['mid'] . '">Редактировать сообщение</a>'; // добавляем ссылку на редактирование сообщения
-	  $content .= '<a href="index.php?admin=delete&mid=' . $row['mid'] . '">Удалить сообщение</a>'; //добавляем ссылку на удаление сообщения
+	  $content .= '<a href="join.php?admin=update&mid=' . $row['mid'] . '">Редактировать сообщение</a>'; // добавляем ссылку на редактирование сообщения
+	  $content .= '<a href="join.php?admin=delete&mid=' . $row['mid'] . '">Удалить сообщение</a>'; //добавляем ссылку на удаление сообщения
 	  $content .= '</p>';
 	  $content .= '</div>'; // конец оборачивающего div'a
 	}
-	$content .= '<p><a href="index.php?admin=add">Добавить сообщение</a></p>';
+	$content .= '<p><a href="join.php?admin=add">Добавить сообщение</a></p>';
 	
 	$content .= '<h2>LEFT JOIN без пересечений</h2>';	
 	$sql = 'SELECT * FROM Messages LEFT JOIN Files ON Messages.mid=Files.fid WHERE Files.fid IS NULL ORDER BY mid DESC';
@@ -57,14 +57,14 @@
 	  $content .= '<span class="time">#' . $row['mid'] . ' от ' . date('d-m-Y', $row['created']) . '</span><h2>' . $row['title'] . '</h2>'; 	// выводим время и заголовок
 	  $content .= '<p>' . $row['bodytext'] . '</p>'; // выводим текст сообщения
 	  if(!empty($row['filename'])){
-	    $content .= '<p>Приложение: <a target="_blank" href="/'. $row['filepath'] .'">'. $row['filename'] .'</a></p>';
+	    $content .= '<p>Приложение: <a target="_blank" href="'. $row['filepath'] .'">'. $row['filename'] .'</a></p>';
 	  }
-	  $content .= '<a href="index.php?admin=update&mid=' . $row['mid'] . '">Редактировать сообщение</a>'; // добавляем ссылку на редактирование сообщения
-	  $content .= '<a href="index.php?admin=delete&mid=' . $row['mid'] . '">Удалить сообщение</a>'; //добавляем ссылку на удаление сообщения
+	  $content .= '<a href="join.php?admin=update&mid=' . $row['mid'] . '">Редактировать сообщение</a>'; // добавляем ссылку на редактирование сообщения
+	  $content .= '<a href="join.php?admin=delete&mid=' . $row['mid'] . '">Удалить сообщение</a>'; //добавляем ссылку на удаление сообщения
 	  $content .= '</p>';
 	  $content .= '</div>'; // конец оборачивающего div'a
 	}
-	$content .= '<p><a href="index.php?admin=add">Добавить сообщение</a></p>';
+	$content .= '<p><a href="join.php?admin=add">Добавить сообщение</a></p>';
 
 
 	$content .= '<h2>RIGHT JOIN</h2>';	
@@ -75,14 +75,14 @@
 	  $content .= '<span class="time">#' . $row['mid'] . ' от ' . date('d-m-Y', $row['created']) . '</span><h2>' . $row['title'] . '</h2>'; 	// выводим время и заголовок
 	  $content .= '<p>' . $row['bodytext'] . '</p>'; // выводим текст сообщения
 	  if(!empty($row['filename'])){
-	    $content .= '<p>Приложение: <a target="_blank" href="/'. $row['filepath'] .'">'. $row['filename'] .'</a></p>';
+	    $content .= '<p>Приложение: <a target="_blank" href="'. $row['filepath'] .'">'. $row['filename'] .'</a></p>';
 	  }
-	  $content .= '<a href="index.php?admin=update&mid=' . $row['mid'] . '">Редактировать сообщение</a>'; // добавляем ссылку на редактирование сообщения
-	  $content .= '<a href="index.php?admin=delete&mid=' . $row['mid'] . '">Удалить сообщение</a>'; //добавляем ссылку на удаление сообщения
+	  $content .= '<a href="join.php?admin=update&mid=' . $row['mid'] . '">Редактировать сообщение</a>'; // добавляем ссылку на редактирование сообщения
+	  $content .= '<a href="join.php?admin=delete&mid=' . $row['mid'] . '">Удалить сообщение</a>'; //добавляем ссылку на удаление сообщения
 	  $content .= '</p>';
 	  $content .= '</div>'; // конец оборачивающего div'a
 	}
-	$content .= '<p><a href="index.php?admin=add">Добавить сообщение</a></p>';	
+	$content .= '<p><a href="join.php?admin=add">Добавить сообщение</a></p>';	
 	
 	$content .= '<h2>RIGHT JOIN без пересечений</h2>';	
 	$sql = 'SELECT * FROM Messages RIGHT JOIN Files ON Messages.mid=Files.fid WHERE Messages.mid IS NULL ORDER BY mid DESC';
@@ -92,14 +92,14 @@
 	  $content .= '<span class="time">#' . $row['mid'] . ' от ' . date('d-m-Y', $row['created']) . '</span><h2>' . $row['title'] . '</h2>'; 	// выводим время и заголовок
 	  $content .= '<p>' . $row['bodytext'] . '</p>'; // выводим текст сообщения
 	  if(!empty($row['filename'])){
-	    $content .= '<p>Приложение: <a target="_blank" href="/'. $row['filepath'] .'">'. $row['filename'] .'</a></p>';
+	    $content .= '<p>Приложение: <a target="_blank" href="'. $row['filepath'] .'">'. $row['filename'] .'</a></p>';
 	  }
-	  $content .= '<a href="index.php?admin=update&mid=' . $row['mid'] . '">Редактировать сообщение</a>'; // добавляем ссылку на редактирование сообщения
-	  $content .= '<a href="index.php?admin=delete&mid=' . $row['mid'] . '">Удалить сообщение</a>'; //добавляем ссылку на удаление сообщения
+	  $content .= '<a href="join.php?admin=update&mid=' . $row['mid'] . '">Редактировать сообщение</a>'; // добавляем ссылку на редактирование сообщения
+	  $content .= '<a href="join.php?admin=delete&mid=' . $row['mid'] . '">Удалить сообщение</a>'; //добавляем ссылку на удаление сообщения
 	  $content .= '</p>';
 	  $content .= '</div>'; // конец оборачивающего div'a
 	}
-	$content .= '<p><a href="index.php?admin=add">Добавить сообщение</a></p>';		
+	$content .= '<p><a href="join.php?admin=add">Добавить сообщение</a></p>';		
 
 	$content .= '<h2>Эмуляция запроса FULL OUTER JOIN</h2>';	 
 	$sql = 'SELECT * FROM Messages LEFT JOIN Files ON Messages.mid = Files.fid UNION SELECT * FROM Messages RIGHT JOIN Files ON Messages.mid = Files.fid';
@@ -109,14 +109,14 @@
 	  $content .= '<span class="time">#' . $row['mid'] . ' от ' . date('d-m-Y', $row['created']) . '</span><h2>' . $row['title'] . '</h2>'; 	// выводим время и заголовок
 	  $content .= '<p>' . $row['bodytext'] . '</p>'; // выводим текст сообщения
 	  if(!empty($row['filename'])){
-	    $content .= '<p>Приложение: <a target="_blank" href="/'. $row['filepath'] .'">'. $row['filename'] .'</a></p>';
+	    $content .= '<p>Приложение: <a target="_blank" href="'. $row['filepath'] .'">'. $row['filename'] .'</a></p>';
 	  }
-	  $content .= '<a href="index.php?admin=update&mid=' . $row['mid'] . '">Редактировать сообщение</a>'; // добавляем ссылку на редактирование сообщения
-	  $content .= '<a href="index.php?admin=delete&mid=' . $row['mid'] . '">Удалить сообщение</a>'; //добавляем ссылку на удаление сообщения
+	  $content .= '<a href="join.php?admin=update&mid=' . $row['mid'] . '">Редактировать сообщение</a>'; // добавляем ссылку на редактирование сообщения
+	  $content .= '<a href="join.php?admin=delete&mid=' . $row['mid'] . '">Удалить сообщение</a>'; //добавляем ссылку на удаление сообщения
 	  $content .= '</p>';
 	  $content .= '</div>'; // конец оборачивающего div'a
 	}
-	$content .= '<p><a href="index.php?admin=add">Добавить сообщение</a></p>';	
+	$content .= '<p><a href="join.php?admin=add">Добавить сообщение</a></p>';	
 	
 	$content .= '<h2>Эмуляция запроса FULL OUTER JOIN без пересечений</h2>';	 
 $sql = 'SELECT * FROM Messages LEFT JOIN Files ON Messages.mid = Files.fid WHERE Files.fid IS NULL 
@@ -128,14 +128,14 @@ SELECT * FROM Messages RIGHT JOIN Files ON Messages.mid = Files.fid WHERE Messag
 	  $content .= '<span class="time">#' . $row['mid'] . ' от ' . date('d-m-Y', $row['created']) . '</span><h2>' . $row['title'] . '</h2>'; 	// выводим время и заголовок
 	  $content .= '<p>' . $row['bodytext'] . '</p>'; // выводим текст сообщения
 	  if(!empty($row['filename'])){
-	    $content .= '<p>Приложение: <a target="_blank" href="/'. $row['filepath'] .'">'. $row['filename'] .'</a></p>';
+	    $content .= '<p>Приложение: <a target="_blank" href="'. $row['filepath'] .'">'. $row['filename'] .'</a></p>';
 	  }
-	  $content .= '<a href="index.php?admin=update&mid=' . $row['mid'] . '">Редактировать сообщение</a>'; // добавляем ссылку на редактирование сообщения
-	  $content .= '<a href="index.php?admin=delete&mid=' . $row['mid'] . '">Удалить сообщение</a>'; //добавляем ссылку на удаление сообщения
+	  $content .= '<a href="join.php?admin=update&mid=' . $row['mid'] . '">Редактировать сообщение</a>'; // добавляем ссылку на редактирование сообщения
+	  $content .= '<a href="join.php?admin=delete&mid=' . $row['mid'] . '">Удалить сообщение</a>'; //добавляем ссылку на удаление сообщения
 	  $content .= '</p>';
 	  $content .= '</div>'; // конец оборачивающего div'a
 	}
-	$content .= '<p><a href="index.php?admin=add">Добавить сообщение</a></p>';		
+	$content .= '<p><a href="join.php?admin=add">Добавить сообщение</a></p>';		
 	
 	print $content;
 	
