@@ -2,7 +2,7 @@
 	//Вывод всех ошибок
 	// error_reporting(E_ALL); 
 	// error_reporting(0);  
-class simpleCMS {  // класс управления
+class crud {  // класс управления
 
   public $host = 'localhost'; //переменные для работы с БД
   public $username = 'root';
