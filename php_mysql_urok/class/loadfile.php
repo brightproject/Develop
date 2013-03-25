@@ -1,4 +1,7 @@
 <?php
+	//Вывод всех ошибок
+	// error_reporting(E_ALL); 
+	// error_reporting(0); 
 class loadfile {  // класс управления
 
   public $host = 'localhost'; //переменные для работы с БД
@@ -37,9 +40,9 @@ PRIMARY KEY(mid),
 title varchar(15),
 bodytext text,
 created  int(11),
-file int(11),
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
-CREATE TABLE IF NOT EXISTS Files
+file int(11)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1";
+$sql = "CREATE TABLE IF NOT EXISTS Files
 (
 fid int NOT NULL AUTO_INCREMENT,
 PRIMARY KEY(fid),
@@ -47,8 +50,8 @@ filename varchar(255),
 filepath varchar(255),
 filemime varchar(255),
 filesize int(10),
-timestamp int(11),
-)ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;";
+timestamp int(11)
+)ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1";
 
     $result = mysql_query($sql);   
     print_r($result);	
@@ -56,27 +59,26 @@ timestamp int(11),
 
   public function display_public() { // метод вывода сообщений
     $content = '';
-	$sql = 'SELECT * FROM Messages LEFT JOIN Files ON Messages.fid=Files.fid ORDER BY mid DESC';
+	$sql = 'SELECT * FROM Messages LEFT JOIN Files ON Messages.mid=Files.fid ORDER BY mid DESC';
 	$result = mysql_query($sql) or die(mysql_error());  
 	while($row = mysql_fetch_array($result)){ // переменную запроса выборки необходимо обработать специальной функцией mysql_fetch_array()
 	  $content .= '<div class="post" id="mid-' . $row['mid'] . '">'; // div оборачивающий запись
-	  $content .= '<span class="time">#' . $row['mid'] . ' от ' . date('d-m-Y', $row['created']) . '</span><h2>' . $row['title'] . '</h2>'; 	// выводим время и заголовок
+	  $content .= '<span class="time"><b>Запись №</b>' . $row['mid'] . ' от ' . date('d-m-Y', $row['created']) . '</span><h2>' . $row['title'] . '</h2>'; 	// выводим время и заголовок
 	  $content .= '<p>' . $row['bodytext'] . '</p>'; // выводим текст сообщения
 	  if(!empty($row['filename'])){
 	    $content .= '<p>Приложение: <a target="_blank" href="/'. $row['filepath'] .'">'. $row['filename'] .'</a></p>';
 	  }
-	  $content .= '<a href="/index.php?admin=update&mid=' . $row['mid'] . '">Редактировать сообщение</a>'; // добавляем ссылку на редактирование сообщения
-	  $content .= '<a href="/index.php?admin=delete&mid=' . $row['mid'] . '">Удалить сообщение</a>'; //добавляем ссылку на удаление сообщения
+	  $content .= '<a href="index.php?admin=update&mid=' . $row['mid'] . '">Редактировать сообщение</a>'; // добавляем ссылку на редактирование сообщения
+	  $content .= '<a href="index.php?admin=delete&mid=' . $row['mid'] . '">Удалить сообщение</a>'; //добавляем ссылку на удаление сообщения
 	  $content .= '</p>';
 	  $content .= '</div>'; // конец оборачивающего div'a
 	}
-	$content .= '<p><a href="/index.php?admin=add">Добавить сообщение</a></p>';
+	$content .= '<p><a href="index.php?admin=add">Добавить сообщение</a></p>';
     return $content;
   }
   
   public function display_admin() { // метод ввода сообщения
-	$content = '';
-	
+	$content = '';	
 	$content .=	'<form action="' . $_SERVER['PHP_SELF'] . '" method="post" enctype="multipart/form-data">'; 
 	$content .=	  '<label for="title">Имя:</label><br />';
 	$content .=	  '<input name="title" id="title" type="text" maxlength="150" />';
@@ -87,7 +89,7 @@ timestamp int(11),
 	$content .=	  '<div class="clear"></div>';
 	$content .=	  '<input type="submit" value="Добавить сообщение" />';
 	$content .=	'</form>';	
-	$content .=	'<p><a href="/index.php">Вернуться на главную</a></p>';
+	$content .=	'<p><a href="index.php">Вернуться на главную</a></p>';
 
     return $content;
   }
@@ -98,7 +100,7 @@ timestamp int(11),
 	  $result = mysql_query('SELECT * FROM Messages WHERE mid='.$message_id); // запрашиваем нужную нам строку где mid совпадает с нашим значением
 	  $message = mysql_fetch_object($result); // обрабатываем результат в переменную message
 	  $content = '';
-	  $content .=	'<form action="/index.php?admin=update" method="post" enctype="multipart/form-data">'; // отправляем результаты формы на эту же страницу
+	  $content .=	'<form action="index.php?admin=update" method="post" enctype="multipart/form-data">'; // отправляем результаты формы на эту же страницу
 	  $content .=	  '<label for="title">Имя:</label><br />';
 	  $content .=	  '<input name="title" id="title" type="text" maxlength="150" value=' . $message->title .' />'; // добавляем значение заголовка
 	  $content .=	  '<div class="clear"></div>';
@@ -108,15 +110,15 @@ timestamp int(11),
 	  $content .=	  '<div class="clear"></div>';
 	  $content .=	  '<input type="submit" value="Сохранить" />';
 	  $content .=	'</form>';	
-	  $content .=	'<p><a href="/index.php">Вернуться на главную</a></p>';
+	  $content .=	'<p><a href="index.php">Вернуться на главную</a></p>';
 	}else{
 	  if($_POST){ // проверяем результаты отправки формы
 		mysql_query('UPDATE Messages SET title="'.$_POST["title"].'", bodytext="'.$_POST["bodytext"].'" WHERE mid='.$_POST["mid"]);
 		$content .= '<p>Сообщение изменено!';
-		$content .=	'<p><a href="/index.php#mid-'.$_POST['mid'].'">Перейти к записи</a></p>';
+		$content .=	'<p><a href="index.php?mid-'.$_POST['mid'].'">Перейти к записи</a></p>';
 	  }else{
 	    $content .=   '<p>Нет значения mid!</p>';
-	    $content .=	'<p><a href="/index.php">Вернуться на главную</a></p>';
+	    $content .=	'<p><a href="index.php">Вернуться на главную</a></p>';
 	  }
 	}
 	return $content;
