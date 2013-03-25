@@ -1,17 +1,17 @@
 <?
-//Âûâîä âñåõ îøèáîê
+//Ð’Ñ‹Ð²Ð¾Ð´ Ð²ÑÐµÑ… Ð¾ÑˆÐ¸Ð±Ð¾Ðº
 error_reporting(E_ALL);  
-//Ðåøåíèå ïðîáëåì ñ ðóññêîé êîäèðîâêîé
+//Ð ÐµÑˆÐµÐ½Ð¸Ðµ Ð¿Ñ€Ð¾Ð±Ð»ÐµÐ¼ Ñ Ñ€ÑƒÑÑÐºÐ¾Ð¹ ÐºÐ¾Ð´Ð¸Ñ€Ð¾Ð²ÐºÐ¾Ð¹
 //header("Content-Type: text/html; charset=cp1251"); 
-//Ëèáî ñîçäàåì ôàéë .htaccess
-//È ïèøåì â íåì AddDefaultCharset cp1251
+//Ð›Ð¸Ð±Ð¾ ÑÐ¾Ð·Ð´Ð°ÐµÐ¼ Ñ„Ð°Ð¹Ð» .htaccess
+//Ð˜ Ð¿Ð¸ÑˆÐµÐ¼ Ð² Ð½ÐµÐ¼ AddDefaultCharset cp1251
 // $db    = new SafeMysql();
 include 'safemysql.class.php';
 $newtablename = 'new';
 $table = 'new';
 $db = 'test';
 $db    = new SafeMysql(array('db' => $db));
-//Ñîçäàíèå íîâîé òàáëèöû
+//Ð¡Ð¾Ð·Ð´Ð°Ð½Ð¸Ðµ Ð½Ð¾Ð²Ð¾Ð¹ Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ñ‹
 $db->query("CREATE TABLE IF NOT EXISTS ?n (id INTEGER(2) NOT NULL AUTO_INCREMENT PRIMARY KEY, name VARCHAR(15))",$newtablename);
 // CREATE TABLE IF NOT EXISTS `test` (
   // `id` int(2) NOT NULL AUTO_INCREMENT,

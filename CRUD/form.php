@@ -2,13 +2,13 @@
 <input type="text" name="name" value="<?=$row['name']?>"><br>
 <input type="hidden" name="id" value="<?=$row['id']?>">
 <input type="submit"><br>
-<a href="?">Вернуться обратно к списку</a>
+<a href="?">Р’РµСЂРЅСѓС‚СЊСЃСЏ РѕР±СЂР°С‚РЅРѕ Рє СЃРїРёСЃРєСѓ</a>
 </form>
 <? if ($row['id']):?>
 <div align=right>
 <form method="POST">
 <input type="hidden" name="delete" value="<?=$row['id']?>">
-<input type="submit" value="Удалить"><br>
+<input type="submit" value="РЈРґР°Р»РёС‚СЊ"><br>
 </form>
 </div>
 <?endif?>
