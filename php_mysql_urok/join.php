@@ -1,8 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru" dir="ltr">
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-	<meta http-equiv="Content-Type" con	tent="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Изучаем PHP || Загружаем файлы</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
@@ -24,12 +24,12 @@
 	  if(!empty($row['filename'])){
 	    $content .= '<p>Приложение: <a target="_blank" href="/'. $row['filepath'] .'">'. $row['filename'] .'</a></p>';
 	  }
-	  $content .= '<a href="/index.php?admin=update&mid=' . $row['mid'] . '">Редактировать сообщение</a>'; // добавляем ссылку на редактирование сообщения
-	  $content .= '<a href="/index.php?admin=delete&mid=' . $row['mid'] . '">Удалить сообщение</a>'; //добавляем ссылку на удаление сообщения
+	  $content .= '<a href="index.php?admin=update&mid=' . $row['mid'] . '">Редактировать сообщение</a>'; // добавляем ссылку на редактирование сообщения
+	  $content .= '<a href="index.php?admin=delete&mid=' . $row['mid'] . '">Удалить сообщение</a>'; //добавляем ссылку на удаление сообщения
 	  $content .= '</p>';
 	  $content .= '</div>'; // конец оборачивающего div'a
 	}
-	$content .= '<p><a href="/index.php?admin=add">Добавить сообщение</a></p>';
+	$content .= '<p><a href="index.php?admin=add">Добавить сообщение</a></p>';
 	
 	$content .= '<h2>LEFT JOIN</h2>';
 	$sql = 'SELECT * FROM Messages LEFT JOIN Files ON Messages.fid=Files.fid ORDER BY mid DESC';
@@ -41,12 +41,12 @@
 	  if(!empty($row['filename'])){
 	    $content .= '<p>Приложение: <a target="_blank" href="/'. $row['filepath'] .'">'. $row['filename'] .'</a></p>';
 	  }
-	  $content .= '<a href="/index.php?admin=update&mid=' . $row['mid'] . '">Редактировать сообщение</a>'; // добавляем ссылку на редактирование сообщения
-	  $content .= '<a href="/index.php?admin=delete&mid=' . $row['mid'] . '">Удалить сообщение</a>'; //добавляем ссылку на удаление сообщения
+	  $content .= '<a href="index.php?admin=update&mid=' . $row['mid'] . '">Редактировать сообщение</a>'; // добавляем ссылку на редактирование сообщения
+	  $content .= '<a href="index.php?admin=delete&mid=' . $row['mid'] . '">Удалить сообщение</a>'; //добавляем ссылку на удаление сообщения
 	  $content .= '</p>';
 	  $content .= '</div>'; // конец оборачивающего div'a
 	}
-	$content .= '<p><a href="/index.php?admin=add">Добавить сообщение</a></p>';
+	$content .= '<p><a href="index.php?admin=add">Добавить сообщение</a></p>';
 	
 	$content .= '<h2>LEFT JOIN без пересечений</h2>';	
 	$sql = 'SELECT * FROM Messages LEFT JOIN Files ON Messages.fid=Files.fid WHERE Files.fid IS NULL ORDER BY mid DESC';
@@ -58,12 +58,12 @@
 	  if(!empty($row['filename'])){
 	    $content .= '<p>Приложение: <a target="_blank" href="/'. $row['filepath'] .'">'. $row['filename'] .'</a></p>';
 	  }
-	  $content .= '<a href="/index.php?admin=update&mid=' . $row['mid'] . '">Редактировать сообщение</a>'; // добавляем ссылку на редактирование сообщения
-	  $content .= '<a href="/index.php?admin=delete&mid=' . $row['mid'] . '">Удалить сообщение</a>'; //добавляем ссылку на удаление сообщения
+	  $content .= '<a href="index.php?admin=update&mid=' . $row['mid'] . '">Редактировать сообщение</a>'; // добавляем ссылку на редактирование сообщения
+	  $content .= '<a href="index.php?admin=delete&mid=' . $row['mid'] . '">Удалить сообщение</a>'; //добавляем ссылку на удаление сообщения
 	  $content .= '</p>';
 	  $content .= '</div>'; // конец оборачивающего div'a
 	}
-	$content .= '<p><a href="/index.php?admin=add">Добавить сообщение</a></p>';
+	$content .= '<p><a href="index.php?admin=add">Добавить сообщение</a></p>';
 
 
 	$content .= '<h2>RIGHT JOIN</h2>';	
@@ -76,12 +76,12 @@
 	  if(!empty($row['filename'])){
 	    $content .= '<p>Приложение: <a target="_blank" href="/'. $row['filepath'] .'">'. $row['filename'] .'</a></p>';
 	  }
-	  $content .= '<a href="/index.php?admin=update&mid=' . $row['mid'] . '">Редактировать сообщение</a>'; // добавляем ссылку на редактирование сообщения
-	  $content .= '<a href="/index.php?admin=delete&mid=' . $row['mid'] . '">Удалить сообщение</a>'; //добавляем ссылку на удаление сообщения
+	  $content .= '<a href="index.php?admin=update&mid=' . $row['mid'] . '">Редактировать сообщение</a>'; // добавляем ссылку на редактирование сообщения
+	  $content .= '<a href="index.php?admin=delete&mid=' . $row['mid'] . '">Удалить сообщение</a>'; //добавляем ссылку на удаление сообщения
 	  $content .= '</p>';
 	  $content .= '</div>'; // конец оборачивающего div'a
 	}
-	$content .= '<p><a href="/index.php?admin=add">Добавить сообщение</a></p>';	
+	$content .= '<p><a href="index.php?admin=add">Добавить сообщение</a></p>';	
 	
 	$content .= '<h2>RIGHT JOIN без пересечений</h2>';	
 	$sql = 'SELECT * FROM Messages RIGHT JOIN Files ON Messages.fid=Files.fid WHERE Messages.fid IS NULL ORDER BY mid DESC';
@@ -93,12 +93,12 @@
 	  if(!empty($row['filename'])){
 	    $content .= '<p>Приложение: <a target="_blank" href="/'. $row['filepath'] .'">'. $row['filename'] .'</a></p>';
 	  }
-	  $content .= '<a href="/index.php?admin=update&mid=' . $row['mid'] . '">Редактировать сообщение</a>'; // добавляем ссылку на редактирование сообщения
-	  $content .= '<a href="/index.php?admin=delete&mid=' . $row['mid'] . '">Удалить сообщение</a>'; //добавляем ссылку на удаление сообщения
+	  $content .= '<a href="index.php?admin=update&mid=' . $row['mid'] . '">Редактировать сообщение</a>'; // добавляем ссылку на редактирование сообщения
+	  $content .= '<a href="index.php?admin=delete&mid=' . $row['mid'] . '">Удалить сообщение</a>'; //добавляем ссылку на удаление сообщения
 	  $content .= '</p>';
 	  $content .= '</div>'; // конец оборачивающего div'a
 	}
-	$content .= '<p><a href="/index.php?admin=add">Добавить сообщение</a></p>';		
+	$content .= '<p><a href="index.php?admin=add">Добавить сообщение</a></p>';		
 
 	$content .= '<h2>Эмуляция запроса FULL OUTER JOIN</h2>';	 
 	$sql = 'SELECT * FROM Messages LEFT JOIN Files ON Messages.fid = Files.fid UNION SELECT * FROM Messages RIGHT JOIN Files ON Messages.fid = Files.fid';
@@ -110,12 +110,12 @@
 	  if(!empty($row['filename'])){
 	    $content .= '<p>Приложение: <a target="_blank" href="/'. $row['filepath'] .'">'. $row['filename'] .'</a></p>';
 	  }
-	  $content .= '<a href="/index.php?admin=update&mid=' . $row['mid'] . '">Редактировать сообщение</a>'; // добавляем ссылку на редактирование сообщения
-	  $content .= '<a href="/index.php?admin=delete&mid=' . $row['mid'] . '">Удалить сообщение</a>'; //добавляем ссылку на удаление сообщения
+	  $content .= '<a href="index.php?admin=update&mid=' . $row['mid'] . '">Редактировать сообщение</a>'; // добавляем ссылку на редактирование сообщения
+	  $content .= '<a href="index.php?admin=delete&mid=' . $row['mid'] . '">Удалить сообщение</a>'; //добавляем ссылку на удаление сообщения
 	  $content .= '</p>';
 	  $content .= '</div>'; // конец оборачивающего div'a
 	}
-	$content .= '<p><a href="/index.php?admin=add">Добавить сообщение</a></p>';	
+	$content .= '<p><a href="index.php?admin=add">Добавить сообщение</a></p>';	
 	
 	$content .= '<h2>Эмуляция запроса FULL OUTER JOIN без пересечений</h2>';	 
 $sql = 'SELECT * FROM Messages LEFT JOIN Files ON Messages.fid = Files.fid WHERE Files.fid IS NULL 
@@ -129,12 +129,12 @@ SELECT * FROM Messages RIGHT JOIN Files ON Messages.fid = Files.fid WHERE Messag
 	  if(!empty($row['filename'])){
 	    $content .= '<p>Приложение: <a target="_blank" href="/'. $row['filepath'] .'">'. $row['filename'] .'</a></p>';
 	  }
-	  $content .= '<a href="/index.php?admin=update&mid=' . $row['mid'] . '">Редактировать сообщение</a>'; // добавляем ссылку на редактирование сообщения
-	  $content .= '<a href="/index.php?admin=delete&mid=' . $row['mid'] . '">Удалить сообщение</a>'; //добавляем ссылку на удаление сообщения
+	  $content .= '<a href="index.php?admin=update&mid=' . $row['mid'] . '">Редактировать сообщение</a>'; // добавляем ссылку на редактирование сообщения
+	  $content .= '<a href="index.php?admin=delete&mid=' . $row['mid'] . '">Удалить сообщение</a>'; //добавляем ссылку на удаление сообщения
 	  $content .= '</p>';
 	  $content .= '</div>'; // конец оборачивающего div'a
 	}
-	$content .= '<p><a href="/index.php?admin=add">Добавить сообщение</a></p>';		
+	$content .= '<p><a href="index.php?admin=add">Добавить сообщение</a></p>';		
 	
 	print $content;
 	
