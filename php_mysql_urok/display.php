@@ -32,8 +32,8 @@
   	<div id="page-wrap">
     <?php
     
-      include_once('_class/simpleCMS.php');
-      $obj = new simpleCMS();
+      include_once('class/loadfile.php');
+      $obj = new loadfile();
 
 	  /* CHANGE THESE SETTINGS FOR YOUR OWN DATABASE */
       $obj->host = 'localhost';
