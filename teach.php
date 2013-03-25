@@ -1,39 +1,39 @@
-<!--Оператор case-->
-<h2>Оператор case</h2><br />
+<!--РћРїРµСЂР°С‚РѕСЂ case-->
+<h2>РћРїРµСЂР°С‚РѕСЂ case</h2><br />
 <?php
 $day = 4;
 switch ($day)
 {
  case 5:
- print("Пятый день делаем снеговика<br>");
+ print("РџСЏС‚С‹Р№ РґРµРЅСЊ РґРµР»Р°РµРј СЃРЅРµРіРѕРІРёРєР°<br>");
  break;
  case 4:
- print("Четвертый день делаем стол<br>");
+ print("Р§РµС‚РІРµСЂС‚С‹Р№ РґРµРЅСЊ РґРµР»Р°РµРј СЃС‚РѕР»<br>");
  break;
  case 3:
- print("Третий день делаем полку<br>");
+ print("РўСЂРµС‚РёР№ РґРµРЅСЊ РґРµР»Р°РµРј РїРѕР»РєСѓ<br>");
  break;
  case 2:
- print("Второй день делаем забор<br>");
+ print("Р’С‚РѕСЂРѕР№ РґРµРЅСЊ РґРµР»Р°РµРј Р·Р°Р±РѕСЂ<br>");
  break;
 default: 
- print("Нет такого дня<br>");
+ print("РќРµС‚ С‚Р°РєРѕРіРѕ РґРЅСЏ<br>");
  }
 ?>
-<!--Оператор case-->
+<!--РћРїРµСЂР°С‚РѕСЂ case-->
 <br />
 <br />
-<!--Таблица с арифметическими операциями-->
+<!--РўР°Р±Р»РёС†Р° СЃ Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРёРјРё РѕРїРµСЂР°С†РёСЏРјРё-->
 <?php
 $start_num = 1;
 $end_num = 10;
 ?>
 <html>
 <head>
-<title>Таблица умножения,деления,сложения</title>
+<title>РўР°Р±Р»РёС†Р° СѓРјРЅРѕР¶РµРЅРёСЏ,РґРµР»РµРЅРёСЏ,СЃР»РѕР¶РµРЅРёСЏ</title>
 </head>
 <body>
-<h2>Таблица деления</h2>
+<h2>РўР°Р±Р»РёС†Р° РґРµР»РµРЅРёСЏ</h2>
 <table border="1">
 <?php
   print ("<tr>");
@@ -62,11 +62,11 @@ $end_num = 10;
 </table>
 </body>
 </html>
-<!--Таблица с арифметическими операциями-->
+<!--РўР°Р±Р»РёС†Р° СЃ Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРёРјРё РѕРїРµСЂР°С†РёСЏРјРё-->
 <br />
 <br />
-<!--Циклы while-->
-<h2>Циклы while</h2><br />
+<!--Р¦РёРєР»С‹ while-->
+<h2>Р¦РёРєР»С‹ while</h2><br />
 <?php
 $limit = 500;
 $to_test = 2;
@@ -82,7 +82,7 @@ while (true)
 			print "$to_test ";
 			break;
 		}
-		//Проверка на деление $to_test на $testdiv
+		//РџСЂРѕРІРµСЂРєР° РЅР° РґРµР»РµРЅРёРµ $to_test РЅР° $testdiv
 		if ($to_test % $testdiv == 0)
 		break;
 		$testdiv = $testdiv + 1;
@@ -90,17 +90,17 @@ while (true)
   $to_test = $to_test + 1;
  }
 ?>
-<!--Циклы while-->
+<!--Р¦РёРєР»С‹ while-->
 <br />
 <br />
-<!--Функции-->
-<h2>Функции</h2><br />
+<!--Р¤СѓРЅРєС†РёРё-->
+<h2>Р¤СѓРЅРєС†РёРё</h2><br />
 <?php
 function countdown_first ($num_arg)
  {
 	 if ($num_arg > 0)
 	   {
-		   print ("Обратный отсчет(первая) от $num_arg<br>");
+		   print ("РћР±СЂР°С‚РЅС‹Р№ РѕС‚СЃС‡РµС‚(РїРµСЂРІР°СЏ) РѕС‚ $num_arg<br>");
 		   countdown_second($num_arg - 1);
 	   }
  }
@@ -108,18 +108,18 @@ function countdown_second ($num_arg)
  {
 	 if ($num_arg > 0)
 	   {
-		   print ("Обратный отсчет(вторая) от $num_arg<br>");
+		   print ("РћР±СЂР°С‚РЅС‹Р№ РѕС‚СЃС‡РµС‚(РІС‚РѕСЂР°СЏ) РѕС‚ $num_arg<br>");
 		   countdown_first($num_arg - 1);
 	   }
  }
  
 countdown_first(5);
 ?>
-<!--Функции-->
+<!--Р¤СѓРЅРєС†РёРё-->
 <br />
 <br />
-<!--Строки-->
-<h2>Строки</h2><br />
+<!--РЎС‚СЂРѕРєРё-->
+<h2>РЎС‚СЂРѕРєРё</h2><br />
 <?php
 $alphabet_test = "abcdefghijklmnop";
 print ("3: " . substr ($alphabet_test, 3) . "<br>");
@@ -147,9 +147,9 @@ print ("It's lenght is " . strlen ($trimmed) . "<br>");
 <br />
 <br />
 <?php
-$first_edition = "Я живу в славном городе Иркутск, он на берегу байкала.";
-$second_edition = str_replace ("Иркутск", "Тула", $first_edition);
-$third_edition = str_replace ("на берегу байкала", "город-герой", $second_edition);
+$first_edition = "РЇ Р¶РёРІСѓ РІ СЃР»Р°РІРЅРѕРј РіРѕСЂРѕРґРµ РСЂРєСѓС‚СЃРє, РѕРЅ РЅР° Р±РµСЂРµРіСѓ Р±Р°Р№РєР°Р»Р°.";
+$second_edition = str_replace ("РСЂРєСѓС‚СЃРє", "РўСѓР»Р°", $first_edition);
+$third_edition = str_replace ("РЅР° Р±РµСЂРµРіСѓ Р±Р°Р№РєР°Р»Р°", "РіРѕСЂРѕРґ-РіРµСЂРѕР№", $second_edition);
 print ("$first_edition<br />");
 print ("$second_edition<br />");
 print ("$third_edition");
@@ -194,9 +194,9 @@ print $vse;
 ?>
 <br />
 <br />
-<!--Строки-->
-<!--Массивы-->
-<h2>Массивы</h2><br />
+<!--РЎС‚СЂРѕРєРё-->
+<!--РњР°СЃСЃРёРІС‹-->
+<h2>РњР°СЃСЃРёРІС‹</h2><br />
 <?php
 $many_level_array = array('airplanes' =>
 						    array('an-2' => 'antonov',
@@ -212,12 +212,12 @@ $many_level_array = array('airplanes' =>
 								   'focus' => 'ford'));
 $airplane_search = 'automobile';
 $helicopter_search = 'focus';
-echo "Конкатенация.<br />";
+echo "РљРѕРЅРєР°С‚РµРЅР°С†РёСЏ.<br />";
 print("The $helicopter_search $airplane_search is  " . 
 	  $many_level_array[$airplane_search][$helicopter_search]);
-echo "<br />В php 4.1 и выше.<br />";
+echo "<br />Р’ php 4.1 Рё РІС‹С€Рµ.<br />";
 print("The $helicopter_search $airplane_search is {$many_level_array[$airplane_search][$helicopter_search]}<br />");
-print("Размер массива - " . count($many_level_array[airplanes]));
+print("Р Р°Р·РјРµСЂ РјР°СЃСЃРёРІР° - " . count($many_level_array[airplanes]));
 ?>
 <br />
 <br />
@@ -251,10 +251,10 @@ Reverse Sort: <?php rsort($array1) ; print_r($array1); ?><br />
 Implode: <?php echo $string1 = implode(" * ", $array1); ?><br />
 Explode: <?php print_r(explode(" * ", $string1)); ?><br />
 <br />
-In array: <?php echo in_array(16,$array1); //возвращает T/F - не знаю что жто такое:)?>
-<!--Массивы-->
-<!--Алгебра--> 
-<h2>Алгебра</h2><br />
+In array: <?php echo in_array(16,$array1); //РІРѕР·РІСЂР°С‰Р°РµС‚ T/F - РЅРµ Р·РЅР°СЋ С‡С‚Рѕ Р¶С‚Рѕ С‚Р°РєРѕРµ:)?>
+<!--РњР°СЃСЃРёРІС‹-->
+<!--РђР»РіРµР±СЂР°--> 
+<h2>РђР»РіРµР±СЂР°</h2><br />
 <?php
 $var=15;
 ?>
@@ -264,9 +264,9 @@ $var=15;
 /=:<?php $var /= 4; echo $var; ?><br />
 Increment: <?php $var++; echo $var; ?><br />
 Decrement: <?php $var--; echo $var; ?><br />
-<!--Алгебра-->
-<!--Числа с плавающей точкой - floats-->
-<h2>Числа с плавающей точкой</h2><br />
+<!--РђР»РіРµР±СЂР°-->
+<!--Р§РёСЃР»Р° СЃ РїР»Р°РІР°СЋС‰РµР№ С‚РѕС‡РєРѕР№ - floats-->
+<h2>Р§РёСЃР»Р° СЃ РїР»Р°РІР°СЋС‰РµР№ С‚РѕС‡РєРѕР№</h2><br />
 <?php
 $var = 3.14;
 echo 4/3;
@@ -275,11 +275,11 @@ Floating point:<?php echo $myFloat = 3.14; ?><br />
 Round:<?php echo round($myFloat, 1); ?><br />
 Ceiling:<?php echo ceil($myFloat); ?><br />
 Floor:<?php echo floor($myFloat); ?><br />
-<!--Числа с плавающей точкой - floats-->
+<!--Р§РёСЃР»Р° СЃ РїР»Р°РІР°СЋС‰РµР№ С‚РѕС‡РєРѕР№ - floats-->
 <br />
 <br />
-<!--Булевы операции-->
-<h2>Булевы операции</h2><br />
+<!--Р‘СѓР»РµРІС‹ РѕРїРµСЂР°С†РёРё-->
+<h2>Р‘СѓР»РµРІС‹ РѕРїРµСЂР°С†РёРё</h2><br />
 <?php
 $bool1 = true;
 $bool2 = false;
@@ -289,7 +289,7 @@ false: <? echo $bool2;?><br />
 <?php
 $var1 = 3;
 $var2 = "cat";
-$var4 = NULL; //значение $var4 = 0;
+$var4 = NULL; //Р·РЅР°С‡РµРЅРёРµ $var4 = 0;
 ?>
 $var1 is set: <? echo isset($var1);?><br />
 $var2 is set: <? echo isset($var2);?><br />
@@ -302,9 +302,9 @@ $var1 empty: <?php echo empty($var1); ?><br />
 $var4 empty: <?php echo empty($var4); ?>
 <br />
 <br />
-<!--Булевы операции-->
-<!--Определение типов переменных-->
-<h2>Определение типов переменных</h2><br />
+<!--Р‘СѓР»РµРІС‹ РѕРїРµСЂР°С†РёРё-->
+<!--РћРїСЂРµРґРµР»РµРЅРёРµ С‚РёРїРѕРІ РїРµСЂРµРјРµРЅРЅС‹С…-->
+<h2>РћРїСЂРµРґРµР»РµРЅРёРµ С‚РёРїРѕРІ РїРµСЂРµРјРµРЅРЅС‹С…</h2><br />
 <?php
 $var1 = 2.123;
 $var2 = $var1 + 3;
@@ -312,12 +312,12 @@ echo $var2;
 ?>
 <br />
 <?php
-echo "Тип переменной var1:"; echo gettype($var1); echo "<br />";
-echo "Тип переменной var2:"; echo gettype($var2); echo "<br />";
-settype($var2,"string"); //Полная запись
-echo "Тип назначенной переменной var2:"; echo gettype($var2); echo "<br />";
-$var3 = (int) $var1; // Короткая запись
-echo "Тип назначенной переменной var3:"; echo gettype($var3); echo "<br />";
+echo "РўРёРї РїРµСЂРµРјРµРЅРЅРѕР№ var1:"; echo gettype($var1); echo "<br />";
+echo "РўРёРї РїРµСЂРµРјРµРЅРЅРѕР№ var2:"; echo gettype($var2); echo "<br />";
+settype($var2,"string"); //РџРѕР»РЅР°СЏ Р·Р°РїРёСЃСЊ
+echo "РўРёРї РЅР°Р·РЅР°С‡РµРЅРЅРѕР№ РїРµСЂРµРјРµРЅРЅРѕР№ var2:"; echo gettype($var2); echo "<br />";
+$var3 = (int) $var1; // РљРѕСЂРѕС‚РєР°СЏ Р·Р°РїРёСЃСЊ
+echo "РўРёРї РЅР°Р·РЅР°С‡РµРЅРЅРѕР№ РїРµСЂРµРјРµРЅРЅРѕР№ var3:"; echo gettype($var3); echo "<br />";
 ?>
 <br />
 <br />
@@ -330,23 +330,23 @@ is_numeric:<?php echo is_numeric($var1); ?><br />
 is_string:<?php echo is_string($var1); ?><br />
 <br />
 <br />
-<!--Определение типов переменных-->
-<!--Константы-->
-<h2>Константы</h2><br />
+<!--РћРїСЂРµРґРµР»РµРЅРёРµ С‚РёРїРѕРІ РїРµСЂРµРјРµРЅРЅС‹С…-->
+<!--РљРѕРЅСЃС‚Р°РЅС‚С‹-->
+<h2>РљРѕРЅСЃС‚Р°РЅС‚С‹</h2><br />
 <?php
 $max_width = 980;
 define("MAX_WIDTH", 980);
 echo MAX_WIDTH; echo "<br />";
 /* MAX_WIDTH += 1;
-echo MAX_WIDTH; echo "<br />"; Константа не может быть сложена с переменной */
+echo MAX_WIDTH; echo "<br />"; РљРѕРЅСЃС‚Р°РЅС‚Р° РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ СЃР»РѕР¶РµРЅР° СЃ РїРµСЂРµРјРµРЅРЅРѕР№ */
 $max_width += 1;
 echo $max_width; echo "<br />";
 ?>
 <br />
 <br />
-<!--Константы-->
-<!--Логические конструкции-->
-<h2>Логические конструкции</h2><br />
+<!--РљРѕРЅСЃС‚Р°РЅС‚С‹-->
+<!--Р›РѕРіРёС‡РµСЃРєРёРµ РєРѕРЅСЃС‚СЂСѓРєС†РёРё-->
+<h2>Р›РѕРіРёС‡РµСЃРєРёРµ РєРѕРЅСЃС‚СЂСѓРєС†РёРё</h2><br />
 <?php
 $a = 3;
 $b = 5;
@@ -388,7 +388,7 @@ if (($a < $b) || ($c < $d)) {
 ?>
 <br />
 <?php
-// unset($a); - с такой строкой мы отменим значение переменной и назначим ей значение 100
+// unset($a); - СЃ С‚Р°РєРѕР№ СЃС‚СЂРѕРєРѕР№ РјС‹ РѕС‚РјРµРЅРёРј Р·РЅР°С‡РµРЅРёРµ РїРµСЂРµРјРµРЅРЅРѕР№ Рё РЅР°Р·РЅР°С‡РёРј РµР№ Р·РЅР°С‡РµРЅРёРµ 100
 if (!isset($a)) {
   $a = 100;
   }
@@ -403,24 +403,24 @@ if (!is_int($a)) {
 ?>
 <br />
 <br />
-<!--Логические конструкции-->
-<!--Константы-->
-<h2>Константы</h2><br />
+<!--Р›РѕРіРёС‡РµСЃРєРёРµ РєРѕРЅСЃС‚СЂСѓРєС†РёРё-->
+<!--РљРѕРЅСЃС‚Р°РЅС‚С‹-->
+<h2>РљРѕРЅСЃС‚Р°РЅС‚С‹</h2><br />
 <?php
 
 ?>
 <br />
 <br />
-<!--Константы-->
-<!--Константы-->
-<h2>Константы</h2><br />
+<!--РљРѕРЅСЃС‚Р°РЅС‚С‹-->
+<!--РљРѕРЅСЃС‚Р°РЅС‚С‹-->
+<h2>РљРѕРЅСЃС‚Р°РЅС‚С‹</h2><br />
 <?php
 
 ?>
 <br />
 <br />
-<!--Константы-->
-<!--Информация о php-->
-<h2>Информация о php</h2><br />
+<!--РљРѕРЅСЃС‚Р°РЅС‚С‹-->
+<!--РРЅС„РѕСЂРјР°С†РёСЏ Рѕ php-->
+<h2>РРЅС„РѕСЂРјР°С†РёСЏ Рѕ php</h2><br />
 <?php phpinfo();?>
-<!--Информация о php-->
+<!--РРЅС„РѕСЂРјР°С†РёСЏ Рѕ php-->
