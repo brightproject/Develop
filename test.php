@@ -50,19 +50,19 @@ span:hover {color:#333	}
 		} 
 		closedir($dir); 
 	} 
-//ПРОВЕРКА
-	 // Имя корневой директории проекта
+//РџР РћР’Р•Р РљРђ
+	 // РРјСЏ РєРѕСЂРЅРµРІРѕР№ РґРёСЂРµРєС‚РѕСЂРёРё РїСЂРѕРµРєС‚Р°
 	 //$dirname = "softtime"; 
-	 // Массив с расширениями файлов, для которых следует подсчитывать
-	 // число строк
+	 // РњР°СЃСЃРёРІ СЃ СЂР°СЃС€РёСЂРµРЅРёСЏРјРё С„Р°Р№Р»РѕРІ, РґР»СЏ РєРѕС‚РѕСЂС‹С… СЃР»РµРґСѓРµС‚ РїРѕРґСЃС‡РёС‚С‹РІР°С‚СЊ
+	 // С‡РёСЃР»Рѕ СЃС‚СЂРѕРє
 	 //$extentions = array("#\.php#i"); 
 	 // $extentions = array("#\.cpp#i","#\.h#i");
-	 // Счётчик строк - глобальная переменная
+	 // РЎС‡С‘С‚С‡РёРє СЃС‚СЂРѕРє - РіР»РѕР±Р°Р»СЊРЅР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ
 	 //$count = 0;
-	 // Вызов функции, осуществляющей рекурсивный спуск по подкаталогам
-	 // корневого каталога
+	 // Р’С‹Р·РѕРІ С„СѓРЅРєС†РёРё, РѕСЃСѓС‰РµСЃС‚РІР»СЏСЋС‰РµР№ СЂРµРєСѓСЂСЃРёРІРЅС‹Р№ СЃРїСѓСЃРє РїРѕ РїРѕРґРєР°С‚Р°Р»РѕРіР°Рј
+	 // РєРѕСЂРЅРµРІРѕРіРѕ РєР°С‚Р°Р»РѕРіР°
 	 //scan_dir($dirname);
-	 // Записываем число строк в переменную $count
+	 // Р—Р°РїРёСЃС‹РІР°РµРј С‡РёСЃР»Рѕ СЃС‚СЂРѕРє РІ РїРµСЂРµРјРµРЅРЅСѓСЋ $count
 	 //file_put_contents("test",$count);	
 	 //$dirname = "."; 
 	 //$extentions = array('php', 'css', 'tpl', 'js'); 
@@ -88,12 +88,12 @@ span:hover {color:#333	}
 	
 	$per1 = round(($all_null / $all) * 100);
 	
-	echo '<div class="name">Общая</div>
+	echo '<div class="name">РћР±С‰Р°СЏ</div>
 	      <div class="line"></div>
 		  <div class="block">
-	        Всего строк: <strong>'.$all.'</strong><br />'.
-		   'Пустых строк: <strong>'.$all_null.' - <span>'.$per1.'%</span></strong><br />'.
-		   'Нормальных строк: <strong>'.$all_nonull.' - <span>'.(100 - $per1).'%</strong>
+	        Р’СЃРµРіРѕ СЃС‚СЂРѕРє: <strong>'.$all.'</strong><br />'.
+		   'РџСѓСЃС‚С‹С… СЃС‚СЂРѕРє: <strong>'.$all_null.' - <span>'.$per1.'%</span></strong><br />'.
+		   'РќРѕСЂРјР°Р»СЊРЅС‹С… СЃС‚СЂРѕРє: <strong>'.$all_nonull.' - <span>'.(100 - $per1).'%</strong>
 		 </div>
 		 <div class="line"></div><div class="line"></div><div class="line"></div>';
 	
@@ -101,12 +101,12 @@ span:hover {color:#333	}
 		
 		$per2 = round(($count[$exten]['null'] / $count[$exten]['all'])  * 100);
 		
-		echo '<div class="name">Расширение: '.$exten.'</div>
+		echo '<div class="name">Р Р°СЃС€РёСЂРµРЅРёРµ: '.$exten.'</div>
 		      <div class="line"></div>
 			  <div class="block">
-		        Всего строк: <strong>'.$count[$exten]['all'].'</strong><br />'.
-			   'Пустых строк: <strong>'.$count[$exten]['null'].' - <span>'.$per2.'%</span></strong><br />'.
-			   'Чистый код: <strong>'.$count[$exten]['nonull'].' - <span>'.(100 - $per2).'%</span></strong>
+		        Р’СЃРµРіРѕ СЃС‚СЂРѕРє: <strong>'.$count[$exten]['all'].'</strong><br />'.
+			   'РџСѓСЃС‚С‹С… СЃС‚СЂРѕРє: <strong>'.$count[$exten]['null'].' - <span>'.$per2.'%</span></strong><br />'.
+			   'Р§РёСЃС‚С‹Р№ РєРѕРґ: <strong>'.$count[$exten]['nonull'].' - <span>'.(100 - $per2).'%</span></strong>
 			 </div>
 			 <div class="line"></div><div class="line"></div><div class="line"></div>';
 	}
