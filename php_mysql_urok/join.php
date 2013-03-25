@@ -138,7 +138,6 @@ SELECT * FROM Messages RIGHT JOIN Files ON Messages.fid = Files.fid WHERE Messag
 	
 	print $content;
 	
-	
 ?>
 	</div>
   </body>
