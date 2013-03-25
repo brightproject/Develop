@@ -1,22 +1,24 @@
 <?
-
+//Вывод всех ошибок
 error_reporting(E_ALL);  
 //Решение проблем с русской кодировкой
+//header("Content-Type: text/html; charset=cp1251"); 
 //Либо создаем файл .htaccess
 //И пишем в нем AddDefaultCharset cp1251
-// header("Content-Type: text/html; charset=cp1251"); 
-include 'safemysql.class.php';
 // $db    = new SafeMysql();
-$table = 'test';
-$db = 'test';
+include 'safemysql.class.php';
 $newtablename = 'new';
-//$nametables = 'new';
+$table = 'new';
+$db = 'test';
 $db    = new SafeMysql(array('db' => $db));
-$db->query("CREATE TABLE IF NOT EXISTS ?n (id INTEGER PRIMARY KEY, name TEXT)",$newtablename);
-
 //Создание новой таблицы
-//$db->buildDB("CREATE TABLE IF NOT EXISTS ?s id int auto_increment primary key title VARCHAR(150),bodytext TEXT,created VARCHAR(100)",$newtablename);
-//$db->query("CREATE TABLE IF NOT EXISTS ?s title VARCHAR(150),bodytext TEXT,created VARCHAR(100)",$newtablename);
+$db->query("CREATE TABLE IF NOT EXISTS ?n (id INTEGER(2) NOT NULL AUTO_INCREMENT PRIMARY KEY, name VARCHAR(15))",$newtablename);
+// CREATE TABLE IF NOT EXISTS `test` (
+  // `id` int(2) NOT NULL AUTO_INCREMENT,
+  // `name` varchar(15) COLLATE utf8_bin NOT NULL,
+  // PRIMARY KEY (`id`)
+// ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=8 ;
+// $db->query("CREATE TABLE IF NOT EXISTS ?n (id INTEGER PRIMARY KEY, name TEXT)",$newtablename);
 	
 if($_SERVER['REQUEST_METHOD']=='POST') {
   if (isset($_POST['delete'])) {
