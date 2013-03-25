@@ -5,6 +5,7 @@ error_reporting(E_ALL);
 //header("Content-Type: text/html; charset=cp1251"); 
 //Либо создаем файл .htaccess
 //И пишем в нем AddDefaultCharset cp1251
+//Либо дописываем mysql_set_charset('utf8'); в месте соединения с БД
 // $db    = new SafeMysql();
 include 'safemysql.class.php';
 $newtablename = 'new';
