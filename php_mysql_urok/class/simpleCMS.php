@@ -1,10 +1,14 @@
 <?php
+	//Вывод всех ошибок
+	// error_reporting(E_ALL); 
+	// error_reporting(0);  
 class simpleCMS {  // класс управления
 
   public $host = 'localhost'; //переменные для работы с БД
   public $username = 'root';
   public $password = '';
   public $db = 'testDB';
+  private static $num_queries = 0;
 
   public function connectDB() {
 	$link = mysql_connect($this->host, $this->username, $this->password); // подключаемся к серверу MySQL
@@ -58,13 +62,31 @@ class simpleCMS {  // класс управления
     return $content;
   }
   
+    public function display_tables() { // метод вывода сообщений из таблицы БД
+		// $sql = 'SHOW TABLES FROM '.$db.'';
+		$sql = 'SHOW TABLES FROM testDB';
+		$result = mysql_query($sql) or die(mysql_error());
+
+		if (!$result) {
+			echo "Ошибка базы, не удалось получить список таблиц\n";
+			echo 'Ошибка MySQL: ' . mysql_error();
+			exit;
+		}
+
+		while ($row = mysql_fetch_row($result)) {
+			echo "Таблица: {$row[0]}\n";
+		}
+
+		mysql_free_result($result);
+	}
+
   public function display_public_DB() { // метод вывода сообщений из таблицы БД
     $content = '';
 	$sql = 'SELECT * FROM Messages ORDER BY mid DESC'; //запрос выборки
 	$result = mysql_query($sql) or die(mysql_error());  // результат выполнения запроса выборки мы сохраняем в переменную
 	while($row = mysql_fetch_array($result)){ // переменную запроса выборки необходимо обработать специальной функцией mysql_fetch_array()
 	  print '<div class="post">'; // div оборачивающий запись
-	  print '<span class="time">#' . $row['mid'] . ' от ' . date('d-m-Y', $row['created']) . '</span><h2>' . $row['title'] . '</h2>'; 	// выводим время и заголовок
+	  print '<span class="time"><b>Запись №</b>' . $row['mid'] . ' от ' . date('d-m-Y', $row['created']) . '</span><h2>' . $row['title'] . '</h2>'; 	// выводим время и заголовок
 	  print '<p>' . $row['bodytext'] . '</p>'; // выводим текст сообщения
 	  print '</div>'; // конец оборачивающего div'a
 	}

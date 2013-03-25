@@ -9,10 +9,13 @@
   <body>
   	<div id="page-wrap">
     <?php 
+	//Вывод всех ошибок
+	// error_reporting(E_ALL); 
+	// error_reporting(0); 
       include_once('class/simpleCMS.php'); // подключаем файл с классом
       $obj = new simpleCMS(); // создаем объект класса управления
 	  $db_connection = $obj->connectDB();
-	  
+	  $obj->display_tables();
       if( $_GET['admin'] == 1 ){ // если есть в URL переменная admin
 	    print $obj->display_admin(); // если есть переменная, то отображаем форму
 	  }else{
