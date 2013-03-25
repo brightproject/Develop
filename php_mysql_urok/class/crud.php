@@ -31,6 +31,7 @@ class crud {  // класс управления
 	bodytext text,
 	created  int(11)
 	) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1";
+	
 
 		$result = mysql_query($sql);   
 		print_r($result);	//Вернет 1 если таблица создана и ничего если таблица уже существует
