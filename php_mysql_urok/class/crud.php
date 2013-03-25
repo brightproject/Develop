@@ -8,7 +8,6 @@ class crud {  // класс управления
   public $username = 'root';
   public $password = '';
   public $db = 'testDB';
-  private static $num_queries = 0;
 
   public function connectDB() {
 	$link = mysql_connect($this->host, $this->username, $this->password); // подключаемся к серверу MySQL
@@ -24,7 +23,7 @@ class crud {  // класс управления
 //Создаем новую таблицу для сообщений
   
 		public function buildDB(){
-	$sql = "CREATE TABLE Messages
+	$sql = "CREATE TABLE IF NOT EXISTS Messages
 	(
 	mid int NOT NULL AUTO_INCREMENT,
 	PRIMARY KEY(mid),
