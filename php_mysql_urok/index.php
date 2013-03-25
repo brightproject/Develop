@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Изучаем PHP</title>
+    <title>Изучаем PHP || CRUD</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
@@ -45,7 +45,7 @@
 	  if($_POST){
         $obj->write_DB($_POST);
 	  }
-	  
+	  // echo ( $_GET['admin'] == 1 ) ? $obj->display_admin() : $obj->display_public();
 	  mysql_close($db_connection);
      
     ?>	  
