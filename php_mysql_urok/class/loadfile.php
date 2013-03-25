@@ -1,6 +1,6 @@
 <?php
 
-class simpleCMS {
+class loadfile {
 
   var $host;
   var $username;
