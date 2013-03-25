@@ -89,7 +89,7 @@ class SafeMySQL
 
 		$this->emode  = $opt['errmode'];
 		$this->exname = $opt['exception'];
-		$this->buildDB();
+		// $this->buildDB();
 		if ($opt['pconnect'])
 		{
 			$opt['host'] = "p:".$opt['host'];
@@ -124,14 +124,14 @@ class SafeMySQL
 	// {
 	  // return mysql_query($sql);    
 	// }
-	public function buildDB(){
-    $sql = 'CREATE TABLE IF NOT EXISTS new ( 
-			  title		    VARCHAR(150),
-			  bodytext	    TEXT,
-			  created		VARCHAR(100)
-			)';
-    return $sql;    
-  }
+	// public function buildDB(){
+    // $sql = 'CREATE TABLE IF NOT EXISTS new ( 
+			  // title		    VARCHAR(150),
+			  // bodytext	    TEXT,
+			  // created		VARCHAR(100)
+			// )';
+    // return $sql;    
+  // }
 
 	/**
 	 * Conventional function to fetch single row. 

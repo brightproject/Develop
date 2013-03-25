@@ -1,15 +1,18 @@
 <?
 
 error_reporting(E_ALL);  
-header("Content-Type: text/html; charset=cp1251"); 
+//Решение проблем с русской кодировкой
+//Либо создаем файл .htaccess
+//И пишем в нем AddDefaultCharset cp1251
+// header("Content-Type: text/html; charset=cp1251"); 
 include 'safemysql.class.php';
 // $db    = new SafeMysql();
 $table = 'test';
 $db = 'test';
 $newtablename = 'new';
 //$nametables = 'new';
-// $db->query("CREATE TABLE IF NOT EXISTS ?n (id INTEGER PRIMARY KEY, name TEXT), ",$table);
 $db    = new SafeMysql(array('db' => $db));
+$db->query("CREATE TABLE IF NOT EXISTS ?n (id INTEGER PRIMARY KEY, name TEXT)",$newtablename);
 
 //Создание новой таблицы
 //$db->buildDB("CREATE TABLE IF NOT EXISTS ?s id int auto_increment primary key title VARCHAR(150),bodytext TEXT,created VARCHAR(100)",$newtablename);
