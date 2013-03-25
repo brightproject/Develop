@@ -16,46 +16,46 @@ class loadfile {  // класс управления
 	}    
 	mysql_set_charset('utf8');//решение проблем с русской кодировкой при записи в БД
 	mysql_select_db($this->db) or die("Не могу найти БД. " . mysql_error()); //подсоединяем БД
-    $this->buildDB();
+    // $this->buildDB();
 	return $link;
   }
   
-  public function buildDB(){
-  /*
-    $sql = <<<MySQL_QUERY
-CREATE TABLE IF NOT EXISTS messages (
-mid int(11) NOT NULL AUTO_INCREMENT,
-title VARCHAR(150),
-bodytext TEXT,
-created VARCHAR(100),
-PRIMARY KEY ("mid")
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1";	
-MySQL_QUERY;
-*/
+  // public function buildDB(){
+  // /*
+    // $sql = <<<MySQL_QUERY
+// CREATE TABLE IF NOT EXISTS messages (
+// mid int(11) NOT NULL AUTO_INCREMENT,
+// title VARCHAR(150),
+// bodytext TEXT,
+// created VARCHAR(100),
+// PRIMARY KEY ("mid")
+// ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1";	
+// MySQL_QUERY;
+// */
 
-$sql = "CREATE TABLE IF NOT EXISTS Messages
-(
-mid int NOT NULL AUTO_INCREMENT,
-PRIMARY KEY(mid),
-title varchar(15),
-bodytext text,
-created  int(11),
-file int(11)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1";
-$sql = "CREATE TABLE IF NOT EXISTS Files
-(
-fid int NOT NULL AUTO_INCREMENT,
-PRIMARY KEY(fid),
-filename varchar(255),
-filepath varchar(255),
-filemime varchar(255),
-filesize int(10),
-timestamp int(11)
-)ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1";
+// $sql = "CREATE TABLE IF NOT EXISTS Messages
+// (
+// mid int NOT NULL AUTO_INCREMENT,
+// PRIMARY KEY(mid),
+// title varchar(15),
+// bodytext text,
+// created  int(11),
+// file int(11)
+// ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1";
+// $sql = "CREATE TABLE IF NOT EXISTS Files
+// (
+// fid int NOT NULL AUTO_INCREMENT,
+// PRIMARY KEY(fid),
+// filename varchar(255),
+// filepath varchar(255),
+// filemime varchar(255),
+// filesize int(10),
+// timestamp int(11)
+// )ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1";
 
-    $result = mysql_query($sql);   
-    print_r($result);	
-  }
+    // $result = mysql_query($sql);   
+    // print_r($result);	
+  // }
 
   public function display_public() { // метод вывода сообщений
     $content = '';

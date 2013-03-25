@@ -13,7 +13,7 @@
       include_once('class/loadfile.php'); // подключаем файл с классом
       $obj = new loadfile(); // создаем объект класса управления
 	  $db_connection = $obj->connectDB();
-	   echo ( $_GET['admin'] == 1 ) ? $obj->display_admin() : $obj->display_public();
+	   // echo ( $_GET['admin'] == 1 ) ? $obj->display_admin() : $obj->display_public();
 	$content = '';
     $content .= '<h2>INNER JOIN</h2>';
 	$sql = 'SELECT * FROM Messages INNER JOIN Files ON Messages.mid=Files.fid ORDER BY mid DESC';
@@ -37,7 +37,7 @@
 	$result = mysql_query($sql) or die(mysql_error());  
 	while($row = mysql_fetch_array($result)){ // переменную запроса выборки необходимо обработать специальной функцией mysql_fetch_array()
 	  $content .= '<div class="post" id="mid-' . $row['mid'] . '">'; // div оборачивающий запись
-	  $content .= '<span class="time">#' . $row['mid'] . ' от ' . date('d-m-Y', $row['created']) . '</span><h2>' . $row['title'] . '</h2>'; 	// выводим время и заголовок
+	  $content .= '<span class="time"><b>Запись №</b>' . $row['mid'] . ' от ' . date('d-m-Y', $row['created']) . '</span><h2>' . $row['title'] . '</h2>'; 	// выводим время и заголовок
 	  $content .= '<p>' . $row['bodytext'] . '</p>'; // выводим текст сообщения
 	  if(!empty($row['filename'])){
 	    $content .= '<p>Приложение: <a target="_blank" href="'. $row['filepath'] .'">'. $row['filename'] .'</a></p>';
@@ -54,7 +54,7 @@
 	$result = mysql_query($sql) or die(mysql_error());  
 	while($row = mysql_fetch_array($result)){ // переменную запроса выборки необходимо обработать специальной функцией mysql_fetch_array()
 	  $content .= '<div class="post" id="mid-' . $row['mid'] . '">'; // div оборачивающий запись
-	  $content .= '<span class="time">#' . $row['mid'] . ' от ' . date('d-m-Y', $row['created']) . '</span><h2>' . $row['title'] . '</h2>'; 	// выводим время и заголовок
+	  $content .= '<span class="time"><b>Запись №</b>' . $row['mid'] . ' от ' . date('d-m-Y', $row['created']) . '</span><h2>' . $row['title'] . '</h2>'; 	// выводим время и заголовок
 	  $content .= '<p>' . $row['bodytext'] . '</p>'; // выводим текст сообщения
 	  if(!empty($row['filename'])){
 	    $content .= '<p>Приложение: <a target="_blank" href="'. $row['filepath'] .'">'. $row['filename'] .'</a></p>';
@@ -72,7 +72,7 @@
 	$result = mysql_query($sql) or die(mysql_error());  
 	while($row = mysql_fetch_array($result)){ // переменную запроса выборки необходимо обработать специальной функцией mysql_fetch_array()
 	  $content .= '<div class="post" id="mid-' . $row['mid'] . '">'; // div оборачивающий запись
-	  $content .= '<span class="time">#' . $row['mid'] . ' от ' . date('d-m-Y', $row['created']) . '</span><h2>' . $row['title'] . '</h2>'; 	// выводим время и заголовок
+	  $content .= '<span class="time"><b>Запись №</b>' . $row['mid'] . ' от ' . date('d-m-Y', $row['created']) . '</span><h2>' . $row['title'] . '</h2>'; 	// выводим время и заголовок
 	  $content .= '<p>' . $row['bodytext'] . '</p>'; // выводим текст сообщения
 	  if(!empty($row['filename'])){
 	    $content .= '<p>Приложение: <a target="_blank" href="'. $row['filepath'] .'">'. $row['filename'] .'</a></p>';
@@ -89,7 +89,7 @@
 	$result = mysql_query($sql) or die(mysql_error());  
 	while($row = mysql_fetch_array($result)){ // переменную запроса выборки необходимо обработать специальной функцией mysql_fetch_array()
 	  $content .= '<div class="post" id="mid-' . $row['mid'] . '">'; // div оборачивающий запись
-	  $content .= '<span class="time">#' . $row['mid'] . ' от ' . date('d-m-Y', $row['created']) . '</span><h2>' . $row['title'] . '</h2>'; 	// выводим время и заголовок
+	  $content .= '<span class="time"><b>Запись №</b>' . $row['mid'] . ' от ' . date('d-m-Y', $row['created']) . '</span><h2>' . $row['title'] . '</h2>'; 	// выводим время и заголовок
 	  $content .= '<p>' . $row['bodytext'] . '</p>'; // выводим текст сообщения
 	  if(!empty($row['filename'])){
 	    $content .= '<p>Приложение: <a target="_blank" href="'. $row['filepath'] .'">'. $row['filename'] .'</a></p>';
@@ -106,7 +106,7 @@
 	$result = mysql_query($sql) or die(mysql_error());  
 	while($row = mysql_fetch_array($result)){ // переменную запроса выборки необходимо обработать специальной функцией mysql_fetch_array()
 	  $content .= '<div class="post" id="mid-' . $row['mid'] . '">'; // div оборачивающий запись
-	  $content .= '<span class="time">#' . $row['mid'] . ' от ' . date('d-m-Y', $row['created']) . '</span><h2>' . $row['title'] . '</h2>'; 	// выводим время и заголовок
+	  $content .= '<span class="time"><b>Запись №</b>' . $row['mid'] . ' от ' . date('d-m-Y', $row['created']) . '</span><h2>' . $row['title'] . '</h2>'; 	// выводим время и заголовок
 	  $content .= '<p>' . $row['bodytext'] . '</p>'; // выводим текст сообщения
 	  if(!empty($row['filename'])){
 	    $content .= '<p>Приложение: <a target="_blank" href="'. $row['filepath'] .'">'. $row['filename'] .'</a></p>';
@@ -125,7 +125,7 @@ SELECT * FROM Messages RIGHT JOIN Files ON Messages.mid = Files.fid WHERE Messag
 	$result = mysql_query($sql) or die(mysql_error());  
 	while($row = mysql_fetch_array($result)){ // переменную запроса выборки необходимо обработать специальной функцией mysql_fetch_array()
 	  $content .= '<div class="post" id="mid-' . $row['mid'] . '">'; // div оборачивающий запись
-	  $content .= '<span class="time">#' . $row['mid'] . ' от ' . date('d-m-Y', $row['created']) . '</span><h2>' . $row['title'] . '</h2>'; 	// выводим время и заголовок
+	  $content .= '<span class="time"><b>Запись №</b>' . $row['mid'] . ' от ' . date('d-m-Y', $row['created']) . '</span><h2>' . $row['title'] . '</h2>'; 	// выводим время и заголовок
 	  $content .= '<p>' . $row['bodytext'] . '</p>'; // выводим текст сообщения
 	  if(!empty($row['filename'])){
 	    $content .= '<p>Приложение: <a target="_blank" href="'. $row['filepath'] .'">'. $row['filename'] .'</a></p>';
