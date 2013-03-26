@@ -59,7 +59,7 @@ class loadfile {  // класс управления
 
   public function display_public() { // метод вывода сообщений
     $content = '';
-	$sql = 'SELECT * FROM Messages LEFT JOIN Files ON Messages.mid=Files.fid ORDER BY mid DESC';
+	$sql = 'SELECT * FROM Messages LEFT JOIN Files ON Messages.fid=Files.fid ORDER BY mid DESC';
 	$result = mysql_query($sql) or die(mysql_error());  
 	while($row = mysql_fetch_array($result)){ // переменную запроса выборки необходимо обработать специальной функцией mysql_fetch_array()
 	  $content .= '<div class="post" id="mid-' . $row['mid'] . '">'; // div оборачивающий запись
