@@ -14,6 +14,25 @@
       $obj = new loadfile(); // создаем объект класса управления
 	  $db_connection = $obj->connectDB();
 	   // echo ( $_GET['admin'] == 1 ) ? $obj->display_admin() : $obj->display_public();
+	  switch ($_GET['admin']){
+	case 'add':
+	  print $obj->display_admin(); // если переменная равна 1, то отображаем форму добавления
+	break;
+	case 'update':
+	  print $obj->display_update();  // если переменная равна update, то отображаем форму изменения
+	break;
+	case 'delete':
+	  if($_GET['mid']){ //если переменная ровна delete, то проверяем наличие mid
+		$obj->delete($_GET['mid']); //вызываем метод удаления сообщения
+		print $obj->display_public(); // если переменной нет, то отображаем сообщения
+	  }else{
+		print '<p>Не выбран mid!</p>';
+		print $obj->display_public(); // отображаем список сообщений			
+	  }
+	break;
+	default:
+	  print $obj->display_public(); // если переменной нет, то отображаем сообщения
+	  }
 	$content = '';
     $content .= '<h2>INNER JOIN</h2>';
 	$sql = 'SELECT * FROM Messages INNER JOIN Files ON Messages.fid=Files.fid ORDER BY mid DESC';
@@ -138,7 +157,10 @@ SELECT * FROM Messages RIGHT JOIN Files ON Messages.fid = Files.fid WHERE Messag
 	$content .= '<p><a href="join.php?admin=add">Добавить сообщение</a></p>';		
 	
 	print $content;
-	
+	  if($_POST){
+        $obj->write($_POST);
+	  }
+	mysql_close($db_connection);
 ?>
 	</div>
   </body>
