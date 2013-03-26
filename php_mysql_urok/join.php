@@ -16,7 +16,7 @@
 	   // echo ( $_GET['admin'] == 1 ) ? $obj->display_admin() : $obj->display_public();
 	$content = '';
     $content .= '<h2>INNER JOIN</h2>';
-	$sql = 'SELECT * FROM Messages INNER JOIN Files ON Messages.mid=Files.fid ORDER BY mid DESC';
+	$sql = 'SELECT * FROM Messages INNER JOIN Files ON Messages.fid=Files.fid ORDER BY mid DESC';
 	$result = mysql_query($sql) or die(mysql_error());  
 	while($row = mysql_fetch_array($result)){ // переменную запроса выборки необходимо обработать специальной функцией mysql_fetch_array()
 	  $content .= '<div class="post" id="mid-' . $row['mid'] . '">'; // div оборачивающий запись
@@ -33,7 +33,7 @@
 	$content .= '<p><a href="join.php?admin=add">Добавить сообщение</a></p>';
 	
 	$content .= '<h2>LEFT JOIN</h2>';
-	$sql = 'SELECT * FROM Messages LEFT JOIN Files ON Messages.mid=Files.fid ORDER BY mid DESC';
+	$sql = 'SELECT * FROM Messages LEFT JOIN Files ON Messages.fid=Files.fid ORDER BY mid DESC';
 	$result = mysql_query($sql) or die(mysql_error());  
 	while($row = mysql_fetch_array($result)){ // переменную запроса выборки необходимо обработать специальной функцией mysql_fetch_array()
 	  $content .= '<div class="post" id="mid-' . $row['mid'] . '">'; // div оборачивающий запись
@@ -50,7 +50,7 @@
 	$content .= '<p><a href="join.php?admin=add">Добавить сообщение</a></p>';
 	
 	$content .= '<h2>LEFT JOIN без пересечений</h2>';	
-	$sql = 'SELECT * FROM Messages LEFT JOIN Files ON Messages.mid=Files.fid WHERE Files.fid IS NULL ORDER BY mid DESC';
+	$sql = 'SELECT * FROM Messages LEFT JOIN Files ON Messages.fid=Files.fid WHERE Files.fid IS NULL ORDER BY mid DESC';
 	$result = mysql_query($sql) or die(mysql_error());  
 	while($row = mysql_fetch_array($result)){ // переменную запроса выборки необходимо обработать специальной функцией mysql_fetch_array()
 	  $content .= '<div class="post" id="mid-' . $row['mid'] . '">'; // div оборачивающий запись
@@ -68,7 +68,7 @@
 
 
 	$content .= '<h2>RIGHT JOIN</h2>';	
-	$sql = 'SELECT * FROM Messages RIGHT JOIN Files ON Messages.mid=Files.fid ORDER BY mid DESC';
+	$sql = 'SELECT * FROM Messages RIGHT JOIN Files ON Messages.fid=Files.fid ORDER BY mid DESC';
 	$result = mysql_query($sql) or die(mysql_error());  
 	while($row = mysql_fetch_array($result)){ // переменную запроса выборки необходимо обработать специальной функцией mysql_fetch_array()
 	  $content .= '<div class="post" id="mid-' . $row['mid'] . '">'; // div оборачивающий запись
@@ -85,7 +85,7 @@
 	$content .= '<p><a href="join.php?admin=add">Добавить сообщение</a></p>';	
 	
 	$content .= '<h2>RIGHT JOIN без пересечений</h2>';	
-	$sql = 'SELECT * FROM Messages RIGHT JOIN Files ON Messages.mid=Files.fid WHERE Messages.mid IS NULL ORDER BY mid DESC';
+	$sql = 'SELECT * FROM Messages RIGHT JOIN Files ON Messages.fid=Files.fid WHERE Messages.mid IS NULL ORDER BY mid DESC';
 	$result = mysql_query($sql) or die(mysql_error());  
 	while($row = mysql_fetch_array($result)){ // переменную запроса выборки необходимо обработать специальной функцией mysql_fetch_array()
 	  $content .= '<div class="post" id="mid-' . $row['mid'] . '">'; // div оборачивающий запись
@@ -102,7 +102,7 @@
 	$content .= '<p><a href="join.php?admin=add">Добавить сообщение</a></p>';		
 
 	$content .= '<h2>Эмуляция запроса FULL OUTER JOIN</h2>';	 
-	$sql = 'SELECT * FROM Messages LEFT JOIN Files ON Messages.mid = Files.fid UNION SELECT * FROM Messages RIGHT JOIN Files ON Messages.mid = Files.fid';
+	$sql = 'SELECT * FROM Messages LEFT JOIN Files ON Messages.fid = Files.fid UNION SELECT * FROM Messages RIGHT JOIN Files ON Messages.mid = Files.fid';
 	$result = mysql_query($sql) or die(mysql_error());  
 	while($row = mysql_fetch_array($result)){ // переменную запроса выборки необходимо обработать специальной функцией mysql_fetch_array()
 	  $content .= '<div class="post" id="mid-' . $row['mid'] . '">'; // div оборачивающий запись
@@ -119,9 +119,9 @@
 	$content .= '<p><a href="join.php?admin=add">Добавить сообщение</a></p>';	
 	
 	$content .= '<h2>Эмуляция запроса FULL OUTER JOIN без пересечений</h2>';	 
-$sql = 'SELECT * FROM Messages LEFT JOIN Files ON Messages.mid = Files.fid WHERE Files.fid IS NULL 
+$sql = 'SELECT * FROM Messages LEFT JOIN Files ON Messages.fid = Files.fid WHERE Files.fid IS NULL 
 UNION 
-SELECT * FROM Messages RIGHT JOIN Files ON Messages.mid = Files.fid WHERE Messages.mid IS NULL';
+SELECT * FROM Messages RIGHT JOIN Files ON Messages.fid = Files.fid WHERE Messages.fid IS NULL';
 	$result = mysql_query($sql) or die(mysql_error());  
 	while($row = mysql_fetch_array($result)){ // переменную запроса выборки необходимо обработать специальной функцией mysql_fetch_array()
 	  $content .= '<div class="post" id="mid-' . $row['mid'] . '">'; // div оборачивающий запись
