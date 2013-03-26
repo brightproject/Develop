@@ -1,0 +1,41 @@
+<?php
+  // Устанавливаем содинение с СУБД MySQL
+  require_once("config.php");
+
+  // Выводим заголовок XML-файла
+  echo "<?xml version=\"1.0\" encoding=\"windows-1251\"?>\r\n";
+?>
+<!DOCTYPE rss PUBLIC "-//Netscape Communications//DTD RSS 0.91//EN"
+ "http://my.netscape.com/publish/formats/rss-0.91.dtd">
+<rss version="2.0">
+<channel>
+<title>Название RSS-канала</title>
+<link>http://www.site.ru/</link>
+<description>Описание RSS-канала</description>
+
+<?php
+  // Формируем список новостных позиций
+  $query = "SELECT id_news,
+                   name,
+                   description,
+                DATE_FORMAT(putdate, '%a, %e %b %Y %T') AS putdate_format 
+            FROM news 
+            ORDER BY putdate DESC";
+  $new = mysql_query($query);
+  if(!$new) exit("Ошибка обращения к таблице новостей");
+  if(mysql_num_rows($new))
+  {
+    while($news = mysql_fetch_array($new))
+    {
+      echo "<item>\r\n".
+           "<title>$news[title]</title>\r\n".
+  "<link>http://www.sitе.ru/index.php?id_news=$news[id_news]</link>\r\n".
+           "<description>$news[description]</description>\r\n".
+           "<pubDate>$news[putdate_format] ".date('O')."</pubDate>\r\n".
+           "</item>\r\n\r\n";
+    }
+  }
+?>
+
+</channel>
+</rss>

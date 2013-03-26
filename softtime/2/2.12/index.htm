@@ -1,0 +1,369 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0056)http://www.softtime.ru/info/articlephp.php?id_article=24 -->
+<HTML><HEAD><TITLE>Установка Apache, PHP, MySQL</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1251">
+<META content="Описание установки и настройки взаимодействия связки Apache + PHP + MySQL." 
+name=description><META content="установка настройка apache php mysql gdlib php_gd2.dll php_mcrypt.dll php_mysql.dll сервер web-сервер директивы виртуальных хостов php.ini httpd.conf скачать расширения" 
+name=keywords><LINK href="index.files/info.css" 
+type=text/css rel=StyleSheet><LINK 
+href="index.files/code.css" type=text/css 
+rel=StyleSheet><LINK href="index.files/art.css" 
+type=text/css rel=StyleSheet>
+<SCRIPT language=JavaScript src="index.files/softtime.js"></SCRIPT>
+</HEAD>
+<BODY bottomMargin=0 bgColor=white leftMargin=0 topMargin=0 rightMargin=0 marginwidth="0" marginheight="0">
+<TABLE class=grad1 width="100%" background="index.files/grad1.gif" border=0>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR vAlign=top>
+    <TD width="10%">&nbsp;</TD>
+    <TD><BR><BR>
+      <TABLE cellSpacing=3 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD width=70 rowSpan=2><IMG height=44 alt="" 
+            src="index.files/book.gif" width=59 
+          border=0></TD>
+          <TD>
+            <H1 class=p1>Статьи по PHP</H1></TD></TR>
+        <TR>
+          <TD bgColor=#9fb6c9 height=3><IMG height=1 alt="" 
+            src="index.files\pic(1).gif" 
+            width=1 border=0></TD></TR></TBODY></TABLE>
+      <br><H2 class=artnamepage>Установка Web-сервера Apache в связке с PHP 5 и 
+      MySQL (Apache+PHP+MySQL)</H2>
+      <P class=arttext>В этой статье мы рассмотрим установку и настройку 
+      Web-сервера <B>Apache</B>, <B>PHP&nbsp;5</B> и <B>СУБД MySQL</B> для 
+      использования их на локальной машине под операционной системой Windows 
+      (2000 и XP). Использование локальных серверов может понадобиться по многим 
+      причинам – вам необходимо изучить PHP или MySQL, а тестирование своих 
+      Web-приложений на хостинге либо дорого обходится, либо такой возможности 
+      вообще нет. В этом случае вам понадобится связка Apache+PHP+MySQL на 
+      локальной машине.</P>
+      <P class=arttext>Для начала необходимо раздобыть дистрибутивы серверов 
+      Apache и MySQL, а также архив PHP. Мы будем устанавливать и настраивать 
+      Apache 2, MySQL 4 и PHP 5. </P>
+      <P class=arttext>Также можете скачать с нашего сайта файлы php.ini для 
+      настройки PHP и httpd.conf для Apache. Однако, делайте это только в 
+      крайнем случае — если у Вас ничего не получилось с "родными" файлами, 
+      которые появилиcь при установке приложений. Но в любом случае, их 
+      необходимо будет настроить под конкретную машину. Скачать <A 
+      href="http://www.softtime.ru/files/configs.zip"><NOBR>php.ini и 
+      httpd.conf</NOBR></A></P>
+      <P class=arttext>Скачать Apache можно с зеркал приведённых на официальном 
+      сайте <A 
+      href="http://www.apache.org/dyn/closer.cgi">http://www.apache.org/dyn/closer.cgi</A>. 
+      При поиске следует помнить, что Apache так же может называться httpd, по 
+      имени его демона в UNIX. На зеркалах обычно много различных файлов, 
+      например:<BR>httpd-2.0.49-win32-src.zip - это архив с исходными кодами 
+      (src) для Windows (win32) Web-сервера Apache (httpd) версии 
+      2.0.49.<BR>httpd-2.0.49.tar.gz - тоже самое, но для Linux, в котором 
+      программы принято распространять в исходных 
+      кодах.<BR>apache_2.0.50-win32-x86-no_ssl.exe - а вот это, 
+      откомпилированный под архитектуру (x86) для Windows (win32) без поддержки 
+      SSL(no_ssl) сервер Apache (apache) версии 2.0.50 - вот он и нужен.<BR></P>
+      <H2 class=artnamenote>Замечание</H2>
+      <P class=artnote>Бинарные коды дистрибутивов Apache распространяются в 
+      нескольких вариантах, как с расширением *.exe, так и *.msi и имеют 
+      название вида httpd_версия_win32_*_.msi. </P>
+      <P class=arttext>Чтобы вам не мучатся, вот ресурс где можно его взять: <A 
+      href="http://apache.rin.ru/dist/httpd/binaries/win32/">http://apache.rin.ru/dist/httpd/binaries/win32/</A><BR>Вторая 
+      и третья цифра в версии могут отличаться от приведённых здесь – следует 
+      выбирать самую последнюю версию, так как в ней устранены ошибки 
+      обнаруженные в предыдущих версиях.</P>
+      <P class=arttext>PHP 5 можно обнаружить на зеркалах <A 
+      href="http://www.php.net/downloads.php">http://www.php.net/downloads.php</A>. 
+      На сайте PHP доступен в двух формах: исходных кодах (Complete Source Code) 
+      и предкомпилированном варианте (Windows Binaries). Нас будет интересовать 
+      предкомпилированная версия, которая так же распространяется в двух 
+      вариантах: в виде установщика (php-5.0.0-installer.exe) и виде zip-архива 
+      (php-5.0.0-Win32.zip). Установщик удобен в установке, но содержит лишь 
+      ограниченную версию PHP (для сравнения инсталлятор занимает 2 Мб, а 
+      zip-архив 7 Мб). Кроме того, использование автоматического инсталлятора не 
+      избавляет от необходимости настройки конфигурационного файла сервера 
+      Apache. Поэтому рекомендуется всё же загрузить zip-архив.<BR>Пока вы 
+      находитесь на сайте PHP, заодно можете прихватить документацию к PHP. Для 
+      пользователей Windows наиболее удобен chm-формат, позволяющий осуществлять 
+      поиск по мануалу (<A 
+      href="http://www.php.net/download-docs.php">http://www.php.net/download-docs.php</A>).</P>
+      <P class=arttext>Дистрибутив MySQL можно загрузить со страницы <A 
+      href="http://dev.mysql.com/downloads/">http://dev.mysql.com/downloads/</A>. 
+      Мало кто знает, что полное справочное руководство на русском языке можно 
+      найти на официальном сайте MySQL по адресу <A 
+      href="http://dev.mysql.com/doc/mysql/ru/index.html">http://dev.mysql.com/doc/mysql/ru/index.html</A>.</P>
+      <P class=arttext>После того как мы запаслись всеми необходимыми 
+      дистрибутивами можно приступать к установке. Порядок установки Apache, PHP 
+      и MySQL не имеет значения. Начнём с Web-сервера Apache.</P>
+      <H2 class=artzag>Установка Web-сервера Apache</H2>
+      <P class=arttext>Запустите установщик Web-сервера Apache. Результатом 
+      будет окно с лицензионным соглашением, после принятия которого, следует 
+      перейти к следующему окну с краткой информацией о нововведениях во второй 
+      версии Apache. Следующее окно, показанное на рисунке, позволяет ввести 
+      информацию о сервере: <B>доменное имя сервера</B>, <B>имя сервера</B> и 
+      <B>адрес электронной почты администратора</B>. Если установка происходит 
+      на локальную машину, то в поля для доменного имени и имени сервера следует 
+      ввести <B>localhost</B> (см. рисунок.). В нижней части окна предлагается 
+      выбрать <B>номер порта</B> по которому сервер будет принимать запросы (80 
+      или 8080).</P>
+      <DIV class=artdivcenter><IMG class=img 
+      src="index.files/s_20040808214402.gif" 
+      border=0></DIV>
+      <P class=arttext></P>
+      <P class=arttext><B>localhost</B> - это имя для использования сервера на 
+      локальной машине, которое связано с IP-адресом 127.0.0.1, который 
+      зарезервирован для локального использования.</P>
+      <P class=arttext>После этого будет предложен способ установки: стандартный 
+      (<B>Typical </B>) или выборочный (<B>Custom</B>), позволяющий выбрать 
+      компоненты сервера вручную. Следующее окно позволяет выбрать каталог 
+      установки сервера, по умолчанию это <CODE>C:Program FilesApache 
+      Group</CODE>, но мы рекомендуем выбрать другой каталог, например, С:www. 
+      После этого мастер установки сообщит о готовности к процессу установки и 
+      после нажатия кнопки <B>Install</B>, будет произведено копирование файлов 
+      сервера. Если установка прошла успешно, Windows автоматически запустит 
+      Apache.</P>
+      <P class=arttext>После успешной инсталляции при наборе в окне браузера 
+      http://localhost/ или http://127.0.0.1/ - должна загрузится страница 
+      сервера.</P>
+      <P class=arttext>Теперь необходимо научиться управлять Apache, а именно 
+      научится запускать, останавливать и перезапускать сервер. Существует много 
+      способов осуществить эти операции: при помощи утилиты ApacheMonitor, 
+      используя консоль управления сервисов Windows, используя пункты меню Пуск, 
+      из командной строки… Мы рассмотрим консоль управления сервисов Windows, 
+      позволяющего настроить Apache для автоматического старта при запуске 
+      системы. Для запуска консоли управления выполните команду 
+      <BR><B>Пуск-&gt;Настройка-&gt;Панель 
+      управления-&gt;Администрирование-&gt;Службы</B>. <BR>В появившемся окне 
+      консоли, на приведённом ниже рисунке, следует выбрать сервис Apache2. 
+      Контекстное меню, открывающееся по нажатию на правой кнопке, позволяет 
+      осуществлять запуск, остановку и перезапуск сервиса.</P>
+      <DIV class=artdivcenter><IMG class=img 
+      src="index.files/s_20040808230341.gif" 
+      border=0></DIV>
+      <P class=arttext></P>
+      <P class=arttext>Службы Windows позволяют осуществлять запуск фоновых 
+      приложений при старте системы. Для этого необходимо перейти в окно 
+      Свойства, выбрав в контекстном меню сервиса пункт <B>Свойства</B> и в 
+      появившемся окне в выпадающем списке "<B>Тип запуска</B>" выбрать пункт 
+      "<B>Авто</B>".</P>
+      <P class=arttext>Теперь можно приступить к настройке конфигурационного 
+      файла Web-сервера Apache — http.conf, расположенного в папке 
+      C:/www/Apach2/conf. Следует помнить, что изменения произведённые в этом 
+      файле вступают в силу только после перезапуска сервера.</P>
+      <P class=arttext>Сервер Apache по умолчанию настроен на ISO-ную кодировку. 
+      Т.е. сервер будет считать, что все ваши файлы (html-странички, 
+      php-скрипты) написаны в этой кодировке. Чтобы изменить кодировку на 
+      кодировку Windows необходимо открыть http.conf на редактирование, найти 
+      строку</P>
+      <P class=artcode><CODE><FONT color=#000000>AddDefaultCharset 
+      ISO-8859-1</FONT> </CODE></P>
+      <P class=arttext>и заменить её на </P>
+      <P class=artcode><CODE><FONT color=#000000>AddDefaultCharset 
+      WINDOWS-1251</FONT> </CODE></P>
+      <P class=arttext>После этого, нам понадобится создать так называемы 
+      виртуальный хост — т.е. папку после размещения в которой файлов с 
+      расширением .html и .php они становятся доступными по адресу 
+      http:/localhost/index.html. Для этого следует выбрать папку, которой вы 
+      готовы для этого пожертвовать. Пусть это будет С:/www/scripts.</P>
+      <H2 class=artzag>Директивы виртуальных хостов</H2>
+      <P class=arttext>Директивы, ответственные за виртуальные хосты, обычно 
+      располагаются в конце конфигурационного файла http.conf и выглядят 
+      примерно следующим образом:</P>
+      <P class=artcode><CODE><FONT color=#000000>NameVirtualHost 127.0.0.1:80 
+      <BR><BR>&lt;VirtualHost 127.0.0.1:80&gt; 
+      <BR>&nbsp;&nbsp;&nbsp;&nbsp;ServerAdmin webmaster@dummy-host.example.com 
+      <BR>&nbsp;&nbsp;&nbsp;&nbsp;DocumentRoot "C:/www/scripts" 
+      <BR>&nbsp;&nbsp;&nbsp;&nbsp;ServerName dummy-host.example.com 
+      <BR>&nbsp;&nbsp;&nbsp;&nbsp;ErrorLog logs/dummy-host.example.com-error_log 
+      <BR>&nbsp;&nbsp;&nbsp;&nbsp;CustomLog 
+      logs/dummy-host.example.com-access_log common <BR>&lt;/VirtualHost&gt; 
+      <BR></FONT></CODE></P>
+      <P class=arttext>Теперь создайте в "C:/www/scripts" простейший скрипт 
+      index.html, разместив в нём любую фразу и перезапустите сервер. Набрав в 
+      браузере http:/localhost/ вы увидите в окне браузера фразу помещённую в 
+      index.html. Если это получилось, то Web-сервер Apache работает.</P>
+      <H2 class=artzag>Настройка PHP</H2>
+      <P class=arttext>Сервер Apache настроен — теперь можно приступать к 
+      настройке PHP. Для этого создайте директорию С:/PHP и разархивируйте туда 
+      содержимое архива php-5.0.0-Win32.zip. После этого следует переименовать 
+      конфигурационный файл php.ini-dist в php.ini и скопировать его в 
+      директорию с С:/Windows.</P>
+      <H2 class=artnamenote>Замечание</H2>
+      <P class=artnote>Изменения производимые в конфигурационном файле php.ini 
+      вступают в силу после перезагрузки сервера Apache.</P>
+      <P class=arttext>Так как на локальной машине вы, скорее всего, будете 
+      заняты тестированием Ваших Web-приложений, то необходимо должным образом 
+      настроить конфигурационный файл php.ini. Найдите директиву error_reporting 
+      и установите для неё следующее значение:</P>
+      <P class=artcode><CODE><FONT color=#000000>error_reporting = E_ALL &amp; 
+      ~E_NOTICE</FONT> </CODE></P>
+      <P class=arttext>Это значение настроит PHP таким образом, что при работе 
+      PHP-скриптов будут отображаться все ошибки, а "замечания" будут 
+      игнорироваться. Так же обходимо проследить, чтобы директива 
+      display_errors, была включена:</P>
+      <P class=artcode><CODE><FONT color=#000000>display_errors = On</FONT> 
+      </CODE></P>
+      <P class=arttext>Если данная директива отключена (Off), то сообщения об 
+      ошибках не будут выводится в окно браузера и в случае возникновения в коде 
+      ошибки вы будете гадать перед девственно белым окном — что бы это 
+      означало.<BR>Так же необходимо проследить, чтобы директива variables_order 
+      имела следующее значение:</P>
+      <P class=artcode><CODE><FONT color=#000000>variables_order = 
+      "EGPCS"</FONT> </CODE></P>
+      <P class=arttextindent>Буквы здесь означают следующее:<BR>E - переменными 
+      среды<BR>G - переменными передаваемыми по методу GET (G)<BR>P - 
+      переменными передаваемыми по методу POST (P)<BR>C - Cookies <BR>S - сессии 
+      <BR>Отсутствие какой-либо из букв не позволит вам работать с 
+      соответствующими переменными.</P>
+      <P class=arttext>Следующая директива, которая может потребовать настройки 
+      – это <B>register_globals</B>. Если данная директива включена</P>
+      <P class=artcode><CODE><FONT color=#000000>register_globals = On</FONT> 
+      </CODE></P>
+      <P class=arttext>то переменные передаваемые метором GET, POST, через 
+      cookies и сессии можно использовать в PHP-скрипте, обращаясь к ним просто 
+      как обычным переменным $someone.<BR>Если данная директива отключена </P>
+      <P class=artcode><CODE><FONT color=#000000>register_globals = Off</FONT> 
+      </CODE></P>
+      <P class=arttext>то к таким переменным можно будет обращаться только при 
+      помощи суперглобальных массивов ($_POST, $_GET и т.п.).<BR>Директива 
+      <B>register_long_arrays</B> позволяет использовать суперглобальные массивы 
+      в старом формате ("длинном" - $HTTP_GET_VARS, $HTTP_POST_VARS и т.д.)</P>
+      <P class=artcode><CODE><FONT color=#000000>register_long_arrays = 
+      On</FONT> </CODE></P>
+      <P class=arttext>После того как php.ini настроен Web-серверу Apache 
+      необходимо сообщить о наличии в системе PHP. Для этого в конфигурационном 
+      файле http.conf разместите следующие строки:</P>
+      <P class=artcode><CODE><FONT color=#000000>AddType application/x-httpd-php 
+      phtml php <BR>&lt;Directory "c:/php"&gt; <BR>&nbsp;&nbsp;Options ExecCGI 
+      <BR>&lt;/Directory&gt; <BR>ScriptAlias "/php_dir/" "c:/php/" <BR>Action 
+      application/x-httpd-php "/php_dir/php-cgi.exe"</FONT> </CODE></P>
+      <P class=arttext>Первая строка сообщает серверу Apache, о том, что файлы с 
+      расширениями php и phtml - должны интерпретироваться как PHP скрипты. 
+      <BR>Следующие три строчки сообщают, что в директории c:/php следует 
+      разрешить исполнение CGI скриптов.<BR>Предпоследняя строчка создаёт, так 
+      называемые, алиасы (псевдоним) для директории c:/php/.<BR>В последней 
+      строке в качестве внешнего интерпретатора скриптов PHP назначается файл 
+      С:/php/php-cgi.exe (необходимо убедится что он, действительно, существует 
+      по этому пути).</P>
+      <H2 class=artnamenote>Примечание</H2>
+      <P class=artnote>Чтобы избежать неожиданных проблем пути в настроечных 
+      файлах (httpd.conf и php.ini) рекомедуем писать через слеш в UNIX-овом 
+      формате "/". <BR>Например, ScriptAlias "/php_dir/" "c:/php/"<BR>Вообще 
+      говоря, в ряде директив работают оба слеша - прямой(/) и обратный(). На 
+      так как и Apache и PHP изначально разрабатывались под UNIX, то применяя их 
+      "родной" слеш вы cможете избежать ряда проблем.</P>
+      <P class=arttext>Теперь необходимо настроить индексный файл. Если в окне 
+      браузера набрать строку http://localhost/, а не 
+      http://localhost/index.html. Сервер всё равно предоставит браузеру 
+      index.html, так как этот файл является индексным и ищется в директории 
+      первую очередь, если не указан конкретный файл. Теперь необходимо 
+      настроить http.conf, таким образом, чтобы Web-сервер Apache так же 
+      реагировал на файлы index.php. Для этого найдте в http.conf директиву 
+      DirectoryIndex и исправьте её следующим образом:</P>
+      <P class=artcode><CODE><FONT color=#000000>DirectoryIndex index.html 
+      index.html.var index.php</FONT> </CODE></P>
+      <P class=arttext>После этого необходимо перегрузить сервер Apache, а в 
+      корневой директории виртуального хоста ("C:/www/scripts") создать пробный 
+      файл PHP (index.php):</P>
+      <P class=artcode><CODE><FONT color=#000000><FONT color=#0000cc>&lt;?php 
+      <BR>&nbsp;&nbsp;phpinfo</FONT><FONT color=#006600>(); <BR></FONT><FONT 
+      color=#0000cc>?&gt;</FONT> </FONT></CODE></P>
+      <P class=arttext>В случае успешной настройки, обращение по адресу 
+      http://localhost/index.php отобразит фиолетовую таблицу с текущими 
+      настройками PHP, которая выдаётся функцией phpinfo().<BR>Таким образом, у 
+      нас настроена связка Apache и PHP и можно переходить к настройке MySQL. 
+      Распакуйте дистрибутив MySQL во временную директорию и запустите 
+      установщик. Контролировать работу сервера MySQL можно точно так же как и 
+      Apache, используя консоль управления сервисов Windows.</P>
+      <H2 class=artzag>Подключение MySQL</H2>
+      <P class=arttext>По умолчанию PHP настроен таким образом, что поддержка 
+      MySQL в нём отключена, для того чтобы включить поддержку MySQL следует 
+      опять обратится к конфигурационному файлу php.ini. Найдите и 
+      раскомментируйте строку</P>
+      <P class=artcode><CODE><FONT color=#000000>extension=php_mysql.dll</FONT> 
+      </CODE></P>
+      <P class=arttext>При этом директива extension_dir должна указывать путь, в 
+      котором должна находится динамическая библиотека расширения. Например вот так:
+       <P class=artcode><CODE><FONT color=#000000>extension_dir ="c:/php/ext"</FONT> 
+      </CODE></P>
+      <P class=arttext>Вы можете оставить эту директиву без изменений</P>
+      <P class=artcode><CODE><FONT color=#000000>extension_dir = "./"</FONT> 
+      </CODE></P>
+      <P class=arttext>но в этом случае необходимо скопировать библиотеку 
+      php_mysql.dll из директории C:/PHP/ext в С:/PHP/. Перезапустите сервер 
+      Apache и в файле "C:/www/scripts/index.php" поместите следующий код:</P>
+      <P class=artcode><CODE><FONT color=#000000><FONT color=#0000cc>&lt;?php 
+      <BR>&nbsp;&nbsp;$dblocation </FONT><FONT color=#006600>= </FONT><FONT 
+      color=#cc0000>"127.0.0.1"</FONT><FONT color=#006600>; 
+      <BR>&nbsp;&nbsp;</FONT><FONT color=#0000cc>$dbname </FONT><FONT 
+      color=#006600>= </FONT><FONT color=#cc0000>"test"</FONT><FONT 
+      color=#006600>; <BR>&nbsp;&nbsp;</FONT><FONT color=#0000cc>$dbuser 
+      </FONT><FONT color=#006600>= </FONT><FONT color=#cc0000>"root"</FONT><FONT 
+      color=#006600>; <BR>&nbsp;&nbsp;</FONT><FONT color=#0000cc>$dbpasswd 
+      </FONT><FONT color=#006600>= </FONT><FONT color=#cc0000>""</FONT><FONT 
+      color=#006600>; <BR><BR>&nbsp;&nbsp;</FONT><FONT color=#0000cc>$dbcnx 
+      </FONT><FONT color=#006600>= @</FONT><FONT 
+      color=#0000cc>mysql_connect</FONT><FONT color=#006600>(</FONT><FONT 
+      color=#0000cc>$dblocation</FONT><FONT color=#006600>, </FONT><FONT 
+      color=#0000cc>$dbuser</FONT><FONT color=#006600>, </FONT><FONT 
+      color=#0000cc>$dbpasswd</FONT><FONT color=#006600>); <BR>&nbsp;&nbsp;if 
+      (!</FONT><FONT color=#0000cc>$dbcnx</FONT><FONT color=#006600>) 
+      <BR>&nbsp;&nbsp;{ <BR>&nbsp;&nbsp;&nbsp;&nbsp;echo </FONT><FONT 
+      color=#cc0000>"&lt;p&gt;К сожалению, не доступен сервер 
+      mySQL&lt;/p&gt;"</FONT><FONT color=#006600>; 
+      <BR>&nbsp;&nbsp;&nbsp;&nbsp;exit(); <BR>&nbsp;&nbsp;} <BR>&nbsp;&nbsp;if 
+      (!@</FONT><FONT color=#0000cc>mysql_select_db</FONT><FONT 
+      color=#006600>(</FONT><FONT color=#0000cc>$dbname</FONT><FONT 
+      color=#006600>,</FONT><FONT color=#0000cc>$dbcnx</FONT><FONT 
+      color=#006600>) ) <BR>&nbsp;&nbsp;{ <BR>&nbsp;&nbsp;&nbsp;&nbsp;echo 
+      </FONT><FONT color=#cc0000>"&lt;p&gt;К сожалению, не доступна база 
+      данных&lt;/p&gt;"</FONT><FONT color=#006600>; 
+      <BR>&nbsp;&nbsp;&nbsp;&nbsp;exit(); <BR>&nbsp;&nbsp;} 
+      <BR>&nbsp;&nbsp;</FONT><FONT color=#0000cc>$ver </FONT><FONT 
+      color=#006600>= </FONT><FONT color=#0000cc>mysql_query</FONT><FONT 
+      color=#006600>(</FONT><FONT color=#cc0000>"SELECT VERSION()"</FONT><FONT 
+      color=#006600>); <BR>&nbsp;&nbsp;if(!</FONT><FONT 
+      color=#0000cc>$ver</FONT><FONT color=#006600>) <BR>&nbsp;&nbsp;{ 
+      <BR>&nbsp;&nbsp;&nbsp;&nbsp;echo </FONT><FONT 
+      color=#cc0000>"&lt;p&gt;Ошибка в запросе&lt;/p&gt;"</FONT><FONT 
+      color=#006600>; <BR>&nbsp;&nbsp;&nbsp;&nbsp;exit(); <BR>&nbsp;&nbsp;} 
+      <BR>&nbsp;&nbsp;echo </FONT><FONT color=#0000cc>mysql_result</FONT><FONT 
+      color=#006600>(</FONT><FONT color=#0000cc>$ver</FONT><FONT color=#006600>, 
+      </FONT><FONT color=#0000cc>0</FONT><FONT color=#006600>); <BR></FONT><FONT 
+      color=#0000cc>?&gt; <BR></FONT></FONT></CODE></P>
+      <P class=arttext>В случае успешной интеграции MySQL в связку Apache и PHP, 
+      обращение по адресу http://localhost/index.php выведет в окно браузера 
+      версию сервера MySQL.</P>
+      <H2 class=artnamenote>Примечание</H2>
+      <P class=artnote>Если вы хотите прописать путь к библиотеке - будьте 
+      внимательны: PHP плохо реагирует на прямые слеши в стиле Windows \, 
+      следует использовать обратные /. Например, extension_dir = 
+      "C:/php/ext".<BR><BR></P>
+      <H2 class=artzag>Установка расширений PHP</H2>
+      <P class=arttext>На последок вам возможно понадобится настроить некоторые 
+      расширения PHP, они настраиваются точно так же как и MySQL. </P>
+      <P class=arttext>Так для того, чтобы подключить графическую библиотеку 
+      GDLib в php.ini необходимо раскомментировать строку: </P>
+      <P class=artcode><CODE><FONT color=#000000>extension=php_gd2.dll 
+      </FONT></CODE></P>
+      <P class=arttext>Проверьте после этого наличие данной библиотеки в папке 
+      c:phpext. После внесения изменений в php.ini перезапустите сервер. Что бы 
+      быстро проверить: подключилась ли библиотека — выполните функцию 
+      phpinfo(). Если все в порядке, то в таблице, которая отображается функций 
+      phpinfo(), должен появится раздел "<B>gd</B>". <A 
+      href="http://www.softtime.ru/files/php_gd2.zip">Скачать GDLib2</A></P>
+      <P class=arttext>Некоторые расширения требуют дополнительных библиотек. 
+      Так для того чтобы воспользоваться расширением PHP "<B>Mcrypt 
+      Encryption</B>", позволяющем осуществлять симметричное шифрование 
+      необходимо, во первых, расскомментирования строку в php.ini</P>
+      <P class=artcode><CODE><FONT color=#000000>extension=php_mcrypt.dll</FONT> 
+      </CODE></P>
+      <P class=arttext>А во вторых скопировать в папку С:/WINDOWS/ 
+      дополнительную библиотеку <A 
+      href="http://www.softtime.ru/files/libmcrypt.dll">libmcrypt.dll</A></P>
+      <P class=arttext><I>Любые возникающие по установке связки Apache+PHP+MySQL 
+      вопросы вы можете задать на нашем форуме <A 
+      href="http://www.softtime.ru/forum/">http://www.softtime.ru/forum/</A>. 
+      </I></P><BR><BR>
+      </TD>
+    <TD width="20%">&nbsp;</TD></TR></TBODY></TABLE>
+</BODY></HTML>

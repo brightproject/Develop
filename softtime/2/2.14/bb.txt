@@ -1,0 +1,10 @@
+По адресу [url]http://www.softtime.ru/forum/index.php[/url], вы найдете активный форум, на котором обсуждаются вопросы, посвящённые программированию на [i]PHP[/i], а так же установка, настройка и модификация [i]Web-приложений[/i], распространяемых [b]IT-студией SoftTime[/b], ознакомиться с которыми можно в разделе [url= http://www.softtime.ru/info/downloads.php]downloads[/url]. Помимо главного раздела, существует несколько дополнительных:
+[url = http://www.softtime.ru/forum/index.php?id_forum=5]"Форум Apache"[/url]
+[url = http://www.softtime.ru/forum/index.php?id_forum=6]"Форум по Регулярным выражениям"[/url]
+[url = http://www.softtime.ru/forum/index.php?id_forum=3]"Форум MySQL"[/url]
+[url = http://www.softtime.ru/forum/index.php?id_forum=5]"Форум HTML+CSS+JavaScript"[/url]
+Перед тестированием [i]Web-приложений[/i] вам понадобится настроенная связка Apache+PHP+MySQL на локальной машине. В статье [url = http://www.softtime.ru/info/articlephp.php?id_article=24]"Установка Apache, PHP, MySQL"[/url] вы найдёте описание процесса установи и настройки связки локальных серверов. В разделе [url = http://www.softtime.ru/info/articlephp.php]"Статьи о программировании на языке PHP"[/url] вы найдёте много других статей, посвящённых тем или иным аспектам Web-программирования.
+Если вы предпочитаете изучать язык программирования по коротким, но ёмким примерам, вам понравится раздел [url = http://www.softtime.ru/scripts/index.php]"Примеры скриптов на php"[/url], где приводятся примеры различных скриптов.
+[code]<?php
+  echo "Hello world!";
+?>[/code]

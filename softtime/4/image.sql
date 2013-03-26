@@ -1,0 +1,6 @@
+CREATE TABLE image (
+  id_image INT(11) NOT NULL AUTO_INCREMENT,
+  name TINYTEXT NOT NULL,
+  content LONGBLOB NOT NULL,
+  PRIMARY KEY (id_image)
+) TYPE=MyISAM;

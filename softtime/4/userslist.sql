@@ -1,0 +1,8 @@
+CREATE TABLE userslist (
+  id_user INT(11) NOT NULL AUTO_INCREMENT,
+  name TINYTEXT NOT NULL,
+  pass TINYTEXT NOT NULL,
+  email TINYTEXT NOT NULL,
+  url TINYTEXT NOT NULL,
+  PRIMARY KEY (id_user)
+);

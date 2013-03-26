@@ -1,0 +1,7 @@
+CREATE TABLE session (
+  id_session INT(11) NOT NULL AUTO_INCREMENT,
+  session TINYTEXT NOT NULL,
+  putdate DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
+  value TINYTEXT NOT NULL,
+  PRIMARY KEY (id_session)
+);

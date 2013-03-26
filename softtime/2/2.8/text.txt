@@ -1,0 +1,7 @@
+По адресу http://www.softtime.ru/forum/index.php, вы найдете активный форум, на котором обсуждаются вопросы, посвящённые программированию на PHP, а так же установка, настройка и модификация Web-приложений, распространяемых IT-студией SoftTime, ознакомиться с которыми можно в разделе downloads (http://www.softtime.ru/info/downloads.php). Помимо главного раздела, существует несколько дополнительных:
+"Форум Apache" (http://www.softtime.ru/forum/index.php?id_forum=5)
+"Форум по Регулярным выражениям" (http://www.softtime.ru/forum/index.php?id_forum=6)
+"Форум MySQL" (http://www.softtime.ru/forum/index.php?id_forum=3)
+"Форум HTML+CSS+JavaScript" (http://www.softtime.ru/forum/index.php?id_forum=5)
+Перед тестированием Web-приложений вам понадобиться настроенная связка Apache+PHP+MySQL на локальной машине. В статье "Установка Apache, PHP, MySQL" (http://www.softtime.ru/info/articlephp.php?id_article=24) вы найдёте описание процесса установи и настройки связки локальных серверов. В разделе "Статьи о программировании на языке PHP" (http://www.softtime.ru/info/articlephp.php) вы найдёте много других статей, посвящённых тем или иным аспектам Web-программирования.
+Если вы предпочитате изучать язык программирования по коротким, но ёмким примерам, вам понравится раздел "Примеры скриптов на php" (http://www.softtime.ru/scripts/index.php), где приводятся примеры различных скриптов.

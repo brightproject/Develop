@@ -1,0 +1,6 @@
+CREATE TABLE user_email (
+  id_user INT(11) NOT NULL AUTO_INCREMENT,
+  `user` TINYTEXT NOT NULL,
+  email TINYTEXT NOT NULL,
+  PRIMARY KEY (id_user)
+);

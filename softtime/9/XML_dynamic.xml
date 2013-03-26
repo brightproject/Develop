@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<ValCurs  ID="R01235" DateRange1="01/03/2005" DateRange2="31/03/2005"   name="Foreign Currency Market Dynamic">
+
+<Record Date="01.03.2005" Id="R01235              ">
+<Nominal>1</Nominal>
+<Value>27,7007</Value>
+</Record>
+
+<Record Date="02.03.2005" Id="R01235              ">
+<Nominal>1</Nominal>
+<Value>27,7091</Value>
+</Record>
+
+<Record Date="03.03.2005" Id="R01235              ">
+<Nominal>1</Nominal>
+<Value>27,6990</Value>
+</Record>
+
+<Record Date="04.03.2005" Id="R01235              ">
+<Nominal>1</Nominal>
+<Value>27,7245</Value>
+</Record>
+
+<Record Date="05.03.2005" Id="R01235              ">
+<Nominal>1</Nominal>
+<Value>27,7518</Value>
+</Record>
+
+<Record Date="06.03.2005" Id="R01235              ">
+<Nominal>1</Nominal>
+<Value>27,6698</Value>
+</Record>
+
+<Record Date="10.03.2005" Id="R01235              ">
+<Nominal>1</Nominal>
+<Value>27,5562</Value>
+</Record>
+
+<Record Date="11.03.2005" Id="R01235              ">
+<Nominal>1</Nominal>
+<Value>27,4637</Value>
+</Record>
+
+<Record Date="12.03.2005" Id="R01235              ">
+<Nominal>1</Nominal>
+<Value>27,4629</Value>
+</Record>
+
+<Record Date="15.03.2005" Id="R01235              ">
+<Nominal>1</Nominal>
+<Value>27,4770</Value>
+</Record>
+
+<Record Date="16.03.2005" Id="R01235              ">
+<Nominal>1</Nominal>
+<Value>27,4902</Value>
+</Record>
+
+<Record Date="17.03.2005" Id="R01235              ">
+<Nominal>1</Nominal>
+<Value>27,4890</Value>
+</Record>
+
+<Record Date="18.03.2005" Id="R01235              ">
+<Nominal>1</Nominal>
+<Value>27,4611</Value>
+</Record>
+
+<Record Date="19.03.2005" Id="R01235              ">
+<Nominal>1</Nominal>
+<Value>27,4827</Value>
+</Record>
+
+<Record Date="22.03.2005" Id="R01235              ">
+<Nominal>1</Nominal>
+<Value>27,5442</Value>
+</Record>
+
+<Record Date="23.03.2005" Id="R01235              ">
+<Nominal>1</Nominal>
+<Value>27,5764</Value>
+</Record>
+
+<Record Date="24.03.2005" Id="R01235              ">
+<Nominal>1</Nominal>
+<Value>27,6381</Value>
+</Record>
+
+<Record Date="25.03.2005" Id="R01235              ">
+<Nominal>1</Nominal>
+<Value>27,6970</Value>
+</Record>
+
+<Record Date="26.03.2005" Id="R01235              ">
+<Nominal>1</Nominal>
+<Value>27,7112</Value>
+</Record>
+
+<Record Date="29.03.2005" Id="R01235              ">
+<Nominal>1</Nominal>
+<Value>27,8198</Value>
+</Record>
+
+<Record Date="30.03.2005" Id="R01235              ">
+<Nominal>1</Nominal>
+<Value>27,8313</Value>
+</Record>
+
+<Record Date="31.03.2005" Id="R01235              ">
+<Nominal>1</Nominal>
+<Value>27,8256</Value>
+</Record>
+</ValCurs>

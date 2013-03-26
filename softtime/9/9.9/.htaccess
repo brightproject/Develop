@@ -1,0 +1,2 @@
+RemoveHandler .xml
+AddType application/x-httpd-php .xml
