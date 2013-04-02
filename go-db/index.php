@@ -23,10 +23,10 @@ $params = array(
 $db = go\DB\DB::create($params, 'mysql');
 $login    = 'vasa';
 $password = 'qwerty';
-//âàğèàíò âûáîğà èç òàáëèöû
+//Ğ²Ğ°Ñ€Ğ¸Ğ°Ğ½Ñ‚ Ğ²Ñ‹Ğ±Ğ¾Ñ€Ğ° Ğ¸Ğ· Ñ‚Ğ°Ğ±Ğ»Ğ¸Ñ†Ñ‹
 $email = $db->query('SELECT `email` FROM `users` WHERE `login`=? AND `password`=?', array($login, $password), 'el');
 echo $email;
-//âàğèàíò âûáîğà èç òàáëèöû
+//Ğ²Ğ°Ñ€Ğ¸Ğ°Ğ½Ñ‚ Ğ²Ñ‹Ğ±Ğ¾Ñ€Ğ° Ğ¸Ğ· Ñ‚Ğ°Ğ±Ğ»Ğ¸Ñ†Ñ‹
 $pattern = 'SELECT `email` FROM `users` WHERE `login`=? AND `password`=md5(?)';
 $data    = array($_POST['login'], $_POST['password']);
 $userId  = $db->query($pattern, $data, 'el');
