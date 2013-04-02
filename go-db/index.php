@@ -14,8 +14,8 @@ $params = array(
     'charset'  => 'utf8',
     '_debug'   => true,
     '_prefix'  => '',
+    '_adapter'  => 'mysql',
 );
 
-$db = go\DB\DB::create($params, 'mysql');
 require(__DIR__.'/goDB/autoload.php');
 \go\DB\autoloadRegister();
