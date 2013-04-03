@@ -9,7 +9,7 @@ require(__DIR__.'/goDB/autoload.php');
 \go\DB\autoloadRegister();
 
 echo '<h1>go\DB 2</h1>';
-echo __DIR__;
+// echo __DIR__;
 
 $params = array(
     'host'     => 'localhost',
