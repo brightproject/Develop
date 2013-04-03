@@ -3,12 +3,13 @@
 ini_set('display_errors', 1);
 // error_reporting(E_ALL | E_STRICT);
 error_reporting(E_ALL);  
-header('Content-Type: text/html; charset=utf-8');
+// header('Content-Type: text/html; charset=utf-8');
 
 require(__DIR__.'/goDB/autoload.php');
 \go\DB\autoloadRegister();
 
 echo '<h1>go\DB 2</h1>';
+echo __DIR__;
 
 $params = array(
     'host'     => 'localhost',
