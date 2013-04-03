@@ -18,20 +18,21 @@ $params = array(
     'charset'  => 'utf8',
     '_debug'   => true,
     '_prefix'  => '',
-    // '_adapter'  => 'mysql',
+    '_adapter'  => 'mysql',
 );
-$db = go\DB\DB::create($params, 'mysql');
+// $db = go\DB\DB::create($params, 'mysql');
+$db = go\DB\DB::create($params);
 $login    = 'vasa';
 $password = 'qwerty';
 //вариант выбора из таблицы
 $email = $db->query('SELECT `email` FROM `users` WHERE `login`=? AND `password`=?', array($login, $password), 'el');
 echo $email;
 //вариант выбора из таблицы
-$pattern = 'SELECT `email` FROM `users` WHERE `login`=? AND `password`=md5(?)';
-$data    = array($_POST['login'], $_POST['password']);
-$userId  = $db->query($pattern, $data, 'el');
-if (!$userId) {
-    echo 'User not found';
-}
+// $pattern = 'SELECT `email` FROM `users` WHERE `login`=? AND `password`=md5(?)';
+// $data    = array($_POST['login'], $_POST['password']);
+// $userId  = $db->query($pattern, $data, 'el');
+// if (!$userId) {
+    // echo 'User not found';
+// }
 
 ?>
