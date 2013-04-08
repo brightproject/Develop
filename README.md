@@ -4,7 +4,7 @@
 Так будет выглядеть код:
 
 ```php
-		$queryTotals['time'] = $this->getReadableTime($queryTotals['time']);
-		$this->output['queries'] = $queries;
-		$this->output['queryTotals'] = $queryTotals;
+$queryTotals['time'] = $this->getReadableTime($queryTotals['time']);
+$this->output['queries'] = $queries;
+$this->output['queryTotals'] = $queryTotals;
 ```
