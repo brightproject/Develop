@@ -1,4 +1,4 @@
 <?php
-	 require_once DIR . '/apps/apps.php'; // Ïóòü ê ïðèëîæåíèÿì
-	 require_once DIR_CORE . '/router.php'; // Ïóòü ê êëàññó
+	 require_once DIR . '/apps/applet.php'; // ÐŸÑƒÑ‚ÑŒ Ðº Ð¿Ñ€Ð¸Ð»Ð¾Ð¶ÐµÐ½Ð¸ÑÐ¼
+	 require_once DIR_CORE . '/router.php'; // ÐŸÑƒÑ‚ÑŒ Ðº ÐºÐ»Ð°ÑÑÑƒ
 	 $routing = new Routing;

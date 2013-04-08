@@ -1,9 +1,9 @@
 <?php
-	 //Вывод всех ошибок
+	 //Р’С‹РІРѕРґ РІСЃРµС… РѕС€РёР±РѕРє
 	error_reporting(E_ALL); 
 	// defining constants
 	define('DIR_WEB', dirname(__FILE__));
-	define('DIR_ENGINE', dirname(__FILE__).'/engine');
+	define('DIR_ENGINE', DIR_WEB.'/engine');
 	define('DIR_CORE', DIR_ENGINE.'/core');
 	define('DIR_CONTR', DIR_ENGINE.'/controller');
 	define('DIR_MODEL', DIR_ENGINE.'/model');
