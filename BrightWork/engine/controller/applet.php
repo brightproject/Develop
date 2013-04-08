@@ -3,7 +3,7 @@
  class Apps {
    function rout_test ()
      {
-         print 'test';
+         print 'Супер';
      }
    function rout_index ()
      {
