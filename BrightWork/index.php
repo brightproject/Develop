@@ -8,4 +8,4 @@
 	define('DIR_CONTR', DIR_ENGINE.'/controller');
 	define('DIR_MODEL', DIR_ENGINE.'/model');
 	define('DIR_VIEW', DIR_ENGINE.'/view');
-	require_once 'application/bootstrap.php';
+	require_once DIR_ENGINE.'/bootstrap.php';
