@@ -1,53 +1,46 @@
 <?php
    
- class Routing extends Apps { // Как вы видите, мы сразу наследуем класс Apps, который содержит нужные нам функции
+ class Routing extends App { // Как вы видите, мы сразу наследуем класс Apps, который содержит нужные нам функции
      
-   var $main_action = 'index'; // Функция, вызываемая по стандарту
-   var $funcs_prefix = 'rout_'; // Префикс к функциям
-   var $modules = 'modules'; // Название роута для объекта, в нашем случае модули
+   var $default = 'index'; // Функция, вызываемая по стандарту
+   var $modules = array ('user','private','reg'); // Название роута для объекта, в нашем случае модули
+   var $actions = array ('user_','private_','reg_'); // Действия
      
    function __construct ()
      {
-         $this->routs = explode('/', $_SERVER['REQUEST_URI']);
+         $this->routs = explode('/', DIR_WEB	.$_SERVER['REQUEST_URI']);
+		 // Массив Url
 		 echo "<pre>";
 		 print_r($this->routs);
 		 echo "</pre>";
-		 // Разделяем наш запрос
-         if ($this->routs[4] == $this->modules OR !count($this->routs[4])) { // Если передаётся нужный нам объект либо вообще ничего
+		 // Массив модулей
+		 echo "<pre>";
+		 print_r($this->modules);
+		 echo "</pre>";
+		  // Разделяем наш запрос
+         if ($this->routs[4] == $this->modules[0]) { // Если передаётся нужный нам объект либо вообще ничего
          $this->action = $this->routs[5];
-         $this->action = ($this->action == NULL OR !count($this->action)) ? $this->main_action : $this->action;
-         $this->get_routs ();
+         $this->action = ($this->action == NULL OR !count($this->action)) ? $this->default : $this->action;
+         $this->get_routs_user ();
+         } elseif ($this->routs[4] == $this->modules[1]) { // Если передаётся нужный нам объект либо вообще ничего
+         $this->action = $this->routs[5];
+         $this->action = ($this->action == NULL OR !count($this->action)) ? $this->default : $this->action;
+         $this->get_routs_private ();
          }
      }
              
-   function get_routs () 
+   function get_routs_user () 
          {
-
-    	 $action = $this->funcs_prefix . $this->action;	// Получаем название функции  
+    	 $action = $this->actions[0] . $this->action;	// Получаем название функции  
          if(method_exists($this, $action)) $this->$action(); // Если функция присутствует, то выполняем
-         else die('Возникла ошибка, ваш запрос не верен!'); 
-
-                     
+         else die('Возникла ошибка, ваш запрос не верен!');                    
+         }
+   function get_routs_private () 
+         {
+    	 $action = $this->actions[1] . $this->action;	// Получаем название функции  
+         if(method_exists($this, $action)) $this->$action(); // Если функция присутствует, то выполняем
+         else die('Возникла ошибка, ваш запрос не верен!');                    
          }
      
    }
    
-   // "ловим" строку запроса, превращаем её в масив
-$routeArray = explode('/', $_SERVER['REQUEST_URI']);
-// удаляем пустые элементы массива (элементы образованные начальным и конечным слэшами URI)
-// тут можно было обойтить array_shift и array_pop - но мне способ с foreach кажется более "универсальным"
-$route = array();
-foreach ($routeArray as $value) {
-	if (!empty($value)) {
-		$route[] = trim($value);
-	}
-
-}
-// echo $routeArray[1];
-// echo $routeArray[2];
-// echo $routeArray[3];
-// echo $routeArray[4];
-// вводим в адресную строку всякий бред, смотрим что нам показывают
-echo "<pre>";
-print_r($route);
-echo "</pre>";
