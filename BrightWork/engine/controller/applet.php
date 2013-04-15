@@ -1,12 +1,32 @@
 <?php
    
- class Apps {
-   function rout_test ()
+ class App {
+   // function test ()
+     // {
+         // print 'Супер';
+     // }
+   function user_index ()
      {
-         print 'Супер';
+        print 'Вывод главной страницы юзера';
      }
-   function rout_index ()
+   function user_add ()
      {
-        print 'Вывод типичной главной страницы';
+        print 'Добавление пользователя';
      }
+   function user_update ()
+     {
+        print 'Обновление пользователя';
+     }
+   function private_index ()
+     {
+        print 'Вывод главной страницы разраба';
+     }
+	function private_proger ()
+	 {
+		print 'Профиль прогера';
+	 }	
+	function private_designer ()
+	 {
+		print 'Профиль дизайнера';
+	 }
   }
