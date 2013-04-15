@@ -8,7 +8,7 @@
      
    function __construct ()
      {
-         $this->routs = explode('/', DIR_WEB	.$_SERVER['REQUEST_URI']);
+         $this->routs = explode('/', $_SERVER['REQUEST_URI']);
 		 // Массив Url
 		 echo "<pre>";
 		 print_r($this->routs);
