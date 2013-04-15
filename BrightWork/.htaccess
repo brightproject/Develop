@@ -4,3 +4,4 @@ RewriteCond %{REQUEST_FILENAME} !-f
 #Только на хостинге
 #RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule (.*) index.php [L]
+#deny from all
