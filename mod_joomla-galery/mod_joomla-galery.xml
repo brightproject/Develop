@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?><install version="1.5" type="module">
+	<name>Module galery</name>
+	<author>RusEntu</author>
+	<creationDate>20 Jan 2010</creationDate>
+	<copyright>Copyright (C)  2010 RusEntu. All rights reserved.</copyright>
+	<license>http://www.rusentu.ru</license>
+	<authorEmail>support@rusentu.ru</authorEmail>
+	<authorUrl>http://www.rusentu.ru</authorUrl>
+	<version>1.0.0</version>
+	<description>The module for galery</description>
+	    <files>
+	       <filename module="mod_joomla-galery">mod_joomla-galery.php</filename>	       <filename module="mod_joomla-galery">jquery.plugin.js</filename>	       <filename module="mod_joomla-galery">jquery.min.js</filename>	       <filename module="mod_joomla-galery">galery/1.jpg</filename>	       <filename module="mod_joomla-galery">galery/2.jpg</filename>	       <filename module="mod_joomla-galery">galery/3.jpg</filename>	       <filename module="mod_joomla-galery">galery/4.jpg</filename>	       <filename module="mod_joomla-galery">galery/5.jpg</filename>
+        </files>
+    <params description="-=Нет параметров=-" >
+    </params>
+</install>
