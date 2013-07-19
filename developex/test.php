@@ -10,9 +10,9 @@
 	<script type="text/javascript">
 		$(function(){
 			$.inlineEdit({
-				categoryName: 'test.php?type=name&categoryId=',
-				categoryPrice: 'test.php?type=price&categoryId=',
-				remove: 'test.php?remove&type=price&categoryId='
+				categoryName: 'ajax.php?type=name&categoryId=',
+				categoryPrice: 'ajax.php?type=price&categoryId=',
+				remove: 'ajax.php?remove&type=price&categoryId='
 			}, {
 				animate: false,
 				filterElementValue: function($o){
