@@ -1,0 +1,28 @@
+
+* { margin:0; padding:0; }
+
+html,body {
+	font-size:100%;
+	font-family:Georgia, serif;
+	background: #fff;
+}
+
+
+table {
+	margin-bottom: 10px;
+}
+
+th {
+	padding: 10px 5px 2px;
+	border-bottom: 1px solid #aaa;
+}
+
+td {
+	padding: 5px;
+}
+a {
+	letter-spacing:1px;
+	color: #000;
+	border-bottom:1px solid #3E8F8D;
+	text-decoration:none;
+}
